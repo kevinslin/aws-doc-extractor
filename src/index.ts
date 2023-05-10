@@ -1,6 +1,7 @@
 import MarkdownIt from 'markdown-it';
 import path from 'path';
 import fs from "fs-extra";
+import { glob } from 'glob';
 
 interface Entity {
   position: Position;
@@ -20,6 +21,7 @@ interface Point {
   offset: number;
 }
 
+
 export function extractFromAWSDocs(fpath: string): Entity[] {
   const markdownContent = fs.readFileSync(fpath, 'utf-8');
   const md = new MarkdownIt();
@@ -33,7 +35,7 @@ export function extractFromAWSDocs(fpath: string): Entity[] {
 
     if (token.type === 'heading_open') {
       currentHeader = tokens[i + 1].content;
-    } else if (token.type === 'paragraph_open' && tokens[i + 1].content === '**Note**') {
+    } else if (token.type === 'paragraph_open' && tokens[i + 1].content.indexOf('**Note**') >= 0) {
       captureNext = true;
     } else if (captureNext && token.type === 'paragraph_open' && token.map) {
       const startPosition: Point = {
@@ -63,7 +65,7 @@ export function extractFromAWSDocs(fpath: string): Entity[] {
 
       if (content.endsWith(':')) {
         const nextToken = tokens[i + 4];
-        if (nextToken.type === 'paragraph_open') {
+        if (nextToken && nextToken.type === 'paragraph_open') {
           entity.content += '\n\n' + tokens[i + 5].content;
           i += 2;
         }
@@ -83,40 +85,35 @@ function main() {
   processMarkdownFiles(inputDir, outputDir);
 }
 
-function processMarkdownFiles(inputDir: string, outputDir: string) {
+async function processMarkdownFiles(inputDir: string, outputDir: string) {
   // Read all files in the input directory
-  fs.readdir(inputDir, (err, files) => {
-    if (err) {
-      console.error(`Error reading directory: ${err}`);
-      return;
-    }
+  const files = await glob(`**/*.md`, {cwd: inputDir});
+  // Process each markdown file in the input directory
+  files.forEach((file) => {
+    if (path.extname(file) === '.md') {
+      const inputFile = path.join(inputDir, file);
+      const outputFile = path.join(outputDir, file);
+      fs.ensureDirSync(outputDir);
 
-    // Process each markdown file in the input directory
-    files.forEach((file) => {
-      if (path.extname(file) === '.md') {
-        const inputFile = path.join(inputDir, file);
-        const outputFile = path.join(outputDir, file);
-        fs.ensureDirSync(outputDir);
+      // Extract entities from the markdown file
+      const entities = extractFromAWSDocs(inputFile);
+      if (entities.length === 0) {
+        return
+      }
 
-        // Extract entities from the markdown file
-        const entities = extractFromAWSDocs(inputFile);
-        if (!entities) {
-          return
+      fs.ensureFileSync(outputFile);
+      console.log(`Entities extracted from ${inputFile}: ${entities.length}`)
+      // Write the entities to a new file in the output directory
+      fs.writeFile(outputFile, JSON.stringify(entities, null, 2), (err) => {
+        if (err) {
+          console.error(`Error writing file ${outputFile}: ${err}`);
+          return;
         }
 
-        console.log(`Entities extracted from ${inputFile}: ${entities.length}`)
-        // Write the entities to a new file in the output directory
-        fs.writeFile(outputFile, JSON.stringify(entities, null, 2), (err) => {
-          if (err) {
-            console.error(`Error writing file ${outputFile}: ${err}`);
-            return;
-          }
-
-          console.log(`File written: ${outputFile}`);
-        });
-      }
-    });
+        console.log(`File written: ${outputFile}`);
+      });
+    }
   });
 }
 
-main()
+// main()

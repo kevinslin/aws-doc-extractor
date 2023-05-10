@@ -69,6 +69,7 @@ exports[`proto extract 1`] = `
     "tag": "h2",
     "type": "heading_close",
   },
+  
   Token {
     "attrs": null,
     "block": true,

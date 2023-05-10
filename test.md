@@ -1,10 +1,8 @@
-
 # Section 1
 
 Some content.
 
 **Note**
-
 This is a note.
 
 This is a paragraph following the note.
@@ -12,8 +10,6 @@ This is a paragraph following the note.
 # Section 2
 
 **Note**
-
-This is another note.
 
 This is a paragraph following the second note:
 

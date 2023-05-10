@@ -8,7 +8,6 @@ describe('extractFromAWSDocs', () => {
 Some content.
 
 **Note**
-
 This is a note.
 
 This is a paragraph following the note.
