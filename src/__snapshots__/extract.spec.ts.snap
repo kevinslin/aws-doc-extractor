@@ -3,21 +3,21 @@
 exports[`extractFromAWSDocs should extract entities according to the given conditions 1`] = `
 [
   {
-    "content": "This is a paragraph following the second note:",
+    "content": "**Note**
+This is a note.",
+    "header": "Section 1",
+    "map": [
+      4,
+      6,
+    ],
+  },
+  {
+    "content": "**Note**",
     "header": "Section 2",
-    "position": {
-      "end": {
-        "column": 1,
-        "line": 14,
-        "offset": 13,
-      },
-      "indent": 0,
-      "start": {
-        "column": 1,
-        "line": 14,
-        "offset": 13,
-      },
-    },
+    "map": [
+      11,
+      12,
+    ],
   },
 ]
 `;

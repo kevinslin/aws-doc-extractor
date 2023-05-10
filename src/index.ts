@@ -4,7 +4,8 @@ import fs from "fs-extra";
 import { glob } from 'glob';
 
 interface Entity {
-  position: Position;
+  position?: Position;
+  map: [number, number]
   content: string;
   header: string;
 }
@@ -18,66 +19,83 @@ interface Position {
 interface Point {
   line: number;
   column: number;
-  offset: number;
+  offset?: number;
 }
 
 
 export function extractFromAWSDocs(fpath: string): Entity[] {
-  const markdownContent = fs.readFileSync(fpath, 'utf-8');
   const md = new MarkdownIt();
-  const tokens = md.parse(markdownContent, {});
+  const fileContent = fs.readFileSync(fpath, 'utf8');
+  const tokens = md.parse(fileContent, {});
   const entities: Entity[] = [];
+
   let currentHeader = '';
-  let captureNext = false;
 
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i];
+    debugger;
 
     if (token.type === 'heading_open') {
       currentHeader = tokens[i + 1].content;
-    } else if (token.type === 'paragraph_open' && tokens[i + 1].content.indexOf('**Note**') >= 0) {
-      captureNext = true;
-    } else if (captureNext && token.type === 'paragraph_open' && token.map) {
-      const startPosition: Point = {
-        line: token.map[0] + 1,
-        column: 1,
-        offset: token.map[0],
-      };
+    } else if (
+      token.type === 'inline' &&
+      token.children &&
+      token.children.length >= 4 &&
+      token.children[0].type === 'text' &&
+      token.children[1].type === 'strong_open' &&
+      token.children[2].type === 'text' &&
+      token.children[2].content === 'Note' &&
+      token.children[3].type === 'strong_close'
+    ) {
 
-      const endPosition: Point = {
-        line: token.map[1],
-        column: 1,
-        offset: token.map[1] - 1,
-      };
+      const contentToken = tokens[i];
+      if (!contentToken || !contentToken.map) {
+        continue
+      }
+      // const position: Position = {
+      //   start: {
+      //     line: contentToken.map[0],
+      //     column: 0,
+      //     // offset: contentToken.pos,
+      //   },
+      //   end: {
+      //     line: contentToken.map[1],
+      //     column: 0,
+      //     // offset: contentToken.pos + contentToken.content.length,
+      //   },
+      //   indent: token.level,
+      // };
 
-      const position: Position = {
-        start: startPosition,
-        end: endPosition,
-        indent: token.level,
-      };
+      let content = contentToken.content.trim();
 
-      const content = tokens[i + 1].content;
-      const entity: Entity = {
-        position,
+      // if (content.endsWith(':') && tokens[i + 4].type === 'paragraph_open') {
+      //   const t = tokens[i + 5];
+      //   if (!t || !t.map) {
+      //     continue
+      //   }
+      //   content += '\n\n' + tokens[i + 5].content.trim();
+      //   position.end = {
+      //     line: t.map[1],
+      //     column: 0,
+      //     // offset: tokens[i + 5].pos + tokens[i + 5].content.length,
+      //   };
+      //   i += 4;
+      // } else {
+      //   i += 2;
+      // }
+
+      entities.push({
+        map: contentToken.map,
         content,
         header: currentHeader,
-      };
-
-      if (content.endsWith(':')) {
-        const nextToken = tokens[i + 4];
-        if (nextToken && nextToken.type === 'paragraph_open') {
-          entity.content += '\n\n' + tokens[i + 5].content;
-          i += 2;
-        }
-      }
-
-      entities.push(entity);
-      captureNext = false;
+      });
     }
   }
 
   return entities;
 }
+
+
 
 function main() {
   const inputDir = "/Users/kevinlin/code/proj.aws-docs/semantic-search-aws-docs/amazon-ecs-developer-guide"
@@ -87,7 +105,7 @@ function main() {
 
 async function processMarkdownFiles(inputDir: string, outputDir: string) {
   // Read all files in the input directory
-  const files = await glob(`**/*.md`, {cwd: inputDir});
+  const files = await glob(`**/*.md`, { cwd: inputDir });
   // Process each markdown file in the input directory
   files.forEach((file) => {
     if (path.extname(file) === '.md') {
