@@ -18,6 +18,8 @@
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "test": "npx jest"
+    "start": "node src/main.js",
+    "test": "npx jest",
+    "watch": "tsc --watch"
   }
 }

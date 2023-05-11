@@ -1,0 +1,1428 @@
+{
+  "contents": [
+    {
+      "title": "What is Amazon ECS?",
+      "href": "Welcome.html",
+      "contents": [
+        {
+          "title": "Amazon ECS features",
+          "href": "welcome-features.html"
+        },
+        {
+          "title": "Common use cases",
+          "href": "common_use_cases.html"
+        },
+        {
+          "title": "Related services",
+          "href": "welcome-related.html"
+        },
+        {
+          "title": "New Amazon ECS console",
+          "href": "new-console.html"
+        }
+      ]
+    },
+    {
+      "title": "Getting started",
+      "href": "getting-started.html",
+      "contents": [
+        {
+          "title": "Set up",
+          "href": "get-set-up-for-amazon-ecs.html"
+        },
+        {
+          "title": "Creating a container image",
+          "href": "create-container-image.html"
+        },
+        {
+          "title": "Using AWS Copilot",
+          "href": "getting-started-aws-copilot-cli.html"
+        },
+        {
+          "title": "Using the AWS CDK",
+          "href": "tutorial-ecs-web-server-cdk.html"
+        },
+        {
+          "title": "Using the console with Linux containers on AWS Fargate",
+          "href": "getting-started-fargate.html"
+        },
+        {
+          "title": "Using the console with Windows containers on AWS Fargate",
+          "href": "Windows_fargate-getting_started.html"
+        },
+        {
+          "title": "Using the console with Amazon EC2",
+          "href": "getting-started-ecs-ec2-v2.html"
+        }
+      ]
+    },
+    {
+      "title": "Developer tools overview",
+      "href": "ecs-developer-tools.html",
+      "contents": [
+        {
+          "title": "Using the AWS Copilot CLI",
+          "href": "AWS_Copilot.html"
+        },
+        {
+          "title": "Using the Amazon ECS CLI",
+          "href": "ECS_CLI.html"
+        }
+      ]
+    },
+    {
+      "title": "AWS Fargate",
+      "href": "AWS_Fargate.html",
+      "contents": [
+        {
+          "title": "Platform Versions",
+          "href": "platform_versions.html",
+          "contents": [
+            {
+              "title": "Linux platform versions",
+              "href": "platform-linux-fargate.html",
+              "contents": [
+                {
+                  "title": "Platform version deprecation",
+                  "href": "platform-versions-retired.html"
+                }
+              ]
+            },
+            {
+              "title": "Windows platform versions",
+              "href": "platform-windows-fargate.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Clusters",
+      "href": "clusters.html",
+      "contents": [
+        {
+          "title": "Cluster management in the Amazon ECS console",
+          "href": "available-cluster-actions.html",
+          "contents": [
+            {
+              "title": "Creating a cluster for the Fargate launch type using the console",
+              "href": "create-cluster-console-v2.html"
+            },
+            {
+              "title": "Creating a cluster for the Amazon EC2 launch type using the console",
+              "href": "create-ec2-cluster-console-v2.html"
+            },
+            {
+              "title": "Updating a cluster using the console",
+              "href": "update-cluster-v2.html"
+            },
+            {
+              "title": "Deleting a cluster using the console",
+              "href": "delete_cluster-new-console.html"
+            }
+          ]
+        },
+        {
+          "title": "Capacity providers",
+          "href": "cluster-capacity-providers.html",
+          "contents": [
+            {
+              "title": "AWS Fargate capacity providers",
+              "href": "fargate-capacity-providers.html"
+            },
+            {
+              "title": "Auto Scaling group capacity providers",
+              "href": "asg-capacity-providers.html",
+              "contents": [
+                {
+                  "title": "Creating a capacity provider using the console",
+                  "href": "create-capacity-provider-console-v2.html"
+                },
+                {
+                  "title": "Updating a capacity provider using the console",
+                  "href": "update-capacity-provider-console-v2.html"
+                },
+                {
+                  "title": "Deleting a capacity provider using the console",
+                  "href": "delete-capacity-provider-console-v2.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Cluster auto scaling",
+          "href": "cluster-auto-scaling.html",
+          "contents": [
+            {
+              "title": "Turn on cluster auto scaling",
+              "href": "turn-on-cluster-auto-scaling.html"
+            },
+            {
+              "title": "Turn off cluster auto scaling",
+              "href": "turn-off-cluster-auto-scaling.html"
+            }
+          ]
+        },
+        {
+          "title": "Using Local Zones, Wavelength Zones, and AWS Outposts",
+          "href": "cluster-regions-zones.html"
+        },
+        {
+          "title": "Cluster and capacity provider management using the AWS CLI",
+          "href": "cluster-management-cli.html"
+        }
+      ]
+    },
+    {
+      "title": "Task definitions",
+      "href": "task_definitions.html",
+      "contents": [
+        {
+          "title": "Task definition states",
+          "href": "task-definition-state.html"
+        },
+        {
+          "title": "Amazon EC2 Windows task definition considerations",
+          "href": "windows_task_definitions.html"
+        },
+        {
+          "title": "Application architecture",
+          "href": "application_architecture.html"
+        },
+        {
+          "title": "Task definition management in the Amazon ECS console",
+          "href": "available-task-definition-actions.html",
+          "contents": [
+            {
+              "title": "Creating a task definition using the console",
+              "href": "create-task-definition.html"
+            },
+            {
+              "title": "Updating a task definition using the console",
+              "href": "update-task-definition-console-v2.html"
+            },
+            {
+              "title": "Deregistering a task definition revision using the console",
+              "href": "deregister-task-definition-v2.html"
+            },
+            {
+              "title": "Deleting a task definition revision using the console",
+              "href": "delete-task-definition-v2.html"
+            }
+          ]
+        },
+        {
+          "title": "Task definition template",
+          "href": "task-definition-template.html"
+        },
+        {
+          "title": "Task definition parameters",
+          "href": "task_definition_parameters.html"
+        },
+        {
+          "title": "Launch types",
+          "href": "launch_types.html"
+        },
+        {
+          "title": "Working with GPUs on Amazon ECS",
+          "href": "ecs-gpu.html"
+        },
+        {
+          "title": "Using video transcoding on Amazon ECS",
+          "href": "ecs-vt1.html"
+        },
+        {
+          "title": "Using machine learning on Amazon ECS",
+          "href": "ecs-machine-learning.html",
+          "contents": [
+            {
+              "title": "Using AWS Neuron on Amazon Linux 2 on Amazon ECS",
+              "href": "ecs-inference.html"
+            },
+            {
+              "title": "Using deep learning DL1 instances on Amazon ECS",
+              "href": "ecs-dl1.html"
+            }
+          ]
+        },
+        {
+          "title": "Working with 64-bit ARM workloads on Amazon ECS",
+          "href": "ecs-arm64.html"
+        },
+        {
+          "title": "Using data volumes in tasks",
+          "href": "using_data_volumes.html",
+          "contents": [
+            {
+              "title": "Fargate task storage",
+              "href": "fargate-task-storage.html"
+            },
+            {
+              "title": "Amazon EFS volumes",
+              "href": "efs-volumes.html"
+            },
+            {
+              "title": "FSx for Windows File Server volumes",
+              "href": "wfsx-volumes.html"
+            },
+            {
+              "title": "Docker volumes",
+              "href": "docker-volumes.html"
+            },
+            {
+              "title": "Bind mounts",
+              "href": "bind-mounts.html"
+            }
+          ]
+        },
+        {
+          "title": "Managing container swap space",
+          "href": "container-swap.html"
+        },
+        {
+          "title": "Task networking",
+          "href": "task-networking.html",
+          "contents": [
+            {
+              "title": "AWSVPC mode",
+              "href": "task-networking-awsvpc.html"
+            },
+            {
+              "title": "Host mode",
+              "href": "networking-networkmode-host.html"
+            },
+            {
+              "title": "Bridge mode",
+              "href": "networking-networkmode-bridge.html"
+            }
+          ]
+        },
+        {
+          "title": "Using the awslogs log driver",
+          "href": "using_awslogs.html"
+        },
+        {
+          "title": "Custom log routing",
+          "href": "using_firelens.html",
+          "contents": [
+            {
+              "title": "Using the AWS for Fluent Bit image",
+              "href": "firelens-using-fluentbit.html"
+            },
+            {
+              "title": "Creating a task definition that uses a FireLens configuration",
+              "href": "firelens-taskdef.html"
+            },
+            {
+              "title": "Filtering logs using regular expressions",
+              "href": "firelens-filtering-logs.html"
+            },
+            {
+              "title": "Concatenate multiline or stack-trace log messages",
+              "href": "firelens-concatanate-multiline.html"
+            },
+            {
+              "title": "Example task definitions",
+              "href": "firelens-example-taskdefs.html"
+            }
+          ]
+        },
+        {
+          "title": "Private registry authentication for tasks",
+          "href": "private-auth.html"
+        },
+        {
+          "title": "Passing environment variables",
+          "href": "taskdef-envfiles.html"
+        },
+        {
+          "title": "Passing sensitive data to a container",
+          "href": "specifying-sensitive-data.html",
+          "contents": [
+            {
+              "title": "Retrieving secrets through your application",
+              "href": "secrets-app.html",
+              "contents": [
+                {
+                  "title": "Using Secrets Manager",
+                  "href": "secrets-app-secrets-manager.html"
+                },
+                {
+                  "title": "Using AWS Systems Manager Parameter Store",
+                  "href": "secrets-app-ssm-paramstore.html"
+                }
+              ]
+            },
+            {
+              "title": "Retrieving secrets through environment variables",
+              "href": "secrets-envvar.html",
+              "contents": [
+                {
+                  "title": "Using Secrets Manager",
+                  "href": "secrets-envvar-secrets-manager.html"
+                },
+                {
+                  "title": "Using AWS Systems Manager",
+                  "href": "secrets-envvar-ssm-paramstore.html"
+                }
+              ]
+            },
+            {
+              "title": "Retrieve secrets for logging configuration",
+              "href": "secrets-logconfig.html"
+            }
+          ]
+        },
+        {
+          "title": "Example task definitions",
+          "href": "example_task_definitions.html"
+        },
+        {
+          "title": "Task definition management using the AWS CLI",
+          "href": "task-def-management-cli.html"
+        }
+      ]
+    },
+    {
+      "title": "Account settings",
+      "href": "ecs-account-settings.html",
+      "contents": [
+        {
+          "title": "Viewing account settings using the console",
+          "href": "ecs-viewing-longer-id-settings.html"
+        },
+        {
+          "title": "Modifying account settings",
+          "href": "ecs-modifying-longer-id-settings.html"
+        },
+        {
+          "title": "Reverting to the default account settings",
+          "href": "ecs-reverting-account.html"
+        },
+        {
+          "title": "Account setting management using the AWS CLI",
+          "href": "account-setting-management-cli.html"
+        }
+      ]
+    },
+    {
+      "title": "Container instances",
+      "href": "ECS_instances.html",
+      "contents": [
+        {
+          "title": "Linux instances",
+          "href": "ecs-linux.html",
+          "contents": [
+            {
+              "title": "Amazon ECS-optimized AMI",
+              "href": "ecs-optimized_AMI.html",
+              "contents": [
+                {
+                  "title": "Retrieving Amazon ECS-Optimized AMI metadata",
+                  "href": "retrieve-ecs-optimized_AMI.html"
+                },
+                {
+                  "title": "AMI storage configuration",
+                  "href": "ecs-ami-storage-config.html"
+                },
+                {
+                  "title": "Amazon ECS-optimized Linux AMI build script",
+                  "href": "ecs-ami-build-scripts.html"
+                }
+              ]
+            },
+            {
+              "title": "Bottlerocket",
+              "href": "ecs-bottlerocket.html"
+            },
+            {
+              "title": "Launching a container instance",
+              "href": "launch_container_instance.html",
+              "contents": [
+                {
+                  "title": "Using Spot Instances",
+                  "href": "container-instance-spot.html"
+                }
+              ]
+            },
+            {
+              "title": "Bootstrap Container Instances",
+              "href": "bootstrap_container_instance.html"
+            },
+            {
+              "title": "Starting a task at container instance launch time",
+              "href": "start_task_at_launch.html"
+            },
+            {
+              "title": "Elastic network interface trunking",
+              "href": "container-instance-eni.html"
+            },
+            {
+              "title": "Memory Management",
+              "href": "memory-management.html"
+            },
+            {
+              "title": "Manage container instances remotely",
+              "href": "ec2-run-command.html"
+            }
+          ]
+        },
+        {
+          "title": "Windows instances",
+          "href": "ecs-windows.html",
+          "contents": [
+            {
+              "title": "Amazon ECS-optimized AMI",
+              "href": "ecs-optimized_windows_AMI.html",
+              "contents": [
+                {
+                  "title": "Retrieving Amazon ECS-Optimized AMI metadata",
+                  "href": "retrieve-ecs-optimized_windows_AMI.html"
+                },
+                {
+                  "title": "Subscribing to Amazon ECS-optimized AMI update notifications",
+                  "href": "ECS-AMI-windows-SubscribeTopic.html"
+                },
+                {
+                  "title": "AMI versions",
+                  "href": "ecs-windows-ami-versions.html"
+                },
+                {
+                  "title": "Building your own AMI",
+                  "href": "windows-custom-ami.html"
+                }
+              ]
+            },
+            {
+              "title": "Launching a container instance",
+              "href": "launch_window-container_instance.html",
+              "contents": [
+                {
+                  "title": "Using Spot Instances",
+                  "href": "windows-container-instance-spot.html"
+                }
+              ]
+            },
+            {
+              "title": "Bootstrap Container Instances",
+              "href": "bootstrap_windows_container_instance.html"
+            },
+            {
+              "title": "Connect to your container Windows instance",
+              "href": "instance-windows-connect.html"
+            },
+            {
+              "title": "Deregister a container instance",
+              "href": "deregister_container_instance.html"
+            }
+          ]
+        },
+        {
+          "title": "External instances",
+          "href": "ecs-anywhere.html",
+          "contents": [
+            {
+              "title": "IAM permissions",
+              "href": "ecs-anywhere-iam.html"
+            },
+            {
+              "title": "Registering an external instance to a cluster",
+              "href": "ecs-anywhere-registration.html"
+            },
+            {
+              "title": "Deregistering an external instance",
+              "href": "ecs-anywhere-deregistration.html"
+            },
+            {
+              "title": "Running workloads on external instances",
+              "href": "ecs-anywhere-runtask.html"
+            },
+            {
+              "title": "Updating the AWS Systems Manager Agent and Amazon ECS container agent",
+              "href": "ecs-anywhere-updates.html"
+            }
+          ]
+        },
+        {
+          "title": "Monitoring",
+          "href": "using_cloudwatch_logs.html"
+        },
+        {
+          "title": "Container instance draining",
+          "href": "container-instance-draining.html"
+        }
+      ]
+    },
+    {
+      "title": "Container agent",
+      "href": "ECS_agent.html",
+      "contents": [
+        {
+          "title": "Installing the Amazon ECS container agent",
+          "href": "ecs-agent-install.html"
+        },
+        {
+          "title": "Container agent versions",
+          "href": "ecs-agent-versions.html"
+        },
+        {
+          "title": "Amazon EC2 Windows containers",
+          "href": "ECS_Windows.html"
+        },
+        {
+          "title": "Updating the Amazon ECS container agent",
+          "href": "ecs-agent-update.html",
+          "contents": [
+            {
+              "title": "Updating the Amazon ECS container agent on an Amazon ECS-optimized AMI",
+              "href": "agent-update-ecs-ami.html"
+            },
+            {
+              "title": "Manually updating the Amazon ECS container agent (for non-Amazon ECS-Optimized AMIs)",
+              "href": "manually_update_agent.html"
+            }
+          ]
+        },
+        {
+          "title": "Container agent configuration",
+          "href": "ecs-agent-config.html"
+        },
+        {
+          "title": "Private registry authentication for container instances",
+          "href": "private-auth-container-instances.html"
+        },
+        {
+          "title": "Automated task and image cleanup",
+          "href": "automated_image_cleanup.html"
+        },
+        {
+          "title": "Container metadata file",
+          "href": "container-metadata.html"
+        },
+        {
+          "title": "Task metadata endpoint",
+          "href": "task-metadata-endpoint.html",
+          "contents": [
+            {
+              "title": "Task metadata endpoint version 4",
+              "href": "task-metadata-endpoint-v4.html"
+            },
+            {
+              "title": "Task Metadata Endpoint version 3",
+              "href": "task-metadata-endpoint-v3.html"
+            },
+            {
+              "title": "Task Metadata Endpoint version 2",
+              "href": "task-metadata-endpoint-v2.html"
+            }
+          ]
+        },
+        {
+          "title": "Container agent endpoint",
+          "href": "ecs-container-agent-endpoint.html",
+          "contents": [
+            {
+              "title": "Task scale-in protection endpoint",
+              "href": "task-scale-in-protection-endpoint.html"
+            }
+          ]
+        },
+        {
+          "title": "Container agent introspection",
+          "href": "ecs-agent-introspection.html"
+        },
+        {
+          "title": "HTTP proxy configuration",
+          "href": "http_proxy_config.html"
+        },
+        {
+          "title": "Using gMSAs for Windows Containers",
+          "href": "windows-gmsa.html"
+        },
+        {
+          "title": "Using gMSAs for Linux Containers",
+          "href": "linux-gmsa.html"
+        },
+        {
+          "title": "Updating the Amazon ECS container agent with the console",
+          "href": "agent-update-console.html"
+        },
+        {
+          "title": "Container agent management using the AWS CLI",
+          "href": "agent-management-cli.html"
+        }
+      ]
+    },
+    {
+      "title": "Scheduling tasks",
+      "href": "scheduling_tasks.html",
+      "contents": [
+        {
+          "title": "Running a standalone task using the Amazon ECS console",
+          "href": "ecs_run_task-v2.html"
+        },
+        {
+          "title": "Stopping tasks using the new console",
+          "href": "stop-task-console-v2.html"
+        },
+        {
+          "title": "Task placement",
+          "href": "task-placement.html",
+          "contents": [
+            {
+              "title": "Task groups",
+              "href": "task-groups.html"
+            },
+            {
+              "title": "Task placement strategies",
+              "href": "task-placement-strategies.html"
+            },
+            {
+              "title": "Task placement constraints",
+              "href": "task-placement-constraints.html"
+            },
+            {
+              "title": "Cluster query language",
+              "href": "cluster-query-language.html"
+            }
+          ]
+        },
+        {
+          "title": "Scheduled tasks",
+          "href": "scheduled_tasks.html"
+        },
+        {
+          "title": "Task lifecycle",
+          "href": "task-lifecycle.html"
+        },
+        {
+          "title": "Task maintenance",
+          "href": "task-maintenance.html"
+        }
+      ]
+    },
+    {
+      "title": "Services",
+      "href": "ecs_services.html",
+      "contents": [
+        {
+          "title": "Service definition parameters",
+          "href": "service_definition_parameters.html"
+        },
+        {
+          "title": "Service management in the Amazon ECS console",
+          "href": "v2-service-actions.html",
+          "contents": [
+            {
+              "title": "Creating a service using the console",
+              "href": "create-service-console-v2.html"
+            },
+            {
+              "title": "Updating a service using the console",
+              "href": "update-service-console-v2.html"
+            },
+            {
+              "title": "Updating a blue/green deployment configuration using the console",
+              "href": "update-blue-green-deployment-v2.html"
+            },
+            {
+              "title": "Deleting a service using the console",
+              "href": "delete-service-v2.html"
+            }
+          ]
+        },
+        {
+          "title": "Deployment types",
+          "href": "deployment-types.html",
+          "contents": [
+            {
+              "title": "Rolling update",
+              "href": "deployment-type-ecs.html",
+              "contents": [
+                {
+                  "title": "Deployment circuit breaker",
+                  "href": "deployment-circuit-breaker.html"
+                },
+                {
+                  "title": "CloudWatch alarms",
+                  "href": "deployment-alarm-failure.html"
+                }
+              ]
+            },
+            {
+              "title": "Blue/Green deployment with CodeDeploy",
+              "href": "deployment-type-bluegreen.html"
+            },
+            {
+              "title": "External deployment",
+              "href": "deployment-type-external.html"
+            }
+          ]
+        },
+        {
+          "title": "Service load balancing",
+          "href": "service-load-balancing.html",
+          "contents": [
+            {
+              "title": "Load balancer types",
+              "href": "load-balancer-types.html"
+            },
+            {
+              "title": "Creating a load balancer",
+              "href": "create-load-balancer.html",
+              "contents": [
+                {
+                  "title": "Creating an Application Load Balancer",
+                  "href": "create-application-load-balancer.html"
+                },
+                {
+                  "title": "Creating a Network Load Balancer",
+                  "href": "create-network-load-balancer.html"
+                }
+              ]
+            },
+            {
+              "title": "Registering multiple target groups with a service",
+              "href": "register-multiple-targetgroups.html"
+            }
+          ]
+        },
+        {
+          "title": "Service auto scaling",
+          "href": "service-auto-scaling.html",
+          "contents": [
+            {
+              "title": "Target tracking scaling policies",
+              "href": "service-autoscaling-targettracking.html"
+            },
+            {
+              "title": "Step scaling policies",
+              "href": "service-autoscaling-stepscaling.html"
+            }
+          ]
+        },
+        {
+          "title": "Interconnecting services",
+          "href": "interconnecting-services.html",
+          "contents": [
+            {
+              "title": "Service Connect",
+              "href": "service-connect.html",
+              "contents": [
+                {
+                  "title": "Tutorial: Using Service Connect in Fargate with the AWS CLI",
+                  "href": "create-service-connect.html"
+                }
+              ]
+            },
+            {
+              "title": "Service discovery",
+              "href": "service-discovery.html"
+            }
+          ]
+        },
+        {
+          "title": "Task scale-in protection",
+          "href": "task-scale-in-protection.html"
+        },
+        {
+          "title": "Service throttle logic",
+          "href": "service-throttle-logic.html"
+        },
+        {
+          "title": "Service management using the AWS CLI",
+          "href": "service-management-cli.html"
+        }
+      ]
+    },
+    {
+      "title": "Resources and tags",
+      "href": "ecs-resource-tagging.html",
+      "contents": [
+        {
+          "title": "Tagging your resources",
+          "href": "ecs-using-tags.html"
+        },
+        {
+          "title": "Service quotas",
+          "href": "service-quotas.html"
+        },
+        {
+          "title": "AWS Fargate Regions",
+          "href": "AWS_Fargate-Regions.html"
+        },
+        {
+          "title": "Usage Reports",
+          "href": "usage-reports.html"
+        }
+      ]
+    },
+    {
+      "title": "Monitoring",
+      "href": "ecs_monitoring.html",
+      "contents": [
+        {
+          "title": "Monitoring tools",
+          "href": "monitoring-automated-manual.html"
+        },
+        {
+          "title": "CloudWatch metrics",
+          "href": "cloudwatch-metrics.html",
+          "contents": [
+            {
+              "title": "Viewing Amazon ECS metrics",
+              "href": "viewing_cloudwatch_metrics.html"
+            }
+          ]
+        },
+        {
+          "title": "Events and EventBridge",
+          "href": "cloudwatch_event_stream.html",
+          "contents": [
+            {
+              "title": "Amazon ECS events",
+              "href": "ecs_cwe_events.html"
+            },
+            {
+              "title": "Handling events",
+              "href": "ecs_cwet_handling.html"
+            }
+          ]
+        },
+        {
+          "title": "CloudWatch Container Insights",
+          "href": "cloudwatch-container-insights.html",
+          "contents": [
+            {
+              "title": "Use CloudWatch Container Insights to view Amazon ECS lifecycle events",
+              "href": "lifecycle-metrics.html"
+            }
+          ]
+        },
+        {
+          "title": "Container instance health",
+          "href": "container-instance-health.html"
+        },
+        {
+          "title": "Collecting application trace data",
+          "href": "trace-data.html"
+        },
+        {
+          "title": "Collecting application metrics",
+          "href": "metrics-data.html",
+          "contents": [
+            {
+              "title": "Exporting application metrics to Amazon CloudWatch",
+              "href": "application-metrics-cloudwatch.html"
+            },
+            {
+              "title": "Exporting application metrics to Amazon Managed Service for Prometheus",
+              "href": "application-metrics-prometheus.html"
+            }
+          ]
+        },
+        {
+          "title": "Logging Amazon ECS API calls with AWS CloudTrail",
+          "href": "logging-using-cloudtrail.html"
+        },
+        {
+          "title": "Compute Optimizer recommendations",
+          "href": "ecs-recommendations.html"
+        }
+      ]
+    },
+    {
+      "title": "Security",
+      "href": "security.html",
+      "contents": [
+        {
+          "title": "Identity and Access Management",
+          "href": "security-iam.html",
+          "contents": [
+            {
+              "title": "How Amazon Elastic Container Service works with IAM",
+              "href": "security_iam_service-with-iam.html"
+            },
+            {
+              "title": "Identity-based policy examples",
+              "href": "security_iam_id-based-policy-examples.html"
+            },
+            {
+              "title": "AWS managed policies for Amazon ECS",
+              "href": "security-iam-awsmanpol.html",
+              "contents": [
+                {
+                  "title": "AWS managed policies that are phased out for Amazon ECS",
+                  "href": "security-iam-awsmanpol-deprecated-policies.html"
+                },
+                {
+                  "title": "Migrating to AmazonECS_FullAccess",
+                  "href": "security-iam-awsmanpol-amazonecs-full-access-migration.html"
+                }
+              ]
+            },
+            {
+              "title": "Using service-linked roles",
+              "href": "using-service-linked-roles.html"
+            },
+            {
+              "title": "Task execution IAM role",
+              "href": "task_execution_IAM_role.html"
+            },
+            {
+              "title": "Task IAM role",
+              "href": "task-iam-roles.html"
+            },
+            {
+              "title": "Additional configuration for Windows task role",
+              "href": "windows_task_IAM_roles.html"
+            },
+            {
+              "title": "Container instance IAM role",
+              "href": "instance_IAM_role.html"
+            },
+            {
+              "title": "ECS Anywhere IAM role",
+              "href": "iam-role-ecsanywhere.html"
+            },
+            {
+              "title": "CodeDeploy IAM Role",
+              "href": "codedeploy_IAM_role.html"
+            },
+            {
+              "title": "CloudWatch Events IAM Role",
+              "href": "CWE_IAM_role.html"
+            },
+            {
+              "title": "Tag resources during creation",
+              "href": "supported-iam-actions-tagging.html",
+              "contents": [
+                {
+                  "title": "Control access to Amazon ECS resources using resource tags",
+                  "href": "control-access-with-tags.html"
+                },
+                {
+                  "title": "Example policies",
+                  "href": "iam-policies-ecs-console.html"
+                }
+              ]
+            },
+            {
+              "title": "Troubleshooting",
+              "href": "security_iam_troubleshoot.html"
+            }
+          ]
+        },
+        {
+          "title": "Logging and Monitoring",
+          "href": "ecs-logging-monitoring.html"
+        },
+        {
+          "title": "Compliance validation",
+          "href": "ecs-compliance.html"
+        },
+        {
+          "title": "AWS Fargate FIPS-140 compliance",
+          "href": "ecs-fips-compliance.html"
+        },
+        {
+          "title": "Infrastructure Security",
+          "href": "infrastructure-security.html",
+          "contents": [
+            {
+              "title": "Interface VPC endpoints (AWS PrivateLink)",
+              "href": "vpc-endpoints.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Working with other services",
+      "href": "ecs-integrations.html",
+      "contents": [
+        {
+          "title": "Using Amazon ECR with Amazon ECS",
+          "href": "ecr-repositories.html"
+        },
+        {
+          "title": "Creating Amazon ECS resources with AWS CloudFormation",
+          "href": "creating-resources-with-cloudformation.html"
+        },
+        {
+          "title": "Amazon Elastic Container Service on AWS Outposts",
+          "href": "ecs-on-outposts.html"
+        },
+        {
+          "title": "Use App Mesh with Amazon ECS",
+          "href": "gs-app-mesh.html"
+        },
+        {
+          "title": "AWS Deep Learning Containers on Amazon ECS",
+          "href": "deep-learning-containers.html"
+        }
+      ]
+    },
+    {
+      "title": "Tutorials",
+      "href": "ecs-tutorials.html",
+      "contents": [
+        {
+          "title": "Tutorial: Creating a VPC",
+          "href": "create-public-private-vpc.html"
+        },
+        {
+          "title": "Tutorial: Creating a cluster with a Fargate Linux task using the AWS CLI",
+          "href": "ECS_AWSCLI_Fargate.html"
+        },
+        {
+          "title": "Tutorial: Creating a cluster with a Fargate Windows task using the AWS CLI",
+          "href": "ECS_AWSCLI_Fargate_windows.html"
+        },
+        {
+          "title": "Tutorial: Creating a cluster with an EC2 task using the AWS CLI",
+          "href": "ECS_AWSCLI_EC2.html"
+        },
+        {
+          "title": "Tutorial: Using cluster auto scaling with the AWS Management Console and the Amazon ECS console",
+          "href": "tutorial-cluster-auto-scaling-console.html"
+        },
+        {
+          "title": "Tutorial: Specifying Sensitive Data Using Secrets Manager Secrets",
+          "href": "specifying-sensitive-data-tutorial.html"
+        },
+        {
+          "title": "Tutorial: Creating a service using Service Discovery",
+          "href": "create-service-discovery.html"
+        },
+        {
+          "title": "Tutorial: Creating a service using a blue/green deployment",
+          "href": "create-blue-green.html"
+        },
+        {
+          "title": "Tutorial: Listening for Amazon ECS CloudWatch Events",
+          "href": "ecs_cwet.html"
+        },
+        {
+          "title": "Tutorial: Sending Amazon Simple Notification Service alerts for task stopped events",
+          "href": "ecs_cwet2.html"
+        },
+        {
+          "title": "Tutorial: Using Amazon EFS",
+          "href": "tutorial-efs-volumes.html"
+        },
+        {
+          "title": "Tutorial: Using FSx for Windows File Server",
+          "href": "tutorial-wfsx-volumes.html"
+        },
+        {
+          "title": "Tutorial: Deploying Fluent Bit on Amazon ECS for Windows containers",
+          "href": "tutorial-deploy-fluentbit-on-windows.html"
+        }
+      ]
+    },
+    {
+      "title": "Troubleshooting",
+      "href": "troubleshooting.html",
+      "contents": [
+        {
+          "title": "Using Amazon ECS Exec for debugging",
+          "href": "ecs-exec.html"
+        },
+        {
+          "title": "Troubleshooting ECS Anywhere issues",
+          "href": "ecs-anywhere-troubleshooting.html"
+        },
+        {
+          "title": "Checking stopped tasks for errors",
+          "href": "stopped-task-errors.html"
+        },
+        {
+          "title": "CannotPullContainer task errors",
+          "href": "task_cannot_pull_image.html"
+        },
+        {
+          "title": "Service event messages",
+          "href": "service-event-messages.html"
+        },
+        {
+          "title": "Invalid CPU or memory value specified",
+          "href": "task-cpu-memory-error.html"
+        },
+        {
+          "title": "CannotCreateContainerError: API error (500): devmapper",
+          "href": "CannotCreateContainerError.html"
+        },
+        {
+          "title": "Troubleshooting service load balancers",
+          "href": "troubleshoot-service-load-balancers.html"
+        },
+        {
+          "title": "Troubleshooting service auto scaling",
+          "href": "troubleshoot-service-auto-scaling.html"
+        },
+        {
+          "title": "Using Docker debug output",
+          "href": "docker-debug-mode.html"
+        },
+        {
+          "title": "Amazon ECS Log File Locations",
+          "href": "logs.html"
+        },
+        {
+          "title": "Amazon ECS logs collector",
+          "href": "ecs-logs-collector.html"
+        },
+        {
+          "title": "Agent introspection diagnostics",
+          "href": "introspection-diag.html"
+        },
+        {
+          "title": "Docker diagnostics",
+          "href": "docker-diags.html"
+        },
+        {
+          "title": "AWS Fargate throttling quotas",
+          "href": "throttling.html"
+        },
+        {
+          "title": "API failure reasons",
+          "href": "api_failures_messages.html"
+        },
+        {
+          "title": "Troubleshooting IAM Roles for Tasks",
+          "href": "troubleshoot-task-iam-roles.html"
+        }
+      ]
+    },
+    {
+      "title": "Classic Amazon Elastic Container Service console",
+      "href": "classic-console.html",
+      "contents": [
+        {
+          "title": "Getting started using the classic console",
+          "href": "getting-started-console.html",
+          "contents": [
+            {
+              "title": "Using the classic console with Linux containers on AWS Fargate",
+              "href": "getting-started-fargate-classic-console.html"
+            },
+            {
+              "title": "Using the classic console with Windows containers on AWS Fargate",
+              "href": "Windows_fargate-getting_started-classic-console.html"
+            },
+            {
+              "title": "Using the classic console with Amazon EC2",
+              "href": "getting-started-ecs-ec2.html"
+            },
+            {
+              "title": "Using the classic console with Windows containers",
+              "href": "ECS_Windows_getting_started.html"
+            }
+          ]
+        },
+        {
+          "title": "Cluster management in the classic Amazon ECS console",
+          "href": "available-classic-console-cluster-actions.html",
+          "contents": [
+            {
+              "title": "Creating a cluster using the classic console",
+              "href": "create_cluster.html"
+            },
+            {
+              "title": "Creating an Auto Scaling group capacity provider using the classic console",
+              "href": "asg-capacity-providers-create-capacity-provider.html"
+            },
+            {
+              "title": "Updating an Auto Scaling group capacity provider using the classic console",
+              "href": "asg-capacity-providers-update-capacity-provider.html"
+            },
+            {
+              "title": "Creating a cluster with an Auto Scaling group capacity provider",
+              "href": "asg-capacity-providers-create-cluster.html"
+            },
+            {
+              "title": "Deleting an Auto Scaling group capacity provider using the classic console",
+              "href": "asg-capacity-providers-delete-capacity-provider.html"
+            },
+            {
+              "title": "Deleting a cluster using the classic console",
+              "href": "delete_cluster.html"
+            }
+          ]
+        },
+        {
+          "title": "Task definition management in the classic Amazon ECS console",
+          "href": "available-classic-console-task-definition-actions.html",
+          "contents": [
+            {
+              "title": "Creating a task definition using the classic console",
+              "href": "create-task-definition-classic.html"
+            },
+            {
+              "title": "Updating a task definition using the classic console",
+              "href": "update-task-definition.html"
+            },
+            {
+              "title": "Deregistering a task definition revision",
+              "href": "deregister-task-definition.html"
+            }
+          ]
+        },
+        {
+          "title": "Task management in the classic Amazon ECS console",
+          "href": "available-classic-console-task-actions.html",
+          "contents": [
+            {
+              "title": "Run a standalone task in the classic Amazon ECS console",
+              "href": "ecs_run_task.html"
+            }
+          ]
+        },
+        {
+          "title": "Service Management",
+          "href": "available-classic-console-service-actions.html",
+          "contents": [
+            {
+              "title": "Creating a service",
+              "href": "create-service.html",
+              "contents": [
+                {
+                  "title": "Creating a service using the classic Amazon ECS console",
+                  "href": "create-service-console-v1.html",
+                  "contents": [
+                    {
+                      "title": "Step 1: Configuring basic service parameters",
+                      "href": "basic-service-params.html"
+                    },
+                    {
+                      "title": "Step 2: Configure a network",
+                      "href": "service-configure-network.html"
+                    },
+                    {
+                      "title": "Step 3: Configuring your service to use a load balancer",
+                      "href": "service-create-loadbalancer.html",
+                      "contents": [
+                        {
+                          "title": "Configuring a load balancer for the rolling update deployment type",
+                          "href": "service-create-loadbalancer-rolling.html"
+                        },
+                        {
+                          "title": "Configuring a load balancer for the blue/green deployment type",
+                          "href": "service-create-loadbalancer-bluegreen.html"
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Step 4: Configuring your service to use Service Discovery",
+                      "href": "service-configure-servicediscovery.html"
+                    },
+                    {
+                      "title": "Step 5: Configuring your service to use Service Auto Scaling",
+                      "href": "service-configure-auto-scaling.html"
+                    },
+                    {
+                      "title": "Step 6: Review and create your service",
+                      "href": "create-service-review.html"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Updating a service using the classic console",
+              "href": "update-service.html"
+            },
+            {
+              "title": "Deleting a service using the classic console",
+              "href": "delete-service.html"
+            }
+          ]
+        },
+        {
+          "title": "Tag Management",
+          "href": "available-classic-console-tag-actions.html",
+          "contents": [
+            {
+              "title": "Adding and deleting tags on an individual resource using the classic console",
+              "href": "adding-or-deleting-tags-classic.html"
+            }
+          ]
+        },
+        {
+          "title": "Account setting Management",
+          "href": "available-classic-console-account-actions.html",
+          "contents": [
+            {
+              "title": "Modifying account settings using the classic console",
+              "href": "ecs-modifying-longer-id-settings-classic.html"
+            },
+            {
+              "title": "Viewing account settings using the classic console",
+              "href": "ecs-viewing-longer-id-settings-classic.html"
+            }
+          ]
+        },
+        {
+          "title": "Container instance management",
+          "href": "available-classic-console-instance-actions.html",
+          "contents": [
+            {
+              "title": "Connect to your container Windows instance using the classic console",
+              "href": "instance-windows-connect-classic-console.html"
+            },
+            {
+              "title": "Deregister a container instance",
+              "href": "deregister_container_instance_classic_console.html"
+            },
+            {
+              "title": "Registering an external instance to a cluster using the classic console",
+              "href": "ecs-anywhere-registration-classic-console.html"
+            },
+            {
+              "title": "Deregistering an external instance using the classic console",
+              "href": "ecs-anywhere-deregistration-classic-console.html"
+            }
+          ]
+        },
+        {
+          "title": "Container agent management",
+          "href": "available-classic-console-agent-actions.html",
+          "contents": [
+            {
+              "title": "Updating the Amazon ECS container agent with the classic console",
+              "href": "agent-update-classic-console.html"
+            }
+          ]
+        },
+        {
+          "title": "Montoring and troubleshooting",
+          "href": "available-classic-console-monitor-actions.html",
+          "contents": [
+            {
+              "title": "Viewing Cluster Metrics",
+              "href": "viewing_cluster_metrics_classic.html"
+            },
+            {
+              "title": "Viewing Service Metrics",
+              "href": "viewing_service_metrics_classic.html"
+            },
+            {
+              "title": "Checking stopped tasks for errors in the Amazon ECS classic console",
+              "href": "stopped-task-errors-classic-console.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Document history",
+      "href": "document_history.html"
+    },
+    {
+      "title": "AWS glossary",
+      "href": "glossary.html"
+    }
+  ]
+}
