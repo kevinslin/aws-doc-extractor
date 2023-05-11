@@ -25,6 +25,7 @@ export abstract class BaseTarget {
 
   async runBeforeAllWriteHook(opts: { vfiles: VFile[], metadata: TargetMetadata }) {
     fs.ensureDirSync(opts.metadata.destDir);
+    return opts.vfiles;
   }
   async runAfterAllWriteHook(opts: { vfiles: VFile[], metadata: TargetMetadata }) {
     return opts.vfiles;
@@ -33,10 +34,10 @@ export abstract class BaseTarget {
   async write(opts: { vfiles: VFile[], metadata: TargetMetadata }) {
     const metadata = opts.metadata
 
-    await this.runBeforeAllWriteHook(opts);
+    let vfilesIntermediate = await this.runBeforeAllWriteHook(opts);
 
     // render all files
-    let vfilesIntermediate = await Promise.all(opts.vfiles.map(vfile => {
+    vfilesIntermediate = await Promise.all(vfilesIntermediate.map(vfile => {
       return this.renderFile({ vfile, metadata })
     }))
     vfilesIntermediate = await Promise.all(

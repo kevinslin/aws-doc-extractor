@@ -5,8 +5,9 @@ import { AWSUtils } from "../utils/index.js";
 import fs from "fs-extra";
 import _debug from "debug";
 import path from "path";
+import _ from "lodash";
 
-const debug = _debug("MarkdownSingleFileTarget")
+const debug = _debug("MarkdownTarget")
 
 class NoOpRender {
   render(text: string) {
@@ -15,6 +16,16 @@ class NoOpRender {
 }
 
 const md = new NoOpRender();
+
+function section2Markdown(section: Section): string {
+  debug({ctx: "section2Markdown", section})
+  const out = [];
+  out.push(md.render('### ' + section.title + '\n'));
+  out.push(md.render('- ' + section.notes.join('\n- ')));
+  out.push(md.render('\n'));
+  const content = out.join("\n");
+  return content;
+}
 
 export class MarkdownSingleFileTarget extends BaseTarget {
 
@@ -28,7 +39,7 @@ export class MarkdownSingleFileTarget extends BaseTarget {
     let currentParentSection = '';
     const out = [];
     for (const vfile of opts.vfiles) {
-      const section = AWSUtils.getVFileData(vfile);
+      const section = AWSUtils.getSections(vfile)[0];
       if (section.parent.title !== currentParentSection) {
         out.push(md.render('## ' + section.parent.title + '\n'));
         currentParentSection = section.parent.title;
@@ -43,13 +54,8 @@ export class MarkdownSingleFileTarget extends BaseTarget {
   }
 
   renderFile(opts: { vfile: VFile, metadata: TargetMetadata }) {
-    const out = [];
-    const section = AWSUtils.getVFileData(opts.vfile);
-    out.push(md.render('### ' + section.title + '\n'));
-    out.push(md.render('- ' + section.notes.join('\n- ')));
-    out.push(md.render('\n'));
-    const content = out.join("\n");
-    opts.vfile.value = content;
+    const section = AWSUtils.getSections(opts.vfile)[0];
+    opts.vfile.value = section2Markdown(section);
     return opts.vfile
   }
 
@@ -58,13 +64,54 @@ export class MarkdownSingleFileTarget extends BaseTarget {
   }
 }
 
-// export class MarkdownDendronTarget extends BaseTarget {
-//   spec: { extension: string; } = {
-//     extension: "md"
-//   }
+export class MarkdownDendronFileTarget extends BaseTarget {
+  spec: { extension: string; } = {
+    extension: "md"
+  }
 
-//   renderFile(opts: { sections: Section[], metadata: TargetMetadata }) {
-//     const out:  = [];
-//     out.push(md.render('# ' + opts.metadata.title));
-//   }
-// }
+  /**
+   * Group files by parent title
+   */
+  async runBeforeAllWriteHook(opts: { vfiles: VFile[], metadata: TargetMetadata }) {
+    await super.runBeforeAllWriteHook(opts);
+    const groups = _.groupBy(opts.vfiles, (vfile) => {
+      const section = AWSUtils.getSections(vfile)[0];
+      return section.parent.title;
+    });
+
+    const prefix = _.kebabCase(opts.metadata.title);
+    // reduce to one file per parent
+    const vfiles = _.map(groups, (vfiles, parentTitle) => {
+      const basename = [prefix, _.kebabCase(parentTitle), this.spec.extension].join(".");
+      const fpath = path.join(opts.metadata.destDir, basename);
+      const vfile = new VFile({ path: fpath });
+      const sections: Section[] = vfiles.flatMap(vfile => {
+        return vfile.data.sections as Section[]
+      })
+      vfile.data = {
+        sections,
+        title: parentTitle
+      }
+      return vfile;
+    });
+    return vfiles;
+  }
+
+
+  renderFile(opts: { vfile: VFile, metadata: TargetMetadata }) {
+    const sections = AWSUtils.getSections(opts.vfile);
+    debug({ctx: "renderFile", title: opts.vfile.data.title})
+    const content = sections.map(section => section2Markdown(section)).join("\n");
+    opts.vfile.value = content;
+    return opts.vfile;
+  }
+
+  writeFile(opts: { vfile: VFile; metadata: TargetMetadata; }): VFile {
+    const {vfile, metadata} = opts;
+    const {title, sections} = AWSUtils.getData(vfile)
+    const destPath = path.join(metadata.destDir, vfile.basename!)
+    debug({ctx: "writeFile", title, destPath});
+    fs.writeFileSync(destPath, vfile.value);
+    return vfile
+  }
+}

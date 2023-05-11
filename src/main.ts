@@ -6,8 +6,10 @@ import { extractFromAWSDocs } from "./index.js";
 import _ from "lodash";
 import { ContentInner, Entities, ContentTopLevel, Content, TargetFormat, Section } from "./types/index.js";
 import { HTMLTarget } from "./targets/index.js";
-import { MarkdownSingleFileTarget } from "./targets/markdown.js";
+import { MarkdownDendronFileTarget, MarkdownSingleFileTarget } from "./targets/markdown.js";
 import { VFile } from "vfile";
+import _debug from "debug";
+const debug = _debug("main")
 
 // === Init
 
@@ -45,8 +47,7 @@ async function processMarkdownFiles(inputDir: string, outputDir: string) {
           console.error(`Error writing file ${outputFile}: ${err}`);
           return;
         }
-
-        console.log(`File written: ${outputFile}`);
+        debug({ctx: "processMarkdownFiles", outputFile});
       });
     }
   });
@@ -94,7 +95,7 @@ function filterSectionWithContent(data: ContentTopLevel[]): Section[] {
 
 function section2VFiles(sections: Section[]): VFile[] {
   return sections.map(s => {
-    return new VFile({data: s})
+    return new VFile({data: {sections: [s]}})
   })
 }
 
@@ -106,6 +107,8 @@ function renderFromJSON(opts: {data: ContentTopLevel[], serviceName: string, ren
   switch (opts.renderTargetFormat) {
     case TargetFormat["md.single-page"]:
       return new MarkdownSingleFileTarget().write({vfiles, metadata});
+    case TargetFormat["md.multi-page.dendron"]:
+      return new MarkdownDendronFileTarget().write({vfiles, metadata});
     case TargetFormat["html.single-page"]:
       return new HTMLTarget().write({vfiles, metadata});
     // case TargetFormat["md.multi-page"]:
@@ -126,7 +129,7 @@ async function main() {
   processMarkdownFiles(inputDir, buildDir);
 
 
-  console.log("pre:combining toc and notes")
+  debug("pre:combining toc and notes")
   const base = "/Users/kevinlin/code/proj.aws-docs/aws-doc-extractor"
   const fpath = path.join(base, "data/ecs-toc.json");
   const dataDir = path.join(base, "build/doc_source")
@@ -135,9 +138,9 @@ async function main() {
   await fs.writeJson(replaceEnd(fpath, ".json", "out.json"), toc);
 
   // const tocEnriched = fs.fs.readJsonSync('/Users/kevinlin/code/proj.aws-docs/aws-doc-extractor/data/ecs-tocout.json');
-  console.log("pre:render")
+  debug("pre:render")
   const serviceName = "ECS"
-  const renderTargetFormat = TargetFormat["md.single-page"]
+  const renderTargetFormat = TargetFormat["md.multi-page.dendron"]
   // const renderTargetFormat = TargetFormat["html.single-page"]
   const artifactDirPath = path.join(artifactDir, serviceName, renderTargetFormat)
 
