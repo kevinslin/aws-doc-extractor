@@ -1,6 +1,6 @@
 import MarkdownIt from "markdown-it";
-import { TargetMetadata, Section } from "../types";
-import { BaseTarget, Target } from "./base";
+import { TargetMetadata, Section } from "../types/index.js";
+import { BaseTarget, Target } from "./base.js";
 
 const md = new MarkdownIt();
 

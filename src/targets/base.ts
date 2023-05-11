@@ -1,6 +1,6 @@
 import fs from "fs-extra";
 import { VFile } from "vfile";
-import { Section, TargetMetadata } from "../types";
+import { Section, TargetMetadata } from "../types/index.js";
 
 export type TargetSpec = {
   extension: string
@@ -31,7 +31,6 @@ export abstract class BaseTarget {
   }
 
   async write(opts: { vfiles: VFile[], metadata: TargetMetadata }) {
-    const fname = opts.metadata.title + '.' + this.spec.extension;
     const metadata = opts.metadata
 
     await this.runBeforeAllWriteHook(opts);

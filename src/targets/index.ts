@@ -1,1 +1,1 @@
-export {HTMLTarget} from "./html"
+export {HTMLTarget} from "./html.js"

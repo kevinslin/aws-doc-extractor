@@ -2,12 +2,11 @@
 import fs from "fs-extra";
 import { glob } from 'glob';
 import path from 'path';
-import { extractFromAWSDocs } from ".";
-import { readJson, writeJson, pathExists } from "fs-extra";
+import { extractFromAWSDocs } from "./index.js";
 import _ from "lodash";
-import { ContentInner, Entities, ContentTopLevel, Content, TargetFormat, Section } from "./types";
-import { HTMLTarget } from "./targets";
-import { MarkdownTarget } from "./targets/markdown";
+import { ContentInner, Entities, ContentTopLevel, Content, TargetFormat, Section } from "./types/index.js";
+import { HTMLTarget } from "./targets/index.js";
+import { MarkdownTarget } from "./targets/markdown.js";
 import { VFile } from "vfile";
 
 // === Init
@@ -57,8 +56,8 @@ async function combineTocAndNotes(contents: ContentInner[], dataDir: string) {
   for (const c of contents) {
       const fname = c.href.replace(".html", ".md");
       const fpath = path.join(dataDir, fname);
-      if (await pathExists(fpath)) {
-          const out: Entities[] = await readJson(fpath);
+      if (await fs.pathExists(fpath)) {
+          const out: Entities[] = await fs.readJson(fpath);
           c.notes = out.map(e => e.content);
       }
       if (c.contents) {
@@ -71,7 +70,6 @@ function filterSectionWithContent(data: ContentTopLevel[]): Section[] {
   const sections: Section[] = [];
 
   for (const parentContent of data) {
-    console.log(`processing ${parentContent.title}`)
     if (!parentContent.contents) {
       continue
     }
@@ -132,11 +130,11 @@ async function main() {
   const base = "/Users/kevinlin/code/proj.aws-docs/aws-doc-extractor"
   const fpath = path.join(base, "data/ecs-toc.json");
   const dataDir = path.join(base, "build/doc_source")
-  const toc: Content = await readJson(fpath);
+  const toc: Content = await fs.readJson(fpath);
   await combineTocAndNotes(toc.contents, dataDir);
-  await writeJson(replaceEnd(fpath, ".json", "out.json"), toc);
+  await fs.writeJson(replaceEnd(fpath, ".json", "out.json"), toc);
 
-  // const tocEnriched = fs.readJSONSync('/Users/kevinlin/code/proj.aws-docs/aws-doc-extractor/data/ecs-tocout.json');
+  // const tocEnriched = fs.fs.readJsonSync('/Users/kevinlin/code/proj.aws-docs/aws-doc-extractor/data/ecs-tocout.json');
   console.log("pre:render")
   const serviceName = "ECS"
   const renderTargetFormat = TargetFormat["md.single-page"]

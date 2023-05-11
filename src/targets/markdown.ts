@@ -1,8 +1,12 @@
 import { VFile } from "vfile";
-import { TargetMetadata, Section } from "../types";
-import { BaseTarget } from "./base";
-import { AWSUtils } from "../utils";
+import { TargetMetadata, Section } from "../types/index.js";
+import { BaseTarget } from "./base.js";
+import { AWSUtils } from "../utils/index.js";
 import fs from "fs-extra";
+import _debug from "debug";
+import path from "path";
+
+const debug = _debug("MarkdownTarget")
 
 class NoOpRender {
   render(text: string) {
@@ -19,13 +23,16 @@ export class MarkdownTarget extends BaseTarget {
   }
 
   async runAfterAllWriteHook(opts: { vfiles: VFile[], metadata: TargetMetadata }) {
+    debug("runAfterAllWriteHook:enter")
+
     const out = [];
     for (const vfile of opts.vfiles) {
       out.push(vfile.value);
     }
     const content = out.join("\n");
-    const fname = opts.metadata.title + '.' + this.spec.extension;
-    await fs.writeFile(fname, content)
+    const basename = opts.metadata.title + '.' + this.spec.extension;
+    const fpath = path.join(opts.metadata.destDir, basename);
+    await fs.writeFile(fpath, content)
     return opts.vfiles;
   }
 

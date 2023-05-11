@@ -1,1 +1,1 @@
-export {AWSUtils} from "./aws"
+export {AWSUtils} from "./aws.js"
