@@ -1,5 +1,5 @@
 import MarkdownIt from "markdown-it";
-import { Metadata, Section } from "../types";
+import { TargetMetadata, Section } from "../types";
 import { BaseTarget, Target } from "./base";
 
 const md = new MarkdownIt();
@@ -9,7 +9,7 @@ export class HTMLTarget extends BaseTarget {
     extension: "html"
   };
 
-  render(opts: {sections: Section[], metadata: Metadata}) { 
+  renderFile(opts: {sections: Section[], metadata: TargetMetadata}) { 
     const out = [];
     out.push(md.render('# ' + opts.metadata.title));
     let currentParentSection = '';

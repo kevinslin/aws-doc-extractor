@@ -5,9 +5,10 @@ import path from 'path';
 import { extractFromAWSDocs } from ".";
 import { readJson, writeJson, pathExists } from "fs-extra";
 import _ from "lodash";
-import { ContentInner, Entities, ContentTopLevel, Content, TargetFormat } from "./types";
+import { ContentInner, Entities, ContentTopLevel, Content, TargetFormat, Section } from "./types";
 import { HTMLTarget } from "./targets";
 import { MarkdownTarget } from "./targets/markdown";
+import { VFile } from "vfile";
 
 // === Init
 
@@ -66,18 +67,8 @@ async function combineTocAndNotes(contents: ContentInner[], dataDir: string) {
   }
 }
 
-function filterSectionWithContent(data: ContentTopLevel[]): {
-  title: string;
-  href: string;
-  notes: string[];
-  parent: ContentInner;
-}[] {
-  const sections: {
-    title: string;
-    href: string;
-    notes: string[];
-    parent: ContentInner;
-  }[] = [];
+function filterSectionWithContent(data: ContentTopLevel[]): Section[] {
+  const sections: Section[] = [];
 
   for (const parentContent of data) {
     console.log(`processing ${parentContent.title}`)
@@ -103,13 +94,24 @@ function filterSectionWithContent(data: ContentTopLevel[]): {
 }
 
 
+function section2VFiles(sections: Section[]): VFile[] {
+  return sections.map(s => {
+    return new VFile({data: s})
+  })
+}
+
+
 function renderFromJSON(opts: {data: ContentTopLevel[], serviceName: string, renderTargetFormat: TargetFormat, destDir: string}) {
   const sections = filterSectionWithContent(opts.data);
+  const vfiles: VFile[] = section2VFiles(sections);
+  const metadata = {title: opts.serviceName, destDir: opts.destDir};
   switch (opts.renderTargetFormat) {
-    case TargetFormat["html.single-page"]:
-      return new HTMLTarget().write({sections, metadata: {title: opts.serviceName}, destDir: opts.destDir});
     case TargetFormat["md.single-page"]:
-      return new MarkdownTarget().write({sections, metadata: {title: opts.serviceName}, destDir: opts.destDir});
+      return new MarkdownTarget().write({vfiles, metadata});
+    case TargetFormat["html.single-page"]:
+      return new HTMLTarget().write({vfiles, metadata});
+    // case TargetFormat["md.multi-page"]:
+    //   return new MarkdownMultiPageTarget().write({sections, metadata: {title: opts.serviceName}, destDir: opts.destDir});
     default:
       throw new Error(`Unsupported render target format: ${opts.renderTargetFormat}`)
   }

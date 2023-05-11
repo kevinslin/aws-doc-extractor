@@ -39,8 +39,10 @@ export type Section ={
 export enum TargetFormat {
   "html.single-page" = "html.single-page",
   "md.single-page" = "md.single-page",
+  "md.multi-page" = "md.multi-page"
 }
 
-export type Metadata = {
+export type TargetMetadata = {
   title: string;
+  destDir: string
 }
