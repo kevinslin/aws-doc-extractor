@@ -6,7 +6,7 @@ import fs from "fs-extra";
 import _debug from "debug";
 import path from "path";
 
-const debug = _debug("MarkdownTarget")
+const debug = _debug("MarkdownSingleFileTarget")
 
 class NoOpRender {
   render(text: string) {
@@ -16,7 +16,7 @@ class NoOpRender {
 
 const md = new NoOpRender();
 
-export class MarkdownTarget extends BaseTarget {
+export class MarkdownSingleFileTarget extends BaseTarget {
 
   spec: { extension: string; } = {
     extension: "md"
@@ -25,8 +25,14 @@ export class MarkdownTarget extends BaseTarget {
   async runAfterAllWriteHook(opts: { vfiles: VFile[], metadata: TargetMetadata }) {
     debug("runAfterAllWriteHook:enter")
 
+    let currentParentSection = '';
     const out = [];
     for (const vfile of opts.vfiles) {
+      const section = AWSUtils.getVFileData(vfile);
+      if (section.parent.title !== currentParentSection) {
+        out.push(md.render('## ' + section.parent.title + '\n'));
+        currentParentSection = section.parent.title;
+      }
       out.push(vfile.value);
     }
     const content = out.join("\n");
@@ -38,15 +44,7 @@ export class MarkdownTarget extends BaseTarget {
 
   renderFile(opts: { vfile: VFile, metadata: TargetMetadata }) {
     const out = [];
-    out.push(md.render('# ' + opts.metadata.title));
-    let currentParentSection = '';
     const section = AWSUtils.getVFileData(opts.vfile);
-
-    if (section.parent.title !== currentParentSection) {
-      out.push(md.render('## ' + section.parent.title + '\n'));
-      currentParentSection = section.parent.title;
-    }
-
     out.push(md.render('### ' + section.title + '\n'));
     out.push(md.render('- ' + section.notes.join('\n- ')));
     out.push(md.render('\n'));

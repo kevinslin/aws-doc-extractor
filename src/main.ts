@@ -6,7 +6,7 @@ import { extractFromAWSDocs } from "./index.js";
 import _ from "lodash";
 import { ContentInner, Entities, ContentTopLevel, Content, TargetFormat, Section } from "./types/index.js";
 import { HTMLTarget } from "./targets/index.js";
-import { MarkdownTarget } from "./targets/markdown.js";
+import { MarkdownSingleFileTarget } from "./targets/markdown.js";
 import { VFile } from "vfile";
 
 // === Init
@@ -105,7 +105,7 @@ function renderFromJSON(opts: {data: ContentTopLevel[], serviceName: string, ren
   const metadata = {title: opts.serviceName, destDir: opts.destDir};
   switch (opts.renderTargetFormat) {
     case TargetFormat["md.single-page"]:
-      return new MarkdownTarget().write({vfiles, metadata});
+      return new MarkdownSingleFileTarget().write({vfiles, metadata});
     case TargetFormat["html.single-page"]:
       return new HTMLTarget().write({vfiles, metadata});
     // case TargetFormat["md.multi-page"]:
