@@ -20,12 +20,13 @@ export class MarkdownTarget extends BaseTarget {
     let currentParentSection = '';
     for (const section of opts.sections) {
       if (section.parent.title !== currentParentSection) {
-        out.push(md.render('## ' + section.parent.title));
+        out.push(md.render('## ' + section.parent.title + '\n'));
         currentParentSection = section.parent.title;
       }
   
-      out.push(md.render('### ' + section.title));
+      out.push(md.render('### ' + section.title + '\n'));
       out.push(md.render('- ' + section.notes.join('\n- ')));
+      out.push(md.render('\n'));
     }
     return out.join("\n");
   }
