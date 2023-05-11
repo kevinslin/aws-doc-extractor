@@ -5,41 +5,9 @@ import path from 'path';
 import { extractFromAWSDocs } from ".";
 import { readJson, writeJson, pathExists } from "fs-extra";
 import _ from "lodash";
-import MarkdownIt from "markdown-it";
+import { ContentInner, Entities, ContentTopLevel, Content, TargetFormat } from "./types";
+import { HTMLTarget } from "./targets";
 
-/**
- * contents:
- *   - title:         # ContentTopLevel
- *     href:
- *     contents:      
- *        - title:    # ContentInner
- *          href:
- *          contents:  
- */
-
-type Content = ContentInner & {
-  contents: ContentTopLevel[];
-};
-type ContentTopLevel = {
-  title: string;
-  href: string;
-  contents?: ContentInner[]
-}
-type ContentInner = {
-  title: string;
-  href: string;
-  notes?: string[];
-  contents?: ContentInner[]
-};
-
-type Entities = {
-  map: any;
-  content: string;
-};
-
-// Init
-
-const md = new MarkdownIt();
 
 // === Utils
 
@@ -132,25 +100,17 @@ function filterSectionWithContent(data: ContentTopLevel[]): {
   return sections;
 }
 
-function renderFromJSON(data: ContentTopLevel[], serviceName: string) {
-  const out: string[] = [];
-  const sections = filterSectionWithContent(data);
 
-  out.push(md.render('# ' + serviceName));
-
-  let currentParentSection = '';
-
-  for (const section of sections) {
-    if (section.parent.title !== currentParentSection) {
-      out.push(md.render('## ' + section.parent.title));
-      currentParentSection = section.parent.title;
-    }
-
-    out.push(md.render('### ' + section.title));
-    out.push(md.render('- ' + section.notes.join('\n- ')));
+function renderFromJSON(opts: {data: ContentTopLevel[], serviceName: string, renderTargetFormat: TargetFormat}): string {
+  const sections = filterSectionWithContent(opts.data);
+  switch (opts.renderTargetFormat) {
+    case TargetFormat["html.single-page"]:
+      return new HTMLTarget().render({sections, metadata: {title: opts.serviceName}});
+    case TargetFormat["md.single-page"]:
+      throw new Error(`Unsupported render target format: ${opts.renderTargetFormat}`)
+    default:
+      throw new Error(`Unsupported render target format: ${opts.renderTargetFormat}`)
   }
-
-  return out;
 }
 
 
@@ -176,10 +136,15 @@ async function main() {
   console.log("pre:render")
   const serviceName = "ECS"
   const renderTargetFormat = "md.single-page"
-  const out = renderFromJSON(toc.contents, serviceName);
+  const out = renderFromJSON(
+    {
+      data: toc.contents,
+      renderTargetFormat: TargetFormat["html.single-page"],
+      serviceName
+    });
   const artifactDirPath = path.join(artifactDir, serviceName, renderTargetFormat)
   fs.ensureDirSync(artifactDirPath);
-  fs.writeFileSync(path.join(artifactDirPath, serviceName + ".md"), out.join("\n\n"))
+  fs.writeFileSync(path.join(artifactDirPath, serviceName + ".md"), out)
   console.log("done")
 }
 
