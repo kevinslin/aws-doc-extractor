@@ -7,10 +7,12 @@
     "@types/fs-extra": "^11.0.1",
     "fs-extra": "^11.1.1",
     "glob": "^10.2.2",
+    "lodash": "^4.17.21",
     "markdown-it": "^13.0.1"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",
+    "@types/lodash": "^4.14.194",
     "@types/markdown-it": "^12.2.3",
     "@types/node": "^20.1.0",
     "jest": "^29.5.0",

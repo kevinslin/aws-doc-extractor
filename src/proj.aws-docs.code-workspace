@@ -4,6 +4,9 @@
 			"path": "../.."
 		},
 		{
+			"path": "jsonhero-web"
+		},
+		{
 			"path": ".."
 		}
 	],
