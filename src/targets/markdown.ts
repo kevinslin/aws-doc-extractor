@@ -1,13 +1,18 @@
-import MarkdownIt from "markdown-it";
 import { Metadata, Section } from "../types";
-import { BaseTarget, Target } from "./base";
+import { BaseTarget } from "./base";
 
-const md = new MarkdownIt();
+class NoOpRender {
+  render(text: string) {
+    return text;
+  }
+}
 
-export class HTMLTarget extends BaseTarget {
-  spec = {
-    extension: "html"
-  };
+const md = new NoOpRender();
+
+export class MarkdownTarget extends BaseTarget {
+  spec: { extension: string; } = {
+    extension: "md"
+  }
 
   render(opts: {sections: Section[], metadata: Metadata}) { 
     const out = [];

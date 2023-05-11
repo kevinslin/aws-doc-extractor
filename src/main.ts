@@ -7,7 +7,9 @@ import { readJson, writeJson, pathExists } from "fs-extra";
 import _ from "lodash";
 import { ContentInner, Entities, ContentTopLevel, Content, TargetFormat } from "./types";
 import { HTMLTarget } from "./targets";
+import { MarkdownTarget } from "./targets/markdown";
 
+// === Init
 
 // === Utils
 
@@ -101,13 +103,13 @@ function filterSectionWithContent(data: ContentTopLevel[]): {
 }
 
 
-function renderFromJSON(opts: {data: ContentTopLevel[], serviceName: string, renderTargetFormat: TargetFormat}): string {
+function renderFromJSON(opts: {data: ContentTopLevel[], serviceName: string, renderTargetFormat: TargetFormat, destDir: string}) {
   const sections = filterSectionWithContent(opts.data);
   switch (opts.renderTargetFormat) {
     case TargetFormat["html.single-page"]:
-      return new HTMLTarget().render({sections, metadata: {title: opts.serviceName}});
+      return new HTMLTarget().write({sections, metadata: {title: opts.serviceName}, destDir: opts.destDir});
     case TargetFormat["md.single-page"]:
-      throw new Error(`Unsupported render target format: ${opts.renderTargetFormat}`)
+      return new MarkdownTarget().write({sections, metadata: {title: opts.serviceName}, destDir: opts.destDir});
     default:
       throw new Error(`Unsupported render target format: ${opts.renderTargetFormat}`)
   }
@@ -135,16 +137,17 @@ async function main() {
   // const tocEnriched = fs.readJSONSync('/Users/kevinlin/code/proj.aws-docs/aws-doc-extractor/data/ecs-tocout.json');
   console.log("pre:render")
   const serviceName = "ECS"
-  const renderTargetFormat = "md.single-page"
-  const out = renderFromJSON(
+  const renderTargetFormat = TargetFormat["md.single-page"]
+  // const renderTargetFormat = TargetFormat["html.single-page"]
+  const artifactDirPath = path.join(artifactDir, serviceName, renderTargetFormat)
+
+  const out = await renderFromJSON(
     {
       data: toc.contents,
-      renderTargetFormat: TargetFormat["html.single-page"],
-      serviceName
+      renderTargetFormat,
+      serviceName,
+      destDir: artifactDirPath
     });
-  const artifactDirPath = path.join(artifactDir, serviceName, renderTargetFormat)
-  fs.ensureDirSync(artifactDirPath);
-  fs.writeFileSync(path.join(artifactDirPath, serviceName + ".md"), out)
   console.log("done")
 }
 

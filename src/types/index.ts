@@ -37,8 +37,8 @@ export type Section ={
 
 
 export enum TargetFormat {
-  "html.single-page",
-  "md.single-page",
+  "html.single-page" = "html.single-page",
+  "md.single-page" = "md.single-page",
 }
 
 export type Metadata = {
