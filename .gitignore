@@ -2,3 +2,6 @@ node_modules
 *.js
 !jest.config.js
 build
+build-*
+.gitignore
+data/ecs-tocout.json

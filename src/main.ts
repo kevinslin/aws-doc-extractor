@@ -12,6 +12,7 @@ type ContentInner = {
   title: string;
   href: string;
   notes?: string[];
+  contents?: ContentInner[]
 };
 
 type Entities = {
@@ -60,7 +61,7 @@ async function processMarkdownFiles(inputDir: string, outputDir: string) {
   });
 }
 
-async function combineTocAndNotes(contents: Content[], dataDir: string) {
+async function combineTocAndNotes(contents: ContentInner[], dataDir: string) {
   for (const c of contents) {
       const fname = c.href.replace(".html", ".md");
       const fpath = path.join(dataDir, fname);
@@ -76,18 +77,20 @@ async function combineTocAndNotes(contents: Content[], dataDir: string) {
 
 // ===
 async function main() {
-  // const inputDir = "/Users/kevinlin/code/proj.aws-docs/semantic-search-aws-docs/amazon-ecs-developer-guide"
-  // const outputDir = "/Users/kevinlin/code/proj.aws-docs/aws-doc-extractor/build"
-  // processMarkdownFiles(inputDir, outputDir);
-  console.log("start")
+  console.log("pre:parsing aws docs")
+  const inputDir = "/Users/kevinlin/code/proj.aws-docs/semantic-search-aws-docs/amazon-ecs-developer-guide"
+  const outputDir = "/Users/kevinlin/code/proj.aws-docs/aws-doc-extractor/build"
+  processMarkdownFiles(inputDir, outputDir);
 
+
+  console.log("pre:combining toc and notes")
   const base = "/Users/kevinlin/code/proj.aws-docs/aws-doc-extractor"
-
   const fpath = path.join(base, "data/ecs-toc.json");
   const dataDir = path.join(base, "build/doc_source")
   const toc: { contents: Content[] } = await readJson(fpath);
   await combineTocAndNotes(toc.contents, dataDir);
   await writeJson(replaceEnd(fpath, ".json", "out.json"), toc);
+  console.log("done")
 }
 
 

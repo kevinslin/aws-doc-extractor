@@ -6,6 +6,7 @@ interface Entity {
   map: [number, number]
   content: string;
   header: string;
+  admonition: string;
 }
 
 interface Position {
@@ -28,11 +29,10 @@ export function extractFromAWSDocs(fpath: string): Entity[] {
   const entities: Entity[] = [];
 
   let currentHeader = '';
+  const admonitionValues = ['Tip', 'Considerations', 'Important', 'Note']
 
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i];
-    debugger;
-
     if (token.type === 'heading_open') {
       currentHeader = tokens[i + 1].content;
     } else if (
@@ -42,27 +42,14 @@ export function extractFromAWSDocs(fpath: string): Entity[] {
       token.children[0].type === 'text' &&
       token.children[1].type === 'strong_open' &&
       token.children[2].type === 'text' &&
-      token.children[2].content === 'Note' &&
+      admonitionValues.includes(token.children[2].content) &&
       token.children[3].type === 'strong_close'
     ) {
-
+      const admonitionTitle = token.children[2].content;
       const contentToken = tokens[i];
       if (!contentToken || !contentToken.map) {
         continue
       }
-      // const position: Position = {
-      //   start: {
-      //     line: contentToken.map[0],
-      //     column: 0,
-      //     // offset: contentToken.pos,
-      //   },
-      //   end: {
-      //     line: contentToken.map[1],
-      //     column: 0,
-      //     // offset: contentToken.pos + contentToken.content.length,
-      //   },
-      //   indent: token.level,
-      // };
 
       let content = contentToken.content.trim();
 
@@ -86,6 +73,7 @@ export function extractFromAWSDocs(fpath: string): Entity[] {
         map: contentToken.map,
         content,
         header: currentHeader,
+        admonition: admonitionTitle
       });
     }
   }
