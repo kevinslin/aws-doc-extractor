@@ -8,6 +8,7 @@
     "debug": "^4.3.4",
     "fs-extra": "^11.1.1",
     "glob": "^10.2.2",
+    "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
     "vfile": "^5.3.7"

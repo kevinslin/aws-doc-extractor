@@ -1,13 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "../.."
+			"path": "aws-doc-extractor"
 		},
 		{
-			"path": "jsonhero-web"
-		},
-		{
-			"path": ".."
+			"path": "aws-reference-notes"
 		}
 	],
 	"settings": {}

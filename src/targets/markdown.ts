@@ -6,6 +6,7 @@ import fs from "fs-extra";
 import _debug from "debug";
 import path from "path";
 import _ from "lodash";
+import matter from "gray-matter";
 
 const debug = _debug("MarkdownTarget")
 
@@ -20,7 +21,7 @@ const md = new NoOpRender();
 function section2Markdown(section: Section): string {
   debug({ctx: "section2Markdown", section})
   const out = [];
-  out.push(md.render('### ' + section.title + '\n'));
+  out.push(md.render('## ' + section.title + '\n'));
   out.push(md.render('- ' + section.notes.join('\n- ')));
   out.push(md.render('\n'));
   const content = out.join("\n");
@@ -100,9 +101,15 @@ export class MarkdownDendronFileTarget extends BaseTarget {
 
   renderFile(opts: { vfile: VFile, metadata: TargetMetadata }) {
     const sections = AWSUtils.getSections(opts.vfile);
-    debug({ctx: "renderFile", title: opts.vfile.data.title})
+    const title = opts.vfile.data.title;
+    debug({ctx: "renderFile", title})
     const content = sections.map(section => section2Markdown(section)).join("\n");
-    opts.vfile.value = content;
+    // TODO: dummy date
+    const time = 1683841041000;
+    opts.vfile.value = matter.stringify(
+      // title
+      "# " + title + "\n" + content, 
+      {id: title, title, created: time, updated: time});
     return opts.vfile;
   }
 
