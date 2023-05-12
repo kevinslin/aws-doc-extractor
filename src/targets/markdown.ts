@@ -115,7 +115,7 @@ export class MarkdownDendronFileTarget extends BaseTarget {
 
   writeFile(opts: { vfile: VFile; metadata: TargetMetadata; }): VFile {
     const {vfile, metadata} = opts;
-    const {title, sections} = AWSUtils.getData(vfile)
+    const {title } = AWSUtils.getData(vfile)
     const destPath = path.join(metadata.destDir, vfile.basename!)
     debug({ctx: "writeFile", title, destPath});
     fs.writeFileSync(destPath, vfile.value);
