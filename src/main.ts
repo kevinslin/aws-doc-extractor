@@ -103,7 +103,7 @@ function section2VFiles(sections: Section[]): VFile[] {
 function renderFromJSON(opts: {data: ContentTopLevel[], serviceName: string, renderTargetFormat: TargetFormat, destDir: string}) {
   const sections = filterSectionWithContent(opts.data);
   const vfiles: VFile[] = section2VFiles(sections);
-  const metadata = {title: opts.serviceName, destDir: opts.destDir};
+  const metadata = {title: opts.serviceName, destDir: opts.destDir, serviceName: opts.serviceName};
   switch (opts.renderTargetFormat) {
     case TargetFormat["md.single-page"]:
       return new MarkdownSingleFileTarget().write({vfiles, metadata});

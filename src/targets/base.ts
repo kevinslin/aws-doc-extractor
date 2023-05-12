@@ -45,7 +45,7 @@ export abstract class BaseTarget {
         return this.writeFile({ vfile, metadata })
       }))
 
-    vfilesIntermediate = await this.runAfterAllWriteHook({ vfiles: opts.vfiles, metadata })
+    vfilesIntermediate = await this.runAfterAllWriteHook({ vfiles: vfilesIntermediate, metadata })
     return vfilesIntermediate;
   }
 }

@@ -1,3 +1,5 @@
+
+// --- AWS Content
 /**
  * contents:
  *   - title:         # ContentTopLevel
@@ -36,6 +38,7 @@ export type Section ={
 };
 
 
+// --- Extractor Formats
 export enum TargetFormat {
   "html.single-page" = "html.single-page",
   "md.single-page" = "md.single-page",
@@ -43,6 +46,18 @@ export enum TargetFormat {
 }
 
 export type TargetMetadata = {
+  /**
+   * @deprecated: replace with serviceName
+   */
   title: string;
+
   destDir: string
+  serviceName: string
 }
+
+// --- Content on Page
+export type Link = {
+  title: string;
+  url: string;
+  category: string;
+};

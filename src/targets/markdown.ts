@@ -1,5 +1,5 @@
 import { VFile } from "vfile";
-import { TargetMetadata, Section } from "../types/index.js";
+import { TargetMetadata, Section, Link } from "../types/index.js";
 import { BaseTarget } from "./base.js";
 import { AWSUtils } from "../utils/index.js";
 import fs from "fs-extra";
@@ -7,6 +7,8 @@ import _debug from "debug";
 import path from "path";
 import _ from "lodash";
 import matter from "gray-matter";
+import { getLinkMetadata } from "../utils/links.js";
+import { Categories } from "../constants/index.js";
 
 const debug = _debug("MarkdownTarget")
 
@@ -97,6 +99,42 @@ export class MarkdownDendronFileTarget extends BaseTarget {
     });
     return vfiles;
   }
+
+  async runAfterAllWriteHook(opts: { vfiles: VFile[]; metadata: TargetMetadata }) {
+    const { vfiles, metadata } = opts;
+    const { destDir, serviceName } = metadata;
+    const linkMetaMap: { [key: string]: Link[] } = {};
+    debug({ctx: "runAfterAllWriteHook:enter", vfiles: vfiles.length})
+
+    vfiles.forEach((vfile) => {
+        debug({ctx: "runAfterAllWriteHook", vfile: vfile.toString()})
+        const linkMeta = getLinkMetadata({ baseDir: destDir, vfile, service: serviceName });
+        if (!linkMetaMap[linkMeta.category]) {
+            linkMetaMap[linkMeta.category] = [];
+        }
+        linkMetaMap[linkMeta.category].push(linkMeta);
+    });
+
+    const sc: string[] = [];
+    const spacePaddingPerTab = 2;
+
+    for (const category of Object.values(Categories)) {
+        // header section
+        sc.push(`${" ".repeat((spacePaddingPerTab + 2) * 2)}## ${category}`);
+
+        linkMetaMap[category]?.forEach((link) => {
+            const { url, title } = link;
+            const formattedLink = `[${title}](${url})`;
+            sc.push(`${" ".repeat((spacePaddingPerTab + 4) * 2)}- ${formattedLink}`);
+        });
+    }
+
+    const content = sc.join("\n");
+    const fpath = path.join(destDir, `SUMMARY.${serviceName}.md`);
+    fs.writeFileSync(fpath, content);
+    return vfiles;
+  }
+
 
 
   renderFile(opts: { vfile: VFile, metadata: TargetMetadata }) {
