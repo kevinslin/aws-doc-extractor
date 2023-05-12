@@ -20,18 +20,21 @@ export function matchCategory(opts: { link: string; category: CategoryMap }): st
 
 export function getCategoryForLink(opts: { link: string; service: string }) {
   const commonCategories: CategoryMap = {
-      Dev: ["Getting started", "Tutorials"],
-      Common: ["Resources and tags", "Monitoring", "Working with other services", "Troubleshooting"],
+      Dev: ["getting started", "tutorials"],
+      Common: ["resources and tags", "monitoring", "working with other services", "troubleshooting"],
   };
   const serviceCategories: Record<string,CategoryMap> = {
       ecs: {
-          Dev: ["Developer tools overview", "Account settings"],
+          Dev: ["developer tools overview", "account settings"],
       },
   };
 
-  let category = matchCategory({ link: opts.link, category: _.get(serviceCategories, opts.service.toLowerCase(), {}) });
+  const link = opts.link.toLowerCase();
+
+  debugger;
+  let category = matchCategory({ link, category: _.get(serviceCategories, opts.service.toLowerCase(), {}) });
   if (!category) {
-      category = matchCategory({ link: opts.link, category: commonCategories });
+      category = matchCategory({ link, category: commonCategories });
   }
   if (!category) {
       category = "Topics";
@@ -41,11 +44,11 @@ export function getCategoryForLink(opts: { link: string; service: string }) {
 
 export function getLinkMetadata(opts: { baseDir: string; vfile: VFile; service: string }): Link {
   const { baseDir, vfile, service } = opts;
-  const url = path.join(baseDir, vfile.basename!);
+  const url = path.join(vfile.basename!);
   const {title} = AWSUtils.getData(vfile)
   return {
       title,
       url,
-      category: getCategoryForLink({ link: url, service }),
+      category: getCategoryForLink({ link: title, service }),
   };
 }
