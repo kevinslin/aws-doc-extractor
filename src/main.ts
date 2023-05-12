@@ -118,12 +118,36 @@ function renderFromJSON(opts: {data: ContentTopLevel[], serviceName: string, ren
   }
 }
 
+function generateSiteToc(opts: { prefix: string; services: AWSService[]; artifactDirForServiceAndTargetFormat: string }) {
+  const { prefix, services, artifactDirForServiceAndTargetFormat } = opts;
+  const out: string[] = [];
+  out.push(prefix);
+
+  services.forEach((service) => {
+      const { name } = service;
+      const summaryPath = path.join(artifactDirForServiceAndTargetFormat, `SUMMARY.${name}.md`);
+      const contents = fs.readFileSync(summaryPath, "utf-8");
+      out.push(`- ${name}\n${contents}`);
+      fs.removeSync(summaryPath);
+  });
+  return out.join("\n");
+}
+
 
 // ===
+type AWSService = {
+  name: string
+}
+
 async function main() {
   const inputDir = "/Users/kevinlin/code/proj.aws-docs/semantic-search-aws-docs/amazon-ecs-developer-guide"
   const buildDir = "/Users/kevinlin/code/proj.aws-docs/aws-doc-extractor/build"
   const artifactDir = path.join(buildDir, "artifacts");
+  const services: AWSService[] = [{
+    name: "ECS",
+  }]
+
+  const foo = [].forEach(s=> "")
 
   console.log("pre:parsing aws docs")
   processMarkdownFiles(inputDir, buildDir);
@@ -142,16 +166,25 @@ async function main() {
   const serviceName = "ECS"
   const renderTargetFormat = TargetFormat["md.multi-page.dendron"]
   // const renderTargetFormat = TargetFormat["html.single-page"]
-  const artifactDirPath = path.join(artifactDir, serviceName, renderTargetFormat)
+  const artifactDirForServiceAndTargetFormat = path.join(artifactDir, serviceName, renderTargetFormat)
 
   const out = await renderFromJSON(
     {
       data: toc.contents,
       renderTargetFormat,
       serviceName,
-      destDir: artifactDirPath
+      destDir: artifactDirForServiceAndTargetFormat
     });
+
+  const prefix = `## About
+- [README](./../README.md)
+
+## Services
+`;
+  const tocContents = generateSiteToc({artifactDirForServiceAndTargetFormat, prefix, services});
+  fs.writeFileSync(path.join(artifactDirForServiceAndTargetFormat, "SUMMARY.md"), tocContents);
   console.log("done")
+
 }
 
 

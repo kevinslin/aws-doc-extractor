@@ -117,18 +117,19 @@ export class MarkdownDendronFileTarget extends BaseTarget {
 
     const sc: string[] = [];
     const spacePaddingPerTab = 2;
+    const basePadding = 0
 
     for (const category of Object.values(Categories)) {
         // header section
-        sc.push(`${" ".repeat(spacePaddingPerTab * 2)}- ${category}`);
+        sc.push(`${" ".repeat(spacePaddingPerTab * (basePadding + 1))}- ${category}`);
 
         linkMetaMap[category]?.forEach((link) => {
             const { url, title } = link;
             // TODO: should make this part of dendron-api instead
             const[first, rest] = url.split(".")
-            const awsUrl = `./services/${first.toLowerCase()}/${rest}`
+            const awsUrl = `./${first.toLowerCase()}/${rest}`
             const formattedLink = `[${title}](${awsUrl}.md)`;
-            sc.push(`${" ".repeat(spacePaddingPerTab * 3)}- ${formattedLink}`);
+            sc.push(`${" ".repeat(spacePaddingPerTab * (basePadding + 2))}- ${formattedLink}`);
         });
     }
 
