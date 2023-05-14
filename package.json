@@ -26,7 +26,7 @@
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "start": "env DEBUG=* node src/main2.js",
+    "start": "env DEBUG=* node src/main.js",
     "start:debug": "env DEBUG=* node --inspect src/main.js",
     "test": "npx jest",
     "watch": "tsc --watch"
