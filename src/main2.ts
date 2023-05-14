@@ -14,9 +14,11 @@ const debug = _debug("main")
 
 async function isGitRepo(path: string): Promise<boolean> {
   try {
-    const out = await git.resolveRef({ fs, dir: path, ref: 'HEAD' });
+    const out = await git.resolveRef({ fs: fsNode, dir: path, ref: 'HEAD' });
+    debugger;
     return true;
   } catch (error) {
+    debugger;
     return false;
   }
 }
@@ -59,9 +61,13 @@ async function upsertDevGuide(opts: { service: string, basedir: string }) {
   } else {
     debug({ctx, service: opts.service, msg: "repo found, pulling"})
     await git.pull({
-      fs,
+      fs: fsNode,
       dir: guidePath,
-      http
+      http,
+      author: {
+        name: 'DendronBot',
+        email: 'support@dendron.so',
+      }
     });
   }
 }
