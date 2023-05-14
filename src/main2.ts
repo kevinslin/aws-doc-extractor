@@ -9,6 +9,8 @@ import * as url from 'url';
 import { AWSUtils } from './utils/aws.js';
 import { TargetFormat } from './types/index.js';
 import { extractNotesFromService } from './main.js';
+import { ServiceNames } from './constants/aws.js';
+import _ from 'lodash';
 const debug = _debug("main")
 
 type AWSService = {
@@ -26,6 +28,7 @@ async function isGitRepo(path: string): Promise<boolean> {
   }
 }
 
+// --- Main
 function generateSiteToc(opts: { prefix: string; services: string[]; basedir: string, renderTargetFormat: TargetFormat }) {
   const { prefix, services } = opts;
   const out: string[] = [];
@@ -36,14 +39,14 @@ function generateSiteToc(opts: { prefix: string; services: string[]; basedir: st
       AWSUtils.getArtifactPathForService(service, opts.renderTargetFormat));
     const summaryPath = path.join(artifactDirForServiceAndTargetFormat, `SUMMARY.${service}.md`);
     const contents = fs.readFileSync(summaryPath, "utf-8");
-    out.push(`- ${service}\n${contents}`);
+    const serviceName = _.get(ServiceNames, service, service)
+    out.push(`- ${serviceName}\n${contents}`);
     fs.removeSync(summaryPath);
   });
   return out.join("\n");
 }
 
 
-// ===
 async function main(opts: { services: string[] }) {
   debug("start...")
   const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
@@ -115,6 +118,7 @@ async function upsertToc(opts: { service: string, basedir: string }) {
   }
 }
 
-// const services = ["AMAZON_ECS", "AMAZON_EC2"]
-const services = ["AMAZON_EC2"]
+const services = ["AMAZON_ECS", "AMAZON_EC2"]
+// const services = ["AMAZON_EC2"]
+// const services = ["AMAZON_ECS"]
 main({ services })

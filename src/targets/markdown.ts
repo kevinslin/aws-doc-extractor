@@ -82,7 +82,7 @@ export class MarkdownDendronFileTarget extends BaseTarget {
       return section.parent.title;
     });
     const simpleKebab = (astring: string) => {
-      return _.replace(astring, ' ', '-').toLowerCase();
+      return astring.replace(/ /g, '-').toLowerCase();
     }
 
     const prefix = simpleKebab(opts.metadata.title);
