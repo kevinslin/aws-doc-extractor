@@ -12,7 +12,9 @@
     "isomorphic-git": "^1.23.0",
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
-    "vfile": "^5.3.7"
+    "vfile": "^5.3.7",
+    "zod": "^3.21.4",
+    "zx": "^7.2.2"
   },
   "devDependencies": {
     "@types/debug": "^4.1.7",
@@ -28,6 +30,7 @@
   "scripts": {
     "start": "env DEBUG=* node src/main.js",
     "start:debug": "env DEBUG=* node --inspect src/main.js",
+    "cli": "env DEBUG=* node src/cli.js",
     "test": "npx jest",
     "watch": "tsc --watch"
   }
