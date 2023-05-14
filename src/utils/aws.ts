@@ -16,7 +16,8 @@ export class AWSUtils {
     const serviceNameNoSpaces = _.get(ServiceNames, service).replace(' ', '');
     const getDocTypeURLForService = (service: string) => {
       const wholeUrlOverrides = {
-        AMAZON_EC2: "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/toc-contents.json"
+        AMAZON_EC2: "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/toc-contents.json",
+        AWS_LAMBDA: "https://docs.aws.amazon.com/lambda/latest/dg/toc-contents.json"
       }
       if (service in wholeUrlOverrides) {
         // @ts-ignore

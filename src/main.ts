@@ -13,10 +13,6 @@ import { ServiceNames } from './constants/aws.js';
 import _ from 'lodash';
 const debug = _debug("main")
 
-type AWSService = {
-  name: string
-}
-
 // --- utils
 
 async function isGitRepo(path: string): Promise<boolean> {
@@ -55,12 +51,12 @@ async function main(opts: { services: string[] }) {
   debug({ BASEDIR })
 
   // download raw docs
-  // await Promise.all(
-  //   opts.services.map(async (service) => {
-  //     await upsertDevGuide({ service, basedir: BASEDIR });
-  //     await upsertToc({ service, basedir: BASEDIR });
-  //   })
-  // );
+  await Promise.all(
+    opts.services.map(async (service) => {
+      await upsertDevGuide({ service, basedir: BASEDIR });
+      await upsertToc({ service, basedir: BASEDIR });
+    })
+  );
 
   // TODO: extractNotesFromService
   for (const service of opts.services) {
@@ -118,7 +114,7 @@ async function upsertToc(opts: { service: string, basedir: string }) {
   }
 }
 
-const services = ["AMAZON_ECS", "AMAZON_EC2"]
-// const services = ["AMAZON_EC2"]
+// const services = ["AMAZON_ECS", "AMAZON_EC2", "AWS_LAMBDA"]
+const services = ["AWS_LAMBDA"]
 // const services = ["AMAZON_ECS"]
 main({ services })
