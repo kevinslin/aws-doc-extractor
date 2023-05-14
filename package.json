@@ -30,7 +30,7 @@
   "scripts": {
     "build": "tsc",
     "cli": "env DEBUG=* node src/cli.js",
-    "gen:one:lambda": "yarn cli generate --services AWS_LAMBDA --skipSteps generateToc,fetchDocs",
+    "gen:one:s3": "yarn cli generate --services AMAZON_SIMPLE_STORAGE_SERVICE --skipSteps generateToc",
     "gen:all:noFetchDocs": "yarn cli generate --skipSteps fetchDocs",
     "gen:all": "yarn cli generate",
     "test": "npx jest",

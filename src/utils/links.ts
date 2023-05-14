@@ -48,6 +48,9 @@ function normalizeTitle(title: string): string {
   if (/^Configuring.*/.test(title) ) {
     return "Configure"
   }
+  if (/^Developing.*/.test(title) ) {
+    return "Develop"
+  }
   return title
 }
 
@@ -70,6 +73,7 @@ export function getCategoryAndNormalizedTitleForLink(opts: { link: string; servi
   const commonCategories: CategoryMap = {
     Common: [
       "configure",
+      "develop",
       "monitor",
       "troubleshoot",
       "integration",

@@ -17,7 +17,8 @@ export class AWSUtils {
     const getDocTypeURLForService = (service: string) => {
       const wholeUrlOverrides = {
         AMAZON_EC2: "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/toc-contents.json",
-        AWS_LAMBDA: "https://docs.aws.amazon.com/lambda/latest/dg/toc-contents.json"
+        AWS_LAMBDA: "https://docs.aws.amazon.com/lambda/latest/dg/toc-contents.json",
+        AMAZON_SIMPLE_STORAGE_SERVICE: "https://docs.aws.amazon.com/AmazonS3/latest/userguide/toc-contents.json",
       }
       if (service in wholeUrlOverrides) {
         // @ts-ignore
@@ -34,7 +35,8 @@ export class AWSUtils {
   static getDocRepoForService(service: string) {
     const getDocTypeForService = (service: string) => {
       const overrides = {
-        AMAZON_EC2: "user-guide"
+        AMAZON_EC2: "user-guide",
+        AMAZON_SIMPLE_STORAGE_SERVICE: "userguide",
       }
       if (service in overrides) {
         // @ts-ignore
@@ -42,9 +44,17 @@ export class AWSUtils {
       }
       return "developer-guide"
     }
+
+    const getServiceRepo = (service: string) => {
+      const overrides = {
+        AMAZON_SIMPLE_STORAGE_SERVICE: "amazon-s3",
+      }
+      const serviceRepo = _.get(overrides, service, false) || _.get(ServiceNames, service, service)
+      return serviceRepo.toLowerCase().replace(/ /g, '-');
+    }
+
     const awsgitrepo = (service: string, doctype: string): string => {
-      const serviceRepo = _.get(ServiceNames, service, service).toLowerCase().replace(' ', '-');
-      // eg. https://github.com/awsdocs/amazon-ecs-developer-guide.git
+      const serviceRepo = getServiceRepo(service)
       return `https://github.com/awsdocs/${serviceRepo}-${doctype}.git`;
     }
 
