@@ -24,6 +24,11 @@ function replaceEnd(str: string, search: string, replace: string) {
 
 // === Functions
 
+/**
+ * Extract notable entities from all markdown files in the input directory
+ * @param inputDir 
+ * @param outputDir 
+ */
 async function processMarkdownFiles(inputDir: string, outputDir: string) {
   // Read all files in the input directory
   const files = await glob(`**/*.md`, { cwd: inputDir });
@@ -54,6 +59,11 @@ async function processMarkdownFiles(inputDir: string, outputDir: string) {
   });
 }
 
+/**
+ * Map the notes from the markdown files to the TOC
+ * @param contents 
+ * @param dataDir 
+ */
 async function combineTocAndNotes(contents: ContentInner[], dataDir: string) {
   for (const c of contents) {
     const fname = c.href.replace(".html", ".md");
@@ -104,7 +114,10 @@ function section2VFiles(sections: Section[]): VFile[] {
 function renderFromJSON(opts: { data: ContentTopLevel[], serviceName: string, renderTargetFormat: TargetFormat, destDir: string }) {
   const sections = filterSectionWithContent(opts.data);
   const vfiles: VFile[] = section2VFiles(sections);
-  const metadata = { title: opts.serviceName, destDir: opts.destDir, serviceName: opts.serviceName };
+  const metadata = {
+    title: opts.serviceName,
+    destDir: opts.destDir, serviceName: opts.serviceName
+  };
   switch (opts.renderTargetFormat) {
     case TargetFormat["md.single-page"]:
       return new MarkdownSingleFileTarget().write({ vfiles, metadata });
@@ -133,21 +146,20 @@ export async function extractNotesFromService(opts: { basedir: string, service: 
   const ctx = "downloadDocs";
   debug({ ctx, inputDir, buildDir: stagingDir, artifactDir, msg: "enter" })
 
-  debug({ctx, msg: "pre:parsing aws docs"})
+  debug({ ctx, msg: "pre:parsing aws docs" })
   processMarkdownFiles(inputDir, stagingDir);
 
 
   debug("pre:combining toc and notes")
   const toc: Content = await fs.readJson(tocPath);
   await combineTocAndNotes(toc.contents, stagingDir);
+  // TODO: remove this
   await fs.writeJson(replaceEnd(tocPath, ".json", "out.json"), toc);
 
-  // const tocEnriched = fs.fs.readJsonSync('/Users/kevinlin/code/proj.aws-docs/aws-doc-extractor/data/ecs-tocout.json');
   debug("pre:render")
   const renderTargetFormat = TargetFormat["md.multi-page.dendron"]
-  // const renderTargetFormat = TargetFormat["html.single-page"]
   const artifactDirForServiceAndTargetFormat = path.join(opts.basedir, AWSUtils.getArtifactPathForService(opts.service, renderTargetFormat));
-  const out = await renderFromJSON(
+  await renderFromJSON(
     {
       data: toc.contents,
       renderTargetFormat,

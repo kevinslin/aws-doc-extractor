@@ -61,3 +61,10 @@ export type Link = {
   url: string;
   category: string;
 };
+
+// --- Unsorted
+
+export type ContentSource = {
+  title: string
+  url: string
+}
