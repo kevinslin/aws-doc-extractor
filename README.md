@@ -34,7 +34,7 @@ These instructions go over generating content to update [AWS Reference Notes](ht
 
 1. Create a dependencies folder
     ```sh
-    mkdir dependencies
+    mkdir dependencies && cd dependencies
     git clone https://github.com/dendronhq/dendron-api-v2
     git clone https://github.com/kevinslin/aws-reference-notes
     ```
