@@ -66,7 +66,12 @@ export async function main(opts: { services: string[], skipSteps: z.infer<typeof
 
   // TODO: extractNotesFromService
   for (const service of opts.services) {
-    await extractNotesFromService({ basedir: BASEDIR, service })
+    const url = AWSUtils.getDocRepoForService(service);
+    const source = {
+      title: "AWS Developer Guide",
+      url
+    }
+    await extractNotesFromService({ basedir: BASEDIR, service, sources: [source] })
   }
 
   if (opts.skipSteps.includes(SkipStepsOptions.Enum.generateToc)) {

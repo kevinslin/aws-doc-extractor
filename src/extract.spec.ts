@@ -1,4 +1,4 @@
-import { extractFromAWSDocs } from './index'; // Update with the correct path to your function
+import { extractFromAWSDocs } from './index.js'; // Update with the correct path to your function
 import fs from 'fs';
 
 describe('extractFromAWSDocs', () => {

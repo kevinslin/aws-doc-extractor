@@ -139,7 +139,7 @@ function renderFromJSON(opts: { data: ContentTopLevel[], serviceName: string, re
 // ===
 
 
-export async function extractNotesFromService(opts: { basedir: string, service: string }) {
+export async function extractNotesFromService(opts: { basedir: string, service: string, sources: ContentSource[] }) {
   const inputDir = path.join(opts.basedir, AWSUtils.getDocPathForService(opts.service));
   const stagingDir = path.join(opts.basedir, AWSUtils.getStagingPathForService(opts.service));
   const artifactDir = AWSUtils.getArtifactPath()
@@ -161,17 +161,13 @@ export async function extractNotesFromService(opts: { basedir: string, service: 
   debug("pre:render")
   const renderTargetFormat = TargetFormat["md.multi-page.dendron"]
   const artifactDirForServiceAndTargetFormat = path.join(opts.basedir, AWSUtils.getArtifactPathForService(opts.service, renderTargetFormat));
-  const sources = [{
-    title: "Dummy",
-    url: "https://docs.aws.amazon.com/ec2/index.html"
-  }];
   await renderFromJSON(
     {
       data: toc.contents,
       renderTargetFormat,
       serviceName: opts.service,
       destDir: artifactDirForServiceAndTargetFormat,
-      sources
+      sources: opts.sources
     });
 
   console.log("done")

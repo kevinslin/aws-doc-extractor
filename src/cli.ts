@@ -2,9 +2,14 @@ import minimist from 'minimist';
 import { z } from 'zod';
 import { main } from './main.js';
 
+const ALL_SERVICES = ["AMAZON_ECS", "AMAZON_EC2", "AWS_LAMBDA"];
 const ParsedArgsSchema = z.object({
-  skipSteps: z.string().transform(x => x ? x.split(","): []).optional(),
-  services: z.string(z.string()).transform(x => x ? x.split(","): ["all"]).optional(),
+  skipSteps: z.string().transform(x => x ? x.split(","): [])
+    .optional(),
+  services: z.string(z.string())
+    .transform(x => x ? x.split(","): ["all"])
+    .transform(x => x[0] === 'all' ? ALL_SERVICES : x)
+    .optional(),
 });
 
 type ParsedArgs = z.infer<typeof ParsedArgsSchema>;
@@ -16,6 +21,8 @@ function generateCommand(args: ParsedArgs) {
   console.log('Generate command executed!');
   console.log('skipSteps:', skipSteps);
   console.log('services:', services);
+  // TODO: validate
+  // @ts-ignore
   return main({services, skipSteps})
 }
 

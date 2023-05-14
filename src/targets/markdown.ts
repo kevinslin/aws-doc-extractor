@@ -154,13 +154,13 @@ export class MarkdownDendronFileTarget extends BaseTarget {
     if (!source) {
       throw new Error("no source found")
     }
-    const attribution = `This page was generated from content adapted from [${source.title}](${source.url})`
+    const attribution = `This page was generated from content adapted from the [${source.title}](${source.url})`
     const content = sections.map(section => section2Markdown(section)).join("\n");
     // TODO: dummy date
     const time = 1683841041000;
     opts.vfile.value = matter.stringify(
       // title
-      ["# " + title, hint(attribution), content].join("\n"),
+      ["# " + title, hint(attribution), content].join("\n\n"),
       {id: title, title, created: time, updated: time});
     return opts.vfile;
   }

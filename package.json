@@ -32,6 +32,7 @@
     "start:debug": "env DEBUG=* node --inspect src/main.js",
     "cli": "env DEBUG=* node src/cli.js",
     "cli:gen:lambda": "yarn cli generate --services AWS_LAMBDA --skipSteps generateToc,fetchDocs",
+    "cli:gen:all": "yarn cli generate --skipSteps fetchDocs",
     "test": "npx jest",
     "watch": "tsc --watch"
   }
