@@ -1,11 +1,33 @@
-import { VFile } from "vfile";
-import { Section } from "../types/index.js";
 import _ from "lodash";
+import { VFile } from "vfile";
 import { ServiceNames } from "../constants/aws.js";
+import { Section } from "../types/index.js";
+
+import _debug from "debug";
+const debug = _debug("AWSUtils")
 
 export class AWSUtils {
   static getSections(vfile: VFile): Section[] {
     return vfile.data.sections as Section[]
+  }
+
+  static async getDocTocForService(service: string){
+    const serviceNameNoSpaces = _.get(ServiceNames, service).replace(' ', '');
+    const getDocTypeURLForService = (service: string) => {
+      const overrides = {
+        AMAZON_EC2: "UserGuide"
+      }
+      if (service in overrides) {
+        // @ts-ignore
+        return overrides[service]
+      }
+      return "userguide"
+    }
+    const url = `https://docs.aws.amazon.com/${serviceNameNoSpaces}/latest/${getDocTypeURLForService(service)}/toc-contents.json`
+    debug({ctx: "getDocTocForService", url})
+    const resp = await fetch(url);
+    const content = await resp.json();
+    return content;
   }
 
   static getDocRepoForService(service: string) {

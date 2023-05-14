@@ -1,14 +1,11 @@
-import fs from 'fs-extra';
 import fsNode from 'fs';
+import fs from 'fs-extra';
 import git from 'isomorphic-git';
 import http from 'isomorphic-git/http/node/index.js';
 
-import { ServiceNames } from './constants/aws.js';
-import _ from 'lodash';
-import path from 'path';
 import _debug from "debug";
+import path from 'path';
 import * as url from 'url';
-import { json } from 'stream/consumers';
 import { AWSUtils } from './utils/aws.js';
 const debug = _debug("main")
 
@@ -71,10 +68,8 @@ async function upsertToc(opts: { service: string, basedir: string }) {
   const tocPath = path.join(opts.basedir, 'docs', opts.service, 'toc.json');
   debug({ctx, service: opts.service, tocPath, msg: "enter"})
   if (!fs.existsSync(tocPath)) {
-    const serviceNameNoSpaces = _.get(ServiceNames, opts.service, opts.service).replace(' ', '');
     debug({ctx, service: opts.service, tocPath, msg: "fetching toc"})
-    const resp = await fetch(`https://docs.aws.amazon.com/${serviceNameNoSpaces}/latest/userguide/toc-contents.json`);
-    const content = await resp.json();
+    const content = AWSUtils.getDocTocForService(opts.service);
     fs.writeFileSync(tocPath, JSON.stringify(content, null, 2));
   }
 }
