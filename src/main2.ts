@@ -1,4 +1,4 @@
-import * as fs from 'fs-extra';
+import fs from 'fs-extra';
 import fsNode from 'fs';
 import git from 'isomorphic-git';
 import http from 'isomorphic-git/http/node/index.js';
@@ -8,6 +8,7 @@ import _ from 'lodash';
 import path from 'path';
 import _debug from "debug";
 import * as url from 'url';
+import { json } from 'stream/consumers';
 const debug = _debug("main")
 
 // --- utils
@@ -15,10 +16,8 @@ const debug = _debug("main")
 async function isGitRepo(path: string): Promise<boolean> {
   try {
     const out = await git.resolveRef({ fs: fsNode, dir: path, ref: 'HEAD' });
-    debugger;
     return true;
   } catch (error) {
-    debugger;
     return false;
   }
 }
@@ -32,8 +31,8 @@ async function main(opts: { services: string[] }) {
 
   await Promise.all(
     opts.services.map(async (service) => {
-      await upsertDevGuide({ service, basedir: BASEDIR });
-      // await upsertToc({ service, basedir: BASEDIR });
+      // await upsertDevGuide({ service, basedir: BASEDIR });
+      await upsertToc({ service, basedir: BASEDIR });
     })
   );
 }
@@ -73,11 +72,15 @@ async function upsertDevGuide(opts: { service: string, basedir: string }) {
 }
 
 async function upsertToc(opts: { service: string, basedir: string }) {
+  const ctx = "upsertToc";
   const tocPath = path.join(opts.basedir, 'docs', opts.service, 'toc.json');
+  debug({ctx, service: opts.service, tocPath, msg: "enter"})
   if (!fs.existsSync(tocPath)) {
-    const serviceNameNoSpaces = ServiceNames[opts.service].replace(' ', '');
-    const content = await fetch(`https://docs.aws.amazon.com/${serviceNameNoSpaces}/latest/userguide/toc-contents.json`);
-    fs.writeFileSync(tocPath, content);
+    const serviceNameNoSpaces = _.get(ServiceNames, opts.service, opts.service).replace(' ', '');
+    debug({ctx, service: opts.service, tocPath, msg: "fetching toc"})
+    const resp = await fetch(`https://docs.aws.amazon.com/${serviceNameNoSpaces}/latest/userguide/toc-contents.json`);
+    const content = await resp.json();
+    fs.writeFileSync(tocPath, JSON.stringify(content, null, 2));
   }
 }
 
