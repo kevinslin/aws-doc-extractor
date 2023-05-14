@@ -9,6 +9,7 @@ import path from 'path';
 import _debug from "debug";
 import * as url from 'url';
 import { json } from 'stream/consumers';
+import { AWSUtils } from './utils/aws.js';
 const debug = _debug("main")
 
 // --- utils
@@ -31,16 +32,10 @@ async function main(opts: { services: string[] }) {
 
   await Promise.all(
     opts.services.map(async (service) => {
-      // await upsertDevGuide({ service, basedir: BASEDIR });
+      await upsertDevGuide({ service, basedir: BASEDIR });
       await upsertToc({ service, basedir: BASEDIR });
     })
   );
-}
-
-function awsgitrepo(service: string): string {
-  const serviceRepo = _.kebabCase(_.get(ServiceNames, service, service).toLowerCase());
-  // eg. https://github.com/awsdocs/amazon-ecs-developer-guide.git
-  return `https://github.com/awsdocs/${serviceRepo}-developer-guide.git`;
 }
 
 async function upsertDevGuide(opts: { service: string, basedir: string }) {
@@ -48,7 +43,7 @@ async function upsertDevGuide(opts: { service: string, basedir: string }) {
   const guidePath = path.join(opts.basedir, 'docs', opts.service, 'developer-guide');
   debug({ctx, service: opts.service, guidePath})
   if (!await isGitRepo(guidePath)) {
-    const url = awsgitrepo(opts.service);
+    const url = AWSUtils.getDocRepoForService(opts.service);
     debug({ctx, service: opts.service, url, msg: "no repo found, cloning"})
     fs.ensureDirSync(guidePath);
     await git.clone({
@@ -84,5 +79,5 @@ async function upsertToc(opts: { service: string, basedir: string }) {
   }
 }
 
-const services = ["AMAZON_ECS"]
+const services = ["AMAZON_ECS", "AMAZON_EC2"]
 main({ services})

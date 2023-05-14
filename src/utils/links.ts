@@ -31,7 +31,6 @@ export function getCategoryForLink(opts: { link: string; service: string }) {
 
   const link = opts.link.toLowerCase();
 
-  debugger;
   let category = matchCategory({ link, category: _.get(serviceCategories, opts.service.toLowerCase(), {}) });
   if (!category) {
       category = matchCategory({ link, category: commonCategories });
