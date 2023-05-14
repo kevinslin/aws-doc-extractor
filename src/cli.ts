@@ -1,12 +1,6 @@
 import minimist from 'minimist';
 import { z } from 'zod';
-
-const SkipStepsOptions = z.enum([
-  'fetchDocs',
-  'fetchToc',
-  'extractNotes',
-  'generateToc',
-]);
+import { main } from './main.js';
 
 const ParsedArgsSchema = z.object({
   skipSteps: z.string().transform(x => x ? x.split(","): []).optional(),
@@ -22,6 +16,7 @@ function generateCommand(args: ParsedArgs) {
   console.log('Generate command executed!');
   console.log('skipSteps:', skipSteps);
   console.log('services:', services);
+  return main({services, skipSteps})
 }
 
 function printHelp() {

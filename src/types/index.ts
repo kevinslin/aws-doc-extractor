@@ -1,3 +1,4 @@
+import { z } from 'zod';
 
 // --- AWS Content
 /**
@@ -69,3 +70,12 @@ export type ContentSource = {
   title: string
   url: string
 }
+
+export const SkipStepsOptions = z.enum([
+  'fetchDocs',
+  'fetchToc',
+  'extractNotes',
+  'generateToc',
+]);
+
+

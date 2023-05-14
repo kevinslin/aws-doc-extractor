@@ -7,10 +7,11 @@ import _debug from "debug";
 import path from 'path';
 import * as url from 'url';
 import { AWSUtils } from './utils/aws.js';
-import { TargetFormat } from './types/index.js';
+import { TargetFormat, SkipStepsOptions } from './types/index.js';
 import { extractNotesFromService } from './core/extractNotesFromService.js';
 import { ServiceNames } from './constants/aws.js';
 import _ from 'lodash';
+import { z } from 'zod';
 const debug = _debug("main")
 
 // --- utils
@@ -43,36 +44,46 @@ function generateSiteToc(opts: { prefix: string; services: string[]; basedir: st
 }
 
 
-async function main(opts: { services: string[] }) {
-  debug("start...")
+export async function main(opts: { services: string[], skipSteps: z.infer<typeof SkipStepsOptions>[] }) {
+  const ctx = "main"
+  debug({ ctx, opts, msg: "enter" })
   const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
   const BASEDIR = path.dirname(path.join(__dirname, "..", 'package.json'));
   const renderTargetFormat = TargetFormat["md.multi-page.dendron"];
   debug({ BASEDIR })
 
   // download raw docs
-  // await Promise.all(
-  //   opts.services.map(async (service) => {
-  //     await upsertDevGuide({ service, basedir: BASEDIR });
-  //     await upsertToc({ service, basedir: BASEDIR });
-  //   })
-  // );
+  if (opts.skipSteps.includes(SkipStepsOptions.Enum.fetchDocs)) {
+    debug({ ctx, msg: "skipping fetchDocs" })
+  } else {
+    await Promise.all(
+      opts.services.map(async (service) => {
+        await upsertDevGuide({ service, basedir: BASEDIR });
+        await upsertToc({ service, basedir: BASEDIR });
+      })
+    );
+  }
 
   // TODO: extractNotesFromService
   for (const service of opts.services) {
     await extractNotesFromService({ basedir: BASEDIR, service })
   }
 
-  const prefix = `## About
+  if (opts.skipSteps.includes(SkipStepsOptions.Enum.generateToc)) {
+    debug({ ctx, msg: "skipping toc generation" })
+  } else {
+    const prefix = `## About
 - [README](./../README.md)
 
 ## Services
 `;
-  // generate site toc
-  const tocContents = generateSiteToc({ prefix, services: opts.services, basedir: BASEDIR, renderTargetFormat });
-  fs.writeFileSync(
-    path.join(AWSUtils.getArtifactPath(), "SUMMARY.md")
-    , tocContents);
+    // generate site toc
+    const tocContents = generateSiteToc({ prefix, services: opts.services, basedir: BASEDIR, renderTargetFormat });
+    fs.writeFileSync(
+      path.join(AWSUtils.getArtifactPath(), "SUMMARY.md")
+      , tocContents);
+
+  }
 }
 
 async function upsertDevGuide(opts: { service: string, basedir: string }) {
@@ -114,7 +125,7 @@ async function upsertToc(opts: { service: string, basedir: string }) {
   }
 }
 
-const services = ["AMAZON_ECS", "AMAZON_EC2", "AWS_LAMBDA"]
+// const services = ["AMAZON_ECS", "AMAZON_EC2", "AWS_LAMBDA"]
 // const services = ["AWS_LAMBDA"]
 // const services = ["AMAZON_ECS"]
-main({ services })
+// main({ services })
