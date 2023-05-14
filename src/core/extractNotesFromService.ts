@@ -2,14 +2,14 @@
 import fs from "fs-extra";
 import { glob } from 'glob';
 import path from 'path';
-import { extractFromAWSDocs } from "./index.js";
+import { extractFromAWSDocs } from "../index.js";
 import _ from "lodash";
-import { ContentInner, Entities, ContentTopLevel, Content, TargetFormat, Section } from "./types/index.js";
-import { HTMLTarget } from "./targets/index.js";
-import { MarkdownDendronFileTarget, MarkdownSingleFileTarget } from "./targets/markdown.js";
+import { ContentInner, Entities, ContentTopLevel, Content, TargetFormat, Section } from "../types/index.js";
+import { HTMLTarget } from "../targets/index.js";
+import { MarkdownDendronFileTarget, MarkdownSingleFileTarget } from "../targets/markdown.js";
 import { VFile } from "vfile";
 import _debug from "debug";
-import { AWSUtils } from "./utils/aws.js";
+import { AWSUtils } from "../utils/aws.js";
 const debug = _debug("main")
 
 // === Init

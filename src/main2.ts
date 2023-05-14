@@ -8,7 +8,7 @@ import path from 'path';
 import * as url from 'url';
 import { AWSUtils } from './utils/aws.js';
 import { TargetFormat } from './types/index.js';
-import { extractNotesFromService } from './main.js';
+import { extractNotesFromService } from './core/extractNotesFromService.js';
 import { ServiceNames } from './constants/aws.js';
 import _ from 'lodash';
 const debug = _debug("main")
