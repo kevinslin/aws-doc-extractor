@@ -9,6 +9,7 @@ import { HTMLTarget } from "./targets/index.js";
 import { MarkdownDendronFileTarget, MarkdownSingleFileTarget } from "./targets/markdown.js";
 import { VFile } from "vfile";
 import _debug from "debug";
+import { AWSUtils } from "./utils/aws.js";
 const debug = _debug("main")
 
 // === Init
@@ -47,7 +48,7 @@ async function processMarkdownFiles(inputDir: string, outputDir: string) {
           console.error(`Error writing file ${outputFile}: ${err}`);
           return;
         }
-        debug({ctx: "processMarkdownFiles", outputFile});
+        debug({ ctx: "processMarkdownFiles", outputFile });
       });
     }
   });
@@ -55,15 +56,15 @@ async function processMarkdownFiles(inputDir: string, outputDir: string) {
 
 async function combineTocAndNotes(contents: ContentInner[], dataDir: string) {
   for (const c of contents) {
-      const fname = c.href.replace(".html", ".md");
-      const fpath = path.join(dataDir, fname);
-      if (await fs.pathExists(fpath)) {
-          const out: Entities[] = await fs.readJson(fpath);
-          c.notes = out.map(e => e.content);
-      }
-      if (c.contents) {
-          await combineTocAndNotes(c.contents, dataDir);
-      }
+    const fname = c.href.replace(".html", ".md");
+    const fpath = path.join(dataDir, fname);
+    if (await fs.pathExists(fpath)) {
+      const out: Entities[] = await fs.readJson(fpath);
+      c.notes = out.map(e => e.content);
+    }
+    if (c.contents) {
+      await combineTocAndNotes(c.contents, dataDir);
+    }
   }
 }
 
@@ -95,22 +96,22 @@ function filterSectionWithContent(data: ContentTopLevel[]): Section[] {
 
 function section2VFiles(sections: Section[]): VFile[] {
   return sections.map(s => {
-    return new VFile({data: {sections: [s]}})
+    return new VFile({ data: { sections: [s] } })
   })
 }
 
 
-function renderFromJSON(opts: {data: ContentTopLevel[], serviceName: string, renderTargetFormat: TargetFormat, destDir: string}) {
+function renderFromJSON(opts: { data: ContentTopLevel[], serviceName: string, renderTargetFormat: TargetFormat, destDir: string }) {
   const sections = filterSectionWithContent(opts.data);
   const vfiles: VFile[] = section2VFiles(sections);
-  const metadata = {title: opts.serviceName, destDir: opts.destDir, serviceName: opts.serviceName};
+  const metadata = { title: opts.serviceName, destDir: opts.destDir, serviceName: opts.serviceName };
   switch (opts.renderTargetFormat) {
     case TargetFormat["md.single-page"]:
-      return new MarkdownSingleFileTarget().write({vfiles, metadata});
+      return new MarkdownSingleFileTarget().write({ vfiles, metadata });
     case TargetFormat["md.multi-page.dendron"]:
-      return new MarkdownDendronFileTarget().write({vfiles, metadata});
+      return new MarkdownDendronFileTarget().write({ vfiles, metadata });
     case TargetFormat["html.single-page"]:
-      return new HTMLTarget().write({vfiles, metadata});
+      return new HTMLTarget().write({ vfiles, metadata });
     // case TargetFormat["md.multi-page"]:
     //   return new MarkdownMultiPageTarget().write({sections, metadata: {title: opts.serviceName}, destDir: opts.destDir});
     default:
@@ -118,56 +119,40 @@ function renderFromJSON(opts: {data: ContentTopLevel[], serviceName: string, ren
   }
 }
 
-function generateSiteToc(opts: { prefix: string; services: AWSService[]; artifactDirForServiceAndTargetFormat: string }) {
-  const { prefix, services, artifactDirForServiceAndTargetFormat } = opts;
-  const out: string[] = [];
-  out.push(prefix);
-
-  services.forEach((service) => {
-      const { name } = service;
-      const summaryPath = path.join(artifactDirForServiceAndTargetFormat, `SUMMARY.${name}.md`);
-      const contents = fs.readFileSync(summaryPath, "utf-8");
-      out.push(`- ${name}\n${contents}`);
-      fs.removeSync(summaryPath);
-  });
-  return out.join("\n");
-}
 
 
 // ===
-type AWSService = {
-  name: string
-}
 
-async function main() {
-  const inputDir = "/Users/kevinlin/code/proj.aws-docs/semantic-search-aws-docs/amazon-ecs-developer-guide"
-  const buildDir = "/Users/kevinlin/code/proj.aws-docs/aws-doc-extractor/build"
+
+export async function extractNotesFromService(opts: { basedir: string, service: string }) {
+  const inputDir = path.join(opts.basedir, AWSUtils.getDocPathForService(opts.service));
+  const buildDir = path.join(opts.basedir, "build");
   const artifactDir = path.join(buildDir, "artifacts");
-  const services: AWSService[] = [{
-    name: "ECS",
-  }]
+  const tocPath = path.join(opts.basedir, AWSUtils.getDocTocPathForService(opts.service));
 
-  const foo = [].forEach(s=> "")
+  const ctx = "downloadDocs";
+  debug({ ctx, inputDir, buildDir, artifactDir, msg: "enter" })
+
+  // const services: AWSService[] = [{
+  //   name: "ECS",
+  // }]
 
   console.log("pre:parsing aws docs")
   processMarkdownFiles(inputDir, buildDir);
 
 
   debug("pre:combining toc and notes")
-  const base = "/Users/kevinlin/code/proj.aws-docs/aws-doc-extractor"
-  const fpath = path.join(base, "data/ecs-toc.json");
-  const dataDir = path.join(base, "build/doc_source")
-  const toc: Content = await fs.readJson(fpath);
+  const dataDir = path.join(opts.basedir, "build/doc_source")
+  const toc: Content = await fs.readJson(tocPath);
   await combineTocAndNotes(toc.contents, dataDir);
-  await fs.writeJson(replaceEnd(fpath, ".json", "out.json"), toc);
+  await fs.writeJson(replaceEnd(tocPath, ".json", "out.json"), toc);
 
   // const tocEnriched = fs.fs.readJsonSync('/Users/kevinlin/code/proj.aws-docs/aws-doc-extractor/data/ecs-tocout.json');
   debug("pre:render")
   const serviceName = "ECS"
   const renderTargetFormat = TargetFormat["md.multi-page.dendron"]
   // const renderTargetFormat = TargetFormat["html.single-page"]
-  const artifactDirForServiceAndTargetFormat = path.join(artifactDir, serviceName, renderTargetFormat)
-
+  const artifactDirForServiceAndTargetFormat = path.join(opts.basedir, AWSUtils.getArtifactPathForService(serviceName, renderTargetFormat));
   const out = await renderFromJSON(
     {
       data: toc.contents,
@@ -176,16 +161,6 @@ async function main() {
       destDir: artifactDirForServiceAndTargetFormat
     });
 
-  const prefix = `## About
-- [README](./../README.md)
-
-## Services
-`;
-  const tocContents = generateSiteToc({artifactDirForServiceAndTargetFormat, prefix, services});
-  fs.writeFileSync(path.join(artifactDirForServiceAndTargetFormat, "SUMMARY.md"), tocContents);
   console.log("done")
 
 }
-
-
-main()

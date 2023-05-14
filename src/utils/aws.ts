@@ -4,6 +4,7 @@ import { ServiceNames } from "../constants/aws.js";
 import { Section } from "../types/index.js";
 
 import _debug from "debug";
+import path from "path";
 const debug = _debug("AWSUtils")
 
 export class AWSUtils {
@@ -49,6 +50,23 @@ export class AWSUtils {
     const doctype = getDocTypeForService(service)
     return awsgitrepo(service, doctype)
   }
+
+  static getDocPathForService(service: string) {
+    return path.join('docs', service, 'developer-guide');
+  }
+
+  static getDocTocPathForService(service: string) {
+    return path.join('docs', service, 'toc.json');
+  }
+
+  static getArtifactPath() {
+    return path.join("build", "artifacts")
+  }
+
+  static getArtifactPathForService(service: string, renderTargetFormat: string) {
+    return path.join(this.getArtifactPath(), service, renderTargetFormat)
+  }
+
 
   static getData(vfile: VFile): {
     sections: Section[],
