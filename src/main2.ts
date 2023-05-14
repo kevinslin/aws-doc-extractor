@@ -69,10 +69,11 @@ async function upsertToc(opts: { service: string, basedir: string }) {
   debug({ctx, service: opts.service, tocPath, msg: "enter"})
   if (!fs.existsSync(tocPath)) {
     debug({ctx, service: opts.service, tocPath, msg: "fetching toc"})
-    const content = AWSUtils.getDocTocForService(opts.service);
+    const content = await AWSUtils.getDocTocForService(opts.service);
     fs.writeFileSync(tocPath, JSON.stringify(content, null, 2));
   }
 }
 
-const services = ["AMAZON_ECS", "AMAZON_EC2"]
+// const services = ["AMAZON_ECS", "AMAZON_EC2"]
+const services = ["AMAZON_EC2"]
 main({ services})

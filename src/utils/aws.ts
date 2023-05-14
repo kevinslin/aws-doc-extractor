@@ -11,20 +11,19 @@ export class AWSUtils {
     return vfile.data.sections as Section[]
   }
 
-  static async getDocTocForService(service: string){
+  static async getDocTocForService(service: string) {
     const serviceNameNoSpaces = _.get(ServiceNames, service).replace(' ', '');
     const getDocTypeURLForService = (service: string) => {
-      const overrides = {
-        AMAZON_EC2: "UserGuide"
+      const wholeUrlOverrides = {
+        AMAZON_EC2: "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/toc-contents.json"
       }
-      if (service in overrides) {
+      if (service in wholeUrlOverrides) {
         // @ts-ignore
-        return overrides[service]
+        return wholeUrlOverrides[service]
       }
-      return "userguide"
     }
-    const url = `https://docs.aws.amazon.com/${serviceNameNoSpaces}/latest/${getDocTypeURLForService(service)}/toc-contents.json`
-    debug({ctx: "getDocTocForService", url})
+    const url = getDocTypeURLForService(service) || `https://docs.aws.amazon.com/${serviceNameNoSpaces}/latest/userguide/toc-contents.json`
+    debug({ ctx: "getDocTocForService", url })
     const resp = await fetch(url);
     const content = await resp.json();
     return content;
