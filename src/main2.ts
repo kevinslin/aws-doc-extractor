@@ -34,9 +34,9 @@ function generateSiteToc(opts: { prefix: string; services: string[]; basedir: st
   services.forEach((service) => {
     const artifactDirForServiceAndTargetFormat = path.join(opts.basedir,
       AWSUtils.getArtifactPathForService(service, opts.renderTargetFormat));
-    const summaryPath = path.join(artifactDirForServiceAndTargetFormat, `SUMMARY.${name}.md`);
+    const summaryPath = path.join(artifactDirForServiceAndTargetFormat, `SUMMARY.${service}.md`);
     const contents = fs.readFileSync(summaryPath, "utf-8");
-    out.push(`- ${name}\n${contents}`);
+    out.push(`- ${service}\n${contents}`);
     fs.removeSync(summaryPath);
   });
   return out.join("\n");
@@ -52,12 +52,12 @@ async function main(opts: { services: string[] }) {
   debug({ BASEDIR })
 
   // download raw docs
-  await Promise.all(
-    opts.services.map(async (service) => {
-      await upsertDevGuide({ service, basedir: BASEDIR });
-      await upsertToc({ service, basedir: BASEDIR });
-    })
-  );
+  // await Promise.all(
+  //   opts.services.map(async (service) => {
+  //     await upsertDevGuide({ service, basedir: BASEDIR });
+  //     await upsertToc({ service, basedir: BASEDIR });
+  //   })
+  // );
 
   // TODO: extractNotesFromService
   for (const service of opts.services) {
@@ -106,7 +106,7 @@ async function upsertDevGuide(opts: { service: string, basedir: string }) {
 
 async function upsertToc(opts: { service: string, basedir: string }) {
   const ctx = "upsertToc";
-  const tocPath = path.join(opts.basedir, AWSUtils.getDocTocPathForService(opts.service)));
+  const tocPath = path.join(opts.basedir, AWSUtils.getDocTocPathForService(opts.service));
   debug({ ctx, service: opts.service, tocPath, msg: "enter" })
   if (!fs.existsSync(tocPath)) {
     debug({ ctx, service: opts.service, tocPath, msg: "fetching toc" })

@@ -67,6 +67,9 @@ export class AWSUtils {
     return path.join(this.getArtifactPath(), service, renderTargetFormat)
   }
 
+  static getStagingPathForService(service: string) {
+    return path.join('build', "staging", service);
+  }
 
   static getData(vfile: VFile): {
     sections: Section[],

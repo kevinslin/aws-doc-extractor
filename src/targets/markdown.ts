@@ -81,11 +81,14 @@ export class MarkdownDendronFileTarget extends BaseTarget {
       const section = AWSUtils.getSections(vfile)[0];
       return section.parent.title;
     });
+    const simpleKebab = (astring: string) => {
+      return _.replace(astring, ' ', '-').toLowerCase();
+    }
 
-    const prefix = _.kebabCase(opts.metadata.title);
+    const prefix = simpleKebab(opts.metadata.title);
     // reduce to one file per parent
     const vfiles = _.map(groups, (vfiles, parentTitle) => {
-      const basename = [prefix, _.kebabCase(parentTitle), this.spec.extension].join(".");
+      const basename = [prefix, simpleKebab(parentTitle), this.spec.extension].join(".");
       const fpath = path.join(opts.metadata.destDir, basename);
       const vfile = new VFile({ path: fpath });
       const sections: Section[] = vfiles.flatMap(vfile => {
