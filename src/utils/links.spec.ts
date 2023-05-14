@@ -1,6 +1,6 @@
 // Import the necessary dependencies and functions
 import { VFile } from 'vfile';
-import { matchCategory, getCategoryForLink, getLinkMetadata } from './links.js';
+import { matchCategory, getCategoryAndNormalizedTitleForLink, getLinkMetadata } from './links.js';
 
 describe('matchCategory', () => {
   const category = {
@@ -32,17 +32,17 @@ describe('getCategoryForLink', () => {
   };
 
   it('should return the category from serviceCategories if it exists', () => {
-    const result = getCategoryForLink({ link: 'Developer tools overview', service: 'ecs' });
+    const result = getCategoryAndNormalizedTitleForLink({ link: 'Developer tools overview', service: 'ecs' });
     expect(result).toEqual('Dev');
   });
 
   it('should return the category from commonCategories if no category found in serviceCategories', () => {
-    const result = getCategoryForLink({ link: 'Tutorials', service: 'nonexistent' });
+    const result = getCategoryAndNormalizedTitleForLink({ link: 'Tutorials', service: 'nonexistent' });
     expect(result).toEqual('Dev');
   });
 
   it('should return "Topics" if no category found in both serviceCategories and commonCategories', () => {
-    const result = getCategoryForLink({ link: 'link1', service: 'nonexistent2' });
+    const result = getCategoryAndNormalizedTitleForLink({ link: 'link1', service: 'nonexistent2' });
     expect(result).toEqual('Topics');
   });
 });

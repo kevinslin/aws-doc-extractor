@@ -127,7 +127,7 @@ export class MarkdownDendronFileTarget extends BaseTarget {
         sc.push(`${" ".repeat(spacePaddingPerTab * (basePadding + 1))}- ${category}`);
 
         linkMetaMap[category]?.forEach((link) => {
-            const { url, title } = link;
+            const { url, title, normalizedTitle } = link;
             // TODO: should make this part of dendron-api instead
             const[first, rest] = url.split(".")
             const awsUrl = `./${first.toLowerCase()}/${rest}`

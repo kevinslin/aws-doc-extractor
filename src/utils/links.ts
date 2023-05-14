@@ -1,5 +1,5 @@
 import path from "path";
-import { Link } from "../types/index.js";
+import { CategoryAndNormalizedTitle, Link } from "../types/index.js";
 import { VFile } from "vfile";
 import { AWSUtils } from "./aws.js";
 import _ from "lodash";
@@ -8,37 +8,91 @@ import _ from "lodash";
 type CategoryMap = Record<string, string[]>;
 
 
+// --- utils
+
+interface KeyStringValueMap {
+  [key: string]: string;
+}
+
+function createObjectFromKeyValues(keyValuePairs: [string[], string][]): KeyStringValueMap {
+  const obj: KeyStringValueMap = {};
+
+  keyValuePairs.forEach(([keys, value]) => {
+    keys.forEach((key) => {
+      obj[key] = value;
+    });
+  });
+
+  return obj;
+}
+
+const pairs: [string[], string][] = [
+  [["monitoring", "monitor"], "Monitor"],
+  [["troubleshooting", "troubleshoot"], "Troubleshoot"],
+  [["security", "access permissions"], "Security"],
+  [["configure"], "Configure"],
+  [["Integrating other services"], "Integration"],
+  // [[], ""],
+];
+
+const NORMALIZED_TITLE_MAPPING = createObjectFromKeyValues(pairs);
+
+function normalizeTitle(title: string): string {
+  const normalizedTitle = _.get(NORMALIZED_TITLE_MAPPING, title.toLowerCase(), false);
+  if (normalizedTitle) {
+    return normalizedTitle
+  }
+  if (/^Monitoring.*/.test(title) ) {
+    return "Monitor"
+  }
+  if (/^Configuring.*/.test(title) ) {
+    return "Configure"
+  }
+  return title
+}
+
+
+// --- exports
 export function matchCategory(opts: { link: string; category: CategoryMap }): string | false {
   const { link, category } = opts;
   for (const [k, v] of Object.entries(category)) {
-    if (v.includes(link)) {
+    if (v.includes(link.toLowerCase())) {
       return k;
     }
   }
   return false;
 }
 
-export function getCategoryForLink(opts: { link: string; service: string }) {
+export function getCategoryAndNormalizedTitleForLink(opts: { link: string; service: string }): CategoryAndNormalizedTitle {
+  const normalizedTitle = normalizeTitle(opts.link)
+
+  const Dev = ["getting started", "tutorials"];
   const commonCategories: CategoryMap = {
-    Dev: ["getting started", "tutorials"],
-    Common: ["resources and tags", "monitoring", "working with other services", "troubleshooting", "monitor", "security", "troubleshoot", "security"],
+    Common: [
+      "configure",
+      "monitor",
+      "troubleshoot",
+      "integration",
+      "resources and tags",
+      "working with other services",
+      "security",
+      "networking"].concat(Dev),
   };
   const serviceCategories: Record<string, CategoryMap> = {
     ecs: {
-      Dev: ["developer tools overview", "account settings"],
+      Common: ["developer tools overview", "account settings"],
     },
   };
 
-  const link = opts.link.toLowerCase();
 
-  let category = matchCategory({ link, category: _.get(serviceCategories, opts.service.toLowerCase(), {}) });
+  let category = matchCategory({ link: normalizedTitle, category: _.get(serviceCategories, opts.service.toLowerCase(), {}) });
   if (!category) {
-    category = matchCategory({ link, category: commonCategories });
+    category = matchCategory({ link: normalizedTitle, category: commonCategories });
   }
   if (!category) {
     category = "Topics";
   }
-  return category;
+  return {category, normalizedTitle: normalizedTitle }
 }
 
 export function getLinkMetadata(opts: { baseDir: string; vfile: VFile; service: string }): Link {
@@ -48,6 +102,6 @@ export function getLinkMetadata(opts: { baseDir: string; vfile: VFile; service: 
   return {
     title,
     url,
-    category: getCategoryForLink({ link: title, service }),
+    ...getCategoryAndNormalizedTitleForLink({ link: title, service }),
   };
 }

@@ -58,11 +58,15 @@ export type TargetMetadata = {
 }
 
 // --- Content on Page
+export type CategoryAndNormalizedTitle = {
+  category: string;
+  normalizedTitle: string;
+}
+
 export type Link = {
   title: string;
   url: string;
-  category: string;
-};
+} & CategoryAndNormalizedTitle;
 
 // --- Unsorted
 
