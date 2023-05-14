@@ -53,6 +53,7 @@ export type TargetMetadata = {
 
   destDir: string
   serviceName: string
+  sources: ContentSource[]
 }
 
 // --- Content on Page

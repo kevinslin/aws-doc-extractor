@@ -148,12 +148,19 @@ export class MarkdownDendronFileTarget extends BaseTarget {
     const sections = AWSUtils.getSections(opts.vfile);
     const title = opts.vfile.data.title;
     debug({ctx: "renderFile", title})
+
+    // TODO: change to multiple sources
+    const source = opts.metadata.sources[0];
+    if (!source) {
+      throw new Error("no source found")
+    }
+    const attribution = `This page was generated from content adapted from [${source.title}](${source.url})`
     const content = sections.map(section => section2Markdown(section)).join("\n");
     // TODO: dummy date
     const time = 1683841041000;
     opts.vfile.value = matter.stringify(
       // title
-      "# " + title + "\n" + content, 
+      ["# " + title, hint(attribution), content].join("\n"),
       {id: title, title, created: time, updated: time});
     return opts.vfile;
   }
@@ -166,4 +173,8 @@ export class MarkdownDendronFileTarget extends BaseTarget {
     fs.writeFileSync(destPath, vfile.value);
     return vfile
   }
+}
+
+function hint(text: string) {
+  return [`{% hint style="info" %}`, text, `{% endhint %}`].join("\n")
 }

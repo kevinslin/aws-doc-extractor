@@ -4,7 +4,7 @@ import { glob } from 'glob';
 import path from 'path';
 import { extractFromAWSDocs } from "../index.js";
 import _ from "lodash";
-import { ContentInner, Entities, ContentTopLevel, Content, TargetFormat, Section } from "../types/index.js";
+import { ContentInner, Entities, ContentTopLevel, Content, TargetFormat, Section, ContentSource } from "../types/index.js";
 import { HTMLTarget } from "../targets/index.js";
 import { MarkdownDendronFileTarget, MarkdownSingleFileTarget } from "../targets/markdown.js";
 import { VFile } from "vfile";
@@ -111,12 +111,14 @@ function section2VFiles(sections: Section[]): VFile[] {
 }
 
 
-function renderFromJSON(opts: { data: ContentTopLevel[], serviceName: string, renderTargetFormat: TargetFormat, destDir: string }) {
+function renderFromJSON(opts: { data: ContentTopLevel[], serviceName: string, renderTargetFormat: TargetFormat, destDir: string, sources: ContentSource[] }) {
   const sections = filterSectionWithContent(opts.data);
   const vfiles: VFile[] = section2VFiles(sections);
   const metadata = {
     title: opts.serviceName,
-    destDir: opts.destDir, serviceName: opts.serviceName
+    destDir: opts.destDir, 
+    serviceName: opts.serviceName,
+    sources: opts.sources
   };
   switch (opts.renderTargetFormat) {
     case TargetFormat["md.single-page"]:
@@ -159,12 +161,17 @@ export async function extractNotesFromService(opts: { basedir: string, service: 
   debug("pre:render")
   const renderTargetFormat = TargetFormat["md.multi-page.dendron"]
   const artifactDirForServiceAndTargetFormat = path.join(opts.basedir, AWSUtils.getArtifactPathForService(opts.service, renderTargetFormat));
+  const sources = [{
+    title: "Dummy",
+    url: "https://docs.aws.amazon.com/ec2/index.html"
+  }];
   await renderFromJSON(
     {
       data: toc.contents,
       renderTargetFormat,
       serviceName: opts.service,
-      destDir: artifactDirForServiceAndTargetFormat
+      destDir: artifactDirForServiceAndTargetFormat,
+      sources
     });
 
   console.log("done")
