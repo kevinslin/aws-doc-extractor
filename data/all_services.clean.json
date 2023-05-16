@@ -1,0 +1,1126 @@
+[
+  {
+    "category": "Featured Services",
+    "name": "Amazon EC2"
+  },
+  {
+    "category": "Featured Services",
+    "name": "Amazon S3"
+  },
+  {
+    "category": "Featured Services",
+    "name": "Amazon Aurora"
+  },
+  {
+    "category": "Featured Services",
+    "name": "Amazon RDS"
+  },
+  {
+    "category": "Featured Services",
+    "name": "Amazon DynamoDB"
+  },
+  {
+    "category": "Featured Services",
+    "name": "AWS Lambda"
+  },
+  {
+    "category": "Featured Services",
+    "name": "Amazon VPC"
+  },
+  {
+    "category": "Featured Services",
+    "name": "Amazon Lightsail"
+  },
+  {
+    "category": "Featured Services",
+    "name": "Amazon SageMaker"
+  },
+  {
+    "category": "Compute",
+    "name": "Amazon EC2"
+  },
+  {
+    "category": "Compute",
+    "name": "AWS App Runner"
+  },
+  {
+    "category": "Compute",
+    "name": "AWS Batch"
+  },
+  {
+    "category": "Compute",
+    "name": "AWS Elastic Beanstalk"
+  },
+  {
+    "category": "Compute",
+    "name": "Amazon EC2 Image Builder"
+  },
+  {
+    "category": "Compute",
+    "name": "AWS End-of-Support Migration Program (EMP) for Windows Server"
+  },
+  {
+    "category": "Compute",
+    "name": "AWS Lambda"
+  },
+  {
+    "category": "Compute",
+    "name": "Amazon Lightsail"
+  },
+  {
+    "category": "Compute",
+    "name": "AWS Local Zones"
+  },
+  {
+    "category": "Compute",
+    "name": "AWS Outposts"
+  },
+  {
+    "category": "Compute",
+    "name": "AWS ParallelCluster"
+  },
+  {
+    "category": "Compute",
+    "name": "AWS Serverless Application Model (AWS SAM)"
+  },
+  {
+    "category": "Compute",
+    "name": "AWS Serverless Application Repository"
+  },
+  {
+    "category": "Compute",
+    "name": "AWS SimSpace Weaver"
+  },
+  {
+    "category": "Compute",
+    "name": "AWS Wavelength"
+  },
+  {
+    "category": "Containers",
+    "name": "Amazon ECR"
+  },
+  {
+    "category": "Containers",
+    "name": "Amazon ECS"
+  },
+  {
+    "category": "Containers",
+    "name": "Amazon EKS"
+  },
+  {
+    "category": "Containers",
+    "name": "AWS App2Container"
+  },
+  {
+    "category": "Containers",
+    "name": "AWS App Runner"
+  },
+  {
+    "category": "Containers",
+    "name": "Red Hat OpenShift Service on AWS"
+  },
+  {
+    "category": "Storage",
+    "name": "Amazon S3"
+  },
+  {
+    "category": "Storage",
+    "name": "AWS Backup"
+  },
+  {
+    "category": "Storage",
+    "name": "Amazon EBS"
+  },
+  {
+    "category": "Storage",
+    "name": "Amazon EFS"
+  },
+  {
+    "category": "Storage",
+    "name": "AWS Elastic Disaster Recovery"
+  },
+  {
+    "category": "Storage",
+    "name": "Amazon FSx"
+  },
+  {
+    "category": "Storage",
+    "name": "Amazon S3 Glacier"
+  },
+  {
+    "category": "Storage",
+    "name": "AWS Snow Family"
+  },
+  {
+    "category": "Storage",
+    "name": "AWS Storage Gateway"
+  },
+  {
+    "category": "Database",
+    "name": "Amazon Aurora"
+  },
+  {
+    "category": "Database",
+    "name": "Amazon DocumentDB"
+  },
+  {
+    "category": "Database",
+    "name": "Amazon DynamoDB"
+  },
+  {
+    "category": "Database",
+    "name": "Amazon ElastiCache"
+  },
+  {
+    "category": "Database",
+    "name": "Amazon Keyspaces (for Apache Cassandra)"
+  },
+  {
+    "category": "Database",
+    "name": "Amazon MemoryDB for Redis"
+  },
+  {
+    "category": "Database",
+    "name": "Amazon Neptune"
+  },
+  {
+    "category": "Database",
+    "name": "Amazon QLDB"
+  },
+  {
+    "category": "Database",
+    "name": "Amazon RDS"
+  },
+  {
+    "category": "Database",
+    "name": "Amazon Redshift"
+  },
+  {
+    "category": "Database",
+    "name": "Amazon Timestream"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "AWS Identity and Access Management (IAM)"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "AWS Artifact"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "AWS Audit Manager"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "Amazon Cognito"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "Amazon Detective"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "AWS Directory Service"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "AWS Firewall Manager"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "Amazon Cloud Directory"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "Amazon GuardDuty"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "AWS IAM Identity Center (successor to AWS Single Sign-On)"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "Amazon Inspector"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "Amazon Macie"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "AWS Network Firewall"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "AWS Resource Access Manager (AWS RAM)"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "AWS Secrets Manager"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "AWS Security Hub"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "Amazon Security Lake (Preview)"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "AWS Shield"
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "name": "AWS WAF"
+  },
+  {
+    "category": "Cryptography & PKI",
+    "name": "AWS Cryptographic Services Overview"
+  },
+  {
+    "category": "Cryptography & PKI",
+    "name": "AWS PKI Services Overview"
+  },
+  {
+    "category": "Cryptography & PKI",
+    "name": "AWS CloudHSM"
+  },
+  {
+    "category": "Cryptography & PKI",
+    "name": "AWS Key Management Service (AWS KMS)"
+  },
+  {
+    "category": "Cryptography & PKI",
+    "name": "AWS Crypto Tools"
+  },
+  {
+    "category": "Cryptography & PKI",
+    "name": "AWS Certificate Manager"
+  },
+  {
+    "category": "Cryptography & PKI",
+    "name": "AWS Private Certificate Authority"
+  },
+  {
+    "category": "Cryptography & PKI",
+    "name": "AWS Signer"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon SageMaker"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Augmented AI (A2I)"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon CodeGuru"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Comprehend"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Comprehend Medical"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon DevOps Guru"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Elastic Inference"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Forecast"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Fraud Detector"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon HealthLake"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Kendra"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Lex"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Lookout for Equipment"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Lookout for Metrics"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Lookout for Vision"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Monitron"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Omics"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "AWS Panorama"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Personalize"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Polly"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Rekognition"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Textract"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Translate"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Transcribe"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "AWS Deep Learning AMIs"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "AWS Deep Learning Containers"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "AWS DeepComposer"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "AWS DeepLens"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "AWS DeepRacer"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Apache MXNet on AWS"
+  },
+  {
+    "category": "Machine Learning",
+    "name": "Amazon Machine Learning"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Account Management"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS AppConfig"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "Auto Scaling"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Chatbot"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS CloudFormation"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS CloudTrail"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "Amazon CloudWatch"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Command Line Interface (AWS CLI)"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Compute Optimizer"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Config"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Console Mobile Application"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Control Tower"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "Amazon Data Lifecycle Manager"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Health"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Launch Wizard"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS License Manager"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "Amazon Managed Grafana"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "Amazon Managed Service for Prometheus"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Management Console"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS OpsWorks"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Organizations"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Proton"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Resilience Hub"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Resource Explorer"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Resource Groups"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Service Catalog"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Service Management Connector"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "Service Quotas"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Systems Manager"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "Tag Editor"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Telco Network Builder"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Tools for PowerShell"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Trusted Advisor"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS User Notifications"
+  },
+  {
+    "category": "Management & Governance",
+    "name": "AWS Well-Architected Tool"
+  },
+  {
+    "category": "Serverless",
+    "name": "AWS Lambda"
+  },
+  {
+    "category": "Serverless",
+    "name": "Amazon API Gateway"
+  },
+  {
+    "category": "Serverless",
+    "name": "Amazon DynamoDB"
+  },
+  {
+    "category": "Serverless",
+    "name": "Amazon EventBridge"
+  },
+  {
+    "category": "Serverless",
+    "name": "Amazon SNS"
+  },
+  {
+    "category": "Serverless",
+    "name": "Amazon SQS"
+  },
+  {
+    "category": "Serverless",
+    "name": "Amazon S3"
+  },
+  {
+    "category": "Serverless",
+    "name": "AWS AppSync"
+  },
+  {
+    "category": "Serverless",
+    "name": "AWS Fargate"
+  },
+  {
+    "category": "Serverless",
+    "name": "AWS Step Functions"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "AWS Application Composer"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "AWS Cloud9"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "AWS Cloud Control API"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "AWS CloudShell"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "AWS CodeArtifact"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "AWS CodeBuild"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "Amazon CodeCatalyst"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "AWS CodeCommit"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "AWS CodeDeploy"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "AWS CodePipeline"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "AWS CodeStar"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "Amazon CodeWhisperer"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "AWS Fault Injection Simulator"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "AWS Microservice Extractor for .NET"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "Porting Assistant for .NET"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "Toolkit for .NET Refactoring"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "AWS Tools & SDKs"
+  },
+  {
+    "category": "Developer Tools",
+    "name": "AWS X-Ray"
+  },
+  {
+    "category": "Migration & Transfer",
+    "name": "AWS Application Discovery Service"
+  },
+  {
+    "category": "Migration & Transfer",
+    "name": "AWS Application Migration Service"
+  },
+  {
+    "category": "Migration & Transfer",
+    "name": "AWS Database Migration Service"
+  },
+  {
+    "category": "Migration & Transfer",
+    "name": "AWS DataSync"
+  },
+  {
+    "category": "Migration & Transfer",
+    "name": "AWS Mainframe Modernization"
+  },
+  {
+    "category": "Migration & Transfer",
+    "name": "AWS Migration Hub"
+  },
+  {
+    "category": "Migration & Transfer",
+    "name": "AWS Schema Conversion Tool"
+  },
+  {
+    "category": "Migration & Transfer",
+    "name": "AWS Snow Family"
+  },
+  {
+    "category": "Migration & Transfer",
+    "name": "AWS Transfer Family"
+  },
+  {
+    "category": "Networking & Content Delivery",
+    "name": "Amazon API Gateway"
+  },
+  {
+    "category": "Networking & Content Delivery",
+    "name": "AWS App Mesh"
+  },
+  {
+    "category": "Networking & Content Delivery",
+    "name": "AWS Cloud Map"
+  },
+  {
+    "category": "Networking & Content Delivery",
+    "name": "Amazon CloudFront"
+  },
+  {
+    "category": "Networking & Content Delivery",
+    "name": "AWS Direct Connect"
+  },
+  {
+    "category": "Networking & Content Delivery",
+    "name": "Elastic Load Balancing"
+  },
+  {
+    "category": "Networking & Content Delivery",
+    "name": "AWS Global Accelerator"
+  },
+  {
+    "category": "Networking & Content Delivery",
+    "name": "AWS Private 5G"
+  },
+  {
+    "category": "Networking & Content Delivery",
+    "name": "Amazon Route 53"
+  },
+  {
+    "category": "Networking & Content Delivery",
+    "name": "Amazon Route 53 Application Recovery Controller"
+  },
+  {
+    "category": "Networking & Content Delivery",
+    "name": "AWS Verified Access"
+  },
+  {
+    "category": "Networking & Content Delivery",
+    "name": "Amazon VPC"
+  },
+  {
+    "category": "Networking & Content Delivery",
+    "name": "Amazon VPC Lattice"
+  },
+  {
+    "category": "Networking & Content Delivery",
+    "name": "AWS VPN"
+  },
+  {
+    "category": "Media Services",
+    "name": "AWS Cloud Digital Interface SDK"
+  },
+  {
+    "category": "Media Services",
+    "name": "Amazon Elastic Transcoder"
+  },
+  {
+    "category": "Media Services",
+    "name": "AWS Elemental MediaConnect"
+  },
+  {
+    "category": "Media Services",
+    "name": "AWS Elemental MediaConvert"
+  },
+  {
+    "category": "Media Services",
+    "name": "AWS Elemental MediaLive"
+  },
+  {
+    "category": "Media Services",
+    "name": "AWS Elemental MediaPackage"
+  },
+  {
+    "category": "Media Services",
+    "name": "AWS Elemental MediaStore"
+  },
+  {
+    "category": "Media Services",
+    "name": "AWS Elemental MediaTailor"
+  },
+  {
+    "category": "Media Services",
+    "name": "AWS Elemental On-Premises"
+  },
+  {
+    "category": "Media Services",
+    "name": "Amazon Interactive Video Service"
+  },
+  {
+    "category": "Media Services",
+    "name": "Amazon Nimble Studio"
+  },
+  {
+    "category": "Internet of Things (IoT)",
+    "name": "AWS IoT Core"
+  },
+  {
+    "category": "Internet of Things (IoT)",
+    "name": "FreeRTOS"
+  },
+  {
+    "category": "Internet of Things (IoT)",
+    "name": "AWS IoT Analytics"
+  },
+  {
+    "category": "Internet of Things (IoT)",
+    "name": "AWS IoT Device Defender"
+  },
+  {
+    "category": "Internet of Things (IoT)",
+    "name": "AWS IoT Device Management"
+  },
+  {
+    "category": "Internet of Things (IoT)",
+    "name": "AWS IoT Events"
+  },
+  {
+    "category": "Internet of Things (IoT)",
+    "name": "AWS IoT ExpressLink"
+  },
+  {
+    "category": "Internet of Things (IoT)",
+    "name": "AWS IoT FleetWise"
+  },
+  {
+    "category": "Internet of Things (IoT)",
+    "name": "AWS IoT Greengrass"
+  },
+  {
+    "category": "Internet of Things (IoT)",
+    "name": "AWS IoT RoboRunner"
+  },
+  {
+    "category": "Internet of Things (IoT)",
+    "name": "AWS IoT SiteWise"
+  },
+  {
+    "category": "Internet of Things (IoT)",
+    "name": "AWS IoT TwinMaker"
+  },
+  {
+    "category": "Internet of Things (IoT)",
+    "name": "AWS IoT 1-Click"
+  },
+  {
+    "category": "Front-End Web & Mobile",
+    "name": "AWS Amplify"
+  },
+  {
+    "category": "Front-End Web & Mobile",
+    "name": "Amplify Android (AWS Mobile SDK for Android)"
+  },
+  {
+    "category": "Front-End Web & Mobile",
+    "name": "Amplify iOS (AWS Mobile SDK for iOS)"
+  },
+  {
+    "category": "Front-End Web & Mobile",
+    "name": "AWS AppSync"
+  },
+  {
+    "category": "Front-End Web & Mobile",
+    "name": "AWS Device Farm"
+  },
+  {
+    "category": "Front-End Web & Mobile",
+    "name": "Amazon Location Service"
+  },
+  {
+    "category": "Front-End Web & Mobile",
+    "name": "AWS Mobile SDK for Unity"
+  },
+  {
+    "category": "Front-End Web & Mobile",
+    "name": "AWS Mobile SDK for Xamarin"
+  },
+  {
+    "category": "Front-End Web & Mobile",
+    "name": "Amazon Pinpoint"
+  },
+  {
+    "category": "Front-End Web & Mobile",
+    "name": "Amazon SNS"
+  },
+  {
+    "category": "End User Computing",
+    "name": "Amazon WorkSpaces"
+  },
+  {
+    "category": "End User Computing",
+    "name": "Amazon WorkSpaces Web"
+  },
+  {
+    "category": "End User Computing",
+    "name": "Amazon AppStream 2.0"
+  },
+  {
+    "category": "End User Computing",
+    "name": "Amazon WAM"
+  },
+  {
+    "category": "End User Computing",
+    "name": "NICE DCV"
+  },
+  {
+    "category": "Analytics",
+    "name": "Amazon AppFlow"
+  },
+  {
+    "category": "Analytics",
+    "name": "Amazon Athena"
+  },
+  {
+    "category": "Analytics",
+    "name": "AWS Clean Rooms"
+  },
+  {
+    "category": "Analytics",
+    "name": "Amazon CloudSearch"
+  },
+  {
+    "category": "Analytics",
+    "name": "AWS Data Exchange"
+  },
+  {
+    "category": "Analytics",
+    "name": "AWS Data Pipeline"
+  },
+  {
+    "category": "Analytics",
+    "name": "Amazon DataZone"
+  },
+  {
+    "category": "Analytics",
+    "name": "Amazon OpenSearch Service"
+  },
+  {
+    "category": "Analytics",
+    "name": "Amazon EMR"
+  },
+  {
+    "category": "Analytics",
+    "name": "Amazon FinSpace"
+  },
+  {
+    "category": "Analytics",
+    "name": "AWS Glue"
+  },
+  {
+    "category": "Analytics",
+    "name": "Amazon Kinesis"
+  },
+  {
+    "category": "Analytics",
+    "name": "AWS Lake Formation"
+  },
+  {
+    "category": "Analytics",
+    "name": "Amazon MSK"
+  },
+  {
+    "category": "Analytics",
+    "name": "Amazon QuickSight"
+  },
+  {
+    "category": "Analytics",
+    "name": "Amazon Redshift"
+  },
+  {
+    "category": "Application Integration",
+    "name": "Amazon AppFlow"
+  },
+  {
+    "category": "Application Integration",
+    "name": "Amazon EventBridge"
+  },
+  {
+    "category": "Application Integration",
+    "name": "Amazon Managed Workflows for Apache Airflow"
+  },
+  {
+    "category": "Application Integration",
+    "name": "Amazon MQ"
+  },
+  {
+    "category": "Application Integration",
+    "name": "Amazon SNS"
+  },
+  {
+    "category": "Application Integration",
+    "name": "Amazon SQS"
+  },
+  {
+    "category": "Application Integration",
+    "name": "AWS Step Functions"
+  },
+  {
+    "category": "Application Integration",
+    "name": "Amazon SWF"
+  },
+  {
+    "category": "Business Applications",
+    "name": "Alexa for Business"
+  },
+  {
+    "category": "Business Applications",
+    "name": "Amazon Chime"
+  },
+  {
+    "category": "Business Applications",
+    "name": "Amazon Chime SDK"
+  },
+  {
+    "category": "Business Applications",
+    "name": "Amazon Connect"
+  },
+  {
+    "category": "Business Applications",
+    "name": "Amazon Honeycode"
+  },
+  {
+    "category": "Business Applications",
+    "name": "Amazon Pinpoint"
+  },
+  {
+    "category": "Business Applications",
+    "name": "Amazon Simple Email Service (Amazon SES)"
+  },
+  {
+    "category": "Business Applications",
+    "name": "AWS Supply Chain"
+  },
+  {
+    "category": "Business Applications",
+    "name": "AWS Wickr"
+  },
+  {
+    "category": "Business Applications",
+    "name": "Amazon WorkDocs"
+  },
+  {
+    "category": "Business Applications",
+    "name": "Amazon WorkMail"
+  },
+  {
+    "category": "Customer Enablement Services",
+    "name": "AWS Incident Detection and Response"
+  },
+  {
+    "category": "Customer Enablement Services",
+    "name": "AWS Managed Services"
+  },
+  {
+    "category": "Customer Enablement Services",
+    "name": "AWS Professional Services"
+  },
+  {
+    "category": "Customer Enablement Services",
+    "name": "AWS Training and Certification"
+  },
+  {
+    "category": "Customer Enablement Services",
+    "name": "AWS IQ"
+  },
+  {
+    "category": "Satellite",
+    "name": "AWS Ground Station"
+  },
+  {
+    "category": "Robotics",
+    "name": "AWS RoboMaker"
+  },
+  {
+    "category": "Quantum Computing",
+    "name": "Amazon Braket"
+  },
+  {
+    "category": "Blockchain",
+    "name": "Amazon Managed Blockchain"
+  },
+  {
+    "category": "Game Development",
+    "name": "AWS GameKit"
+  },
+  {
+    "category": "Game Development",
+    "name": "Amazon GameLift"
+  },
+  {
+    "category": "Game Development",
+    "name": "Amazon GameSparks (Preview)"
+  },
+  {
+    "category": "Game Development",
+    "name": "Amazon Lumberyard"
+  }
+]

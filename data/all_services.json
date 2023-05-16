@@ -1,0 +1,413 @@
+[
+  {
+    "category": "Featured Services",
+    "services": [
+      "Amazon EC2",
+      "Amazon S3",
+      "Amazon Aurora",
+      "Amazon RDS",
+      "Amazon DynamoDB",
+      "AWS Lambda",
+      "Amazon VPC",
+      "Amazon Lightsail",
+      "Amazon SageMaker"
+    ]
+  },
+  {
+    "category": "Compute",
+    "services": [
+      "Amazon EC2",
+      "AWS App Runner",
+      "AWS Batch",
+      "AWS Elastic Beanstalk",
+      "Amazon EC2 Image Builder",
+      "AWS End-of-Support Migration Program (EMP) for Windows Server",
+      "AWS Lambda",
+      "Amazon Lightsail",
+      "AWS Local Zones",
+      "AWS Outposts",
+      "AWS ParallelCluster",
+      "AWS Serverless Application Model (AWS SAM)",
+      "AWS Serverless Application Repository",
+      "AWS SimSpace Weaver",
+      "AWS Wavelength"
+    ]
+  },
+  {
+    "category": "Containers",
+    "services": [
+      "Amazon ECR",
+      "Amazon ECS",
+      "Amazon EKS",
+      "AWS App2Container",
+      "AWS App Runner",
+      "Red Hat OpenShift Service on AWS"
+    ]
+  },
+  {
+    "category": "Storage",
+    "services": [
+      "Amazon S3",
+      "AWS Backup",
+      "Amazon EBS",
+      "Amazon EFS",
+      "AWS Elastic Disaster Recovery",
+      "Amazon FSx",
+      "Amazon S3 Glacier",
+      "AWS Snow Family",
+      "AWS Storage Gateway"
+    ]
+  },
+  {
+    "category": "Database",
+    "services": [
+      "Amazon Aurora",
+      "Amazon DocumentDB",
+      "Amazon DynamoDB",
+      "Amazon ElastiCache",
+      "Amazon Keyspaces (for Apache Cassandra)",
+      "Amazon MemoryDB for Redis",
+      "Amazon Neptune",
+      "Amazon QLDB",
+      "Amazon RDS",
+      "Amazon Redshift",
+      "Amazon Timestream"
+    ]
+  },
+  {
+    "category": "Security, Identity, & Compliance",
+    "services": [
+      "AWS Identity and Access Management (IAM)",
+      "AWS Artifact",
+      "AWS Audit Manager",
+      "Amazon Cognito",
+      "Amazon Detective",
+      "AWS Directory Service",
+      "AWS Firewall Manager",
+      "Amazon Cloud Directory",
+      "Amazon GuardDuty",
+      "AWS IAM Identity Center (successor to AWS Single Sign-On)",
+      "Amazon Inspector",
+      "Amazon Macie",
+      "AWS Network Firewall",
+      "AWS Resource Access Manager (AWS RAM)",
+      "AWS Secrets Manager",
+      "AWS Security Hub",
+      "Amazon Security Lake (Preview)",
+      "AWS Shield",
+      "AWS WAF"
+    ]
+  },
+  {
+    "category": "Cryptography & PKI",
+    "services": [
+      "AWS Cryptographic Services Overview",
+      "AWS PKI Services Overview",
+      "AWS CloudHSM",
+      "AWS Key Management Service (AWS KMS)",
+      "AWS Crypto Tools",
+      "AWS Certificate Manager",
+      "AWS Private Certificate Authority",
+      "AWS Signer"
+    ]
+  },
+  {
+    "category": "Machine Learning",
+    "services": [
+      "Amazon SageMaker",
+      "Amazon Augmented AI (A2I)",
+      "Amazon CodeGuru",
+      "Amazon Comprehend",
+      "Amazon Comprehend Medical",
+      "Amazon DevOps Guru",
+      "Amazon Elastic Inference",
+      "Amazon Forecast",
+      "Amazon Fraud Detector",
+      "Amazon HealthLake",
+      "Amazon Kendra",
+      "Amazon Lex",
+      "Amazon Lookout for Equipment",
+      "Amazon Lookout for Metrics",
+      "Amazon Lookout for Vision",
+      "Amazon Monitron",
+      "Amazon Omics",
+      "AWS Panorama",
+      "Amazon Personalize",
+      "Amazon Polly",
+      "Amazon Rekognition",
+      "Amazon Textract",
+      "Amazon Translate",
+      "Amazon Transcribe",
+      "AWS Deep Learning AMIs",
+      "AWS Deep Learning Containers",
+      "AWS DeepComposer",
+      "AWS DeepLens",
+      "AWS DeepRacer",
+      "Apache MXNet on AWS",
+      "Amazon Machine Learning"
+    ]
+  },
+  {
+    "category": "Management & Governance",
+    "services": [
+      "AWS Account Management",
+      "AWS AppConfig",
+      "Auto Scaling",
+      "AWS Chatbot",
+      "AWS CloudFormation",
+      "AWS CloudTrail",
+      "Amazon CloudWatch",
+      "AWS Command Line Interface (AWS CLI)",
+      "AWS Compute Optimizer",
+      "AWS Config",
+      "AWS Console Mobile Application",
+      "AWS Control Tower",
+      "Amazon Data Lifecycle Manager",
+      "AWS Health",
+      "AWS Launch Wizard",
+      "AWS License Manager",
+      "Amazon Managed Grafana",
+      "Amazon Managed Service for Prometheus",
+      "AWS Management Console",
+      "AWS OpsWorks",
+      "AWS Organizations",
+      "AWS Proton",
+      "AWS Resilience Hub",
+      "AWS Resource Explorer",
+      "AWS Resource Groups",
+      "AWS Service Catalog",
+      "AWS Service Management Connector",
+      "Service Quotas",
+      "AWS Systems Manager",
+      "Tag Editor",
+      "AWS Telco Network Builder",
+      "AWS Tools for PowerShell",
+      "AWS Trusted Advisor",
+      "AWS User Notifications",
+      "AWS Well-Architected Tool"
+    ]
+  },
+  {
+    "category": "Serverless",
+    "services": [
+      "AWS Lambda",
+      "Amazon API Gateway",
+      "Amazon DynamoDB",
+      "Amazon EventBridge",
+      "Amazon SNS",
+      "Amazon SQS",
+      "Amazon S3",
+      "AWS AppSync",
+      "AWS Fargate",
+      "AWS Step Functions"
+    ]
+  },
+  {
+    "category": "Developer Tools",
+    "services": [
+      "AWS Application Composer",
+      "AWS Cloud9",
+      "AWS Cloud Control API",
+      "AWS CloudShell",
+      "AWS CodeArtifact",
+      "AWS CodeBuild",
+      "Amazon CodeCatalyst",
+      "AWS CodeCommit",
+      "AWS CodeDeploy",
+      "AWS CodePipeline",
+      "AWS CodeStar",
+      "Amazon CodeWhisperer",
+      "AWS Fault Injection Simulator",
+      "AWS Microservice Extractor for .NET",
+      "Porting Assistant for .NET",
+      "Toolkit for .NET Refactoring",
+      "AWS Tools & SDKs",
+      "AWS X-Ray"
+    ]
+  },
+  {
+    "category": "Migration & Transfer",
+    "services": [
+      "AWS Application Discovery Service",
+      "AWS Application Migration Service",
+      "AWS Database Migration Service",
+      "AWS DataSync",
+      "AWS Mainframe Modernization",
+      "AWS Migration Hub",
+      "AWS Schema Conversion Tool",
+      "AWS Snow Family",
+      "AWS Transfer Family"
+    ]
+  },
+  {
+    "category": "Networking & Content Delivery",
+    "services": [
+      "Amazon API Gateway",
+      "AWS App Mesh",
+      "AWS Cloud Map",
+      "Amazon CloudFront",
+      "AWS Direct Connect",
+      "Elastic Load Balancing",
+      "AWS Global Accelerator",
+      "AWS Private 5G",
+      "Amazon Route 53",
+      "Amazon Route 53 Application Recovery Controller",
+      "AWS Verified Access",
+      "Amazon VPC",
+      "Amazon VPC Lattice",
+      "AWS VPN"
+    ]
+  },
+  {
+    "category": "Media Services",
+    "services": [
+      "AWS Cloud Digital Interface SDK",
+      "Amazon Elastic Transcoder",
+      "AWS Elemental MediaConnect",
+      "AWS Elemental MediaConvert",
+      "AWS Elemental MediaLive",
+      "AWS Elemental MediaPackage",
+      "AWS Elemental MediaStore",
+      "AWS Elemental MediaTailor",
+      "AWS Elemental On-Premises",
+      "Amazon Interactive Video Service",
+      "Amazon Nimble Studio"
+    ]
+  },
+  {
+    "category": "Internet of Things (IoT)",
+    "services": [
+      "AWS IoT Core",
+      "FreeRTOS",
+      "AWS IoT Analytics",
+      "AWS IoT Device Defender",
+      "AWS IoT Device Management",
+      "AWS IoT Events",
+      "AWS IoT ExpressLink",
+      "AWS IoT FleetWise",
+      "AWS IoT Greengrass",
+      "AWS IoT RoboRunner",
+      "AWS IoT SiteWise",
+      "AWS IoT TwinMaker",
+      "AWS IoT 1-Click"
+    ]
+  },
+  {
+    "category": "Front-End Web & Mobile",
+    "services": [
+      "AWS Amplify",
+      "Amplify Android (AWS Mobile SDK for Android)",
+      "Amplify iOS (AWS Mobile SDK for iOS)",
+      "AWS AppSync",
+      "AWS Device Farm",
+      "Amazon Location Service",
+      "AWS Mobile SDK for Unity",
+      "AWS Mobile SDK for Xamarin",
+      "Amazon Pinpoint",
+      "Amazon SNS"
+    ]
+  },
+  {
+    "category": "End User Computing",
+    "services": [
+      "Amazon WorkSpaces",
+      "Amazon WorkSpaces Web",
+      "Amazon AppStream 2.0",
+      "Amazon WAM",
+      "NICE DCV"
+    ]
+  },
+  {
+    "category": "Analytics",
+    "services": [
+      "Amazon AppFlow",
+      "Amazon Athena",
+      "AWS Clean Rooms",
+      "Amazon CloudSearch",
+      "AWS Data Exchange",
+      "AWS Data Pipeline",
+      "Amazon DataZone",
+      "Amazon OpenSearch Service",
+      "Amazon EMR",
+      "Amazon FinSpace",
+      "AWS Glue",
+      "Amazon Kinesis",
+      "AWS Lake Formation",
+      "Amazon MSK",
+      "Amazon QuickSight",
+      "Amazon Redshift"
+    ]
+  },
+  {
+    "category": "Application Integration",
+    "services": [
+      "Amazon AppFlow",
+      "Amazon EventBridge",
+      "Amazon Managed Workflows for Apache Airflow",
+      "Amazon MQ",
+      "Amazon SNS",
+      "Amazon SQS",
+      "AWS Step Functions",
+      "Amazon SWF"
+    ]
+  },
+  {
+    "category": "Business Applications",
+    "services": [
+      "Alexa for Business",
+      "Amazon Chime",
+      "Amazon Chime SDK",
+      "Amazon Connect",
+      "Amazon Honeycode",
+      "Amazon Pinpoint",
+      "Amazon Simple Email Service (Amazon SES)",
+      "AWS Supply Chain",
+      "AWS Wickr",
+      "Amazon WorkDocs",
+      "Amazon WorkMail"
+    ]
+  },
+  {
+    "category": "Customer Enablement Services",
+    "services": [
+      "AWS Incident Detection and Response",
+      "AWS Managed Services",
+      "AWS Professional Services",
+      "AWS Training and Certification",
+      "AWS IQ"
+    ]
+  },
+  {
+    "category": "Satellite",
+    "services": [
+      "AWS Ground Station"
+    ]
+  },
+  {
+    "category": "Robotics",
+    "services": [
+      "AWS RoboMaker"
+    ]
+  },
+  {
+    "category": "Quantum Computing",
+    "services": [
+      "Amazon Braket"
+    ]
+  },
+  {
+    "category": "Blockchain",
+    "services": [
+      "Amazon Managed Blockchain"
+    ]
+  },
+  {
+    "category": "Game Development",
+    "services": [
+      "AWS GameKit",
+      "Amazon GameLift",
+      "Amazon GameSparks (Preview)",
+      "Amazon Lumberyard"
+    ]
+  }
+]
