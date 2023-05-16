@@ -51,8 +51,7 @@
   },
   {
     "category": "Compute",
-    "name": "AWS App Runner",
-    "doc_url": "https://docs.aws.amazon.com/apprunner/?icmpid=docs_homepage_compute"
+    "name": "AWS App Runner"
   },
   {
     "category": "Compute",
@@ -71,8 +70,7 @@
   },
   {
     "category": "Compute",
-    "name": "AWS End-of-Support Migration Program (EMP) for Windows Server",
-    "doc_url": "https://aws.amazon.com/emp-windows-server/"
+    "name": "AWS End-of-Support Migration Program (EMP) for Windows Server"
   },
   {
     "category": "Compute",
@@ -86,8 +84,7 @@
   },
   {
     "category": "Compute",
-    "name": "AWS Local Zones",
-    "doc_url": "https://docs.aws.amazon.com/local-zones/?icmpid=docs_homepage_compute"
+    "name": "AWS Local Zones"
   },
   {
     "category": "Compute",
@@ -101,13 +98,11 @@
   },
   {
     "category": "Compute",
-    "name": "AWS Serverless Application Model (AWS SAM)",
-    "doc_url": "https://docs.aws.amazon.com/serverless-application-model/?icmpid=docs_homepage_compute"
+    "name": "AWS Serverless Application Model (AWS SAM)"
   },
   {
     "category": "Compute",
-    "name": "AWS Serverless Application Repository",
-    "doc_url": "https://docs.aws.amazon.com/serverlessrepo/?icmpid=docs_homepage_compute"
+    "name": "AWS Serverless Application Repository"
   },
   {
     "category": "Compute",
@@ -116,8 +111,7 @@
   },
   {
     "category": "Compute",
-    "name": "AWS Wavelength",
-    "doc_url": "https://docs.aws.amazon.com/wavelength/?icmpid=docs_homepage_compute"
+    "name": "AWS Wavelength"
   },
   {
     "category": "Containers",
@@ -136,13 +130,11 @@
   },
   {
     "category": "Containers",
-    "name": "AWS App2Container",
-    "doc_url": "https://docs.aws.amazon.com/app2container/?icmpid=docs_homepage_containers"
+    "name": "AWS App2Container"
   },
   {
     "category": "Containers",
-    "name": "AWS App Runner",
-    "doc_url": "https://docs.aws.amazon.com/apprunner/?icmpid=docs_homepage_compute"
+    "name": "AWS App Runner"
   },
   {
     "category": "Containers",
@@ -156,8 +148,7 @@
   },
   {
     "category": "Storage",
-    "name": "AWS Backup",
-    "doc_url": "https://docs.aws.amazon.com/aws-backup/"
+    "name": "AWS Backup"
   },
   {
     "category": "Storage",
@@ -166,13 +157,11 @@
   },
   {
     "category": "Storage",
-    "name": "Amazon EFS",
-    "doc_url": "https://docs.aws.amazon.com/efs/"
+    "name": "Amazon EFS"
   },
   {
     "category": "Storage",
-    "name": "AWS Elastic Disaster Recovery",
-    "doc_url": "https://docs.aws.amazon.com/drs/?icmpid=docs_homepage_storage"
+    "name": "AWS Elastic Disaster Recovery"
   },
   {
     "category": "Storage",
@@ -221,8 +210,7 @@
   },
   {
     "category": "Database",
-    "name": "Amazon MemoryDB for Redis",
-    "doc_url": "https://docs.aws.amazon.com/memorydb/"
+    "name": "Amazon MemoryDB for Redis"
   },
   {
     "category": "Database",
@@ -246,8 +234,7 @@
   },
   {
     "category": "Database",
-    "name": "Amazon Timestream",
-    "doc_url": "https://docs.aws.amazon.com/timestream/?icmpid=docs_homepage_databases"
+    "name": "Amazon Timestream"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -261,8 +248,7 @@
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "AWS Audit Manager",
-    "doc_url": "https://docs.aws.amazon.com/audit-manager/?icmpid=docs_homepage_security"
+    "name": "AWS Audit Manager"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -281,8 +267,7 @@
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "AWS Firewall Manager",
-    "doc_url": "https://docs.aws.amazon.com/firewall-manager/"
+    "name": "AWS Firewall Manager"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -306,8 +291,7 @@
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "Amazon Macie",
-    "doc_url": "https://docs.aws.amazon.com/macie/"
+    "name": "Amazon Macie"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -321,8 +305,7 @@
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "AWS Secrets Manager",
-    "doc_url": "https://docs.aws.amazon.com/secretsmanager/"
+    "name": "AWS Secrets Manager"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -331,13 +314,11 @@
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "Amazon Security Lake (Preview)",
-    "doc_url": "https://docs.aws.amazon.com/security-lake/?icmpid=docs_homepage_security"
+    "name": "Amazon Security Lake (Preview)"
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "AWS Shield",
-    "doc_url": "https://docs.aws.amazon.com/shield/"
+    "name": "AWS Shield"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -361,13 +342,11 @@
   },
   {
     "category": "Cryptography & PKI",
-    "name": "AWS Key Management Service (AWS KMS)",
-    "doc_url": "https://docs.aws.amazon.com/kms/"
+    "name": "AWS Key Management Service (AWS KMS)"
   },
   {
     "category": "Cryptography & PKI",
-    "name": "AWS Crypto Tools",
-    "doc_url": "https://docs.aws.amazon.com/aws-crypto-tools/"
+    "name": "AWS Crypto Tools"
   },
   {
     "category": "Cryptography & PKI",
@@ -396,8 +375,7 @@
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon CodeGuru",
-    "doc_url": "https://docs.aws.amazon.com/codeguru/?icmpid=docs_homepage_ml"
+    "name": "Amazon CodeGuru"
   },
   {
     "category": "Machine Learning",
@@ -411,8 +389,7 @@
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon DevOps Guru",
-    "doc_url": "https://docs.aws.amazon.com/devops-guru/?icmpid=docs_homepage_ml"
+    "name": "Amazon DevOps Guru"
   },
   {
     "category": "Machine Learning",
@@ -421,23 +398,19 @@
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Forecast",
-    "doc_url": "https://docs.aws.amazon.com/forecast/?icmpid=docs_homepage_ml"
+    "name": "Amazon Forecast"
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Fraud Detector",
-    "doc_url": "https://docs.aws.amazon.com/frauddetector/?icmpid=docs_homepage_ml"
+    "name": "Amazon Fraud Detector"
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon HealthLake",
-    "doc_url": "https://docs.aws.amazon.com/healthlake/?icmpid=docs_homepage_ml"
+    "name": "Amazon HealthLake"
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Kendra",
-    "doc_url": "https://docs.aws.amazon.com/kendra/?icmpid=docs_homepage_ml"
+    "name": "Amazon Kendra"
   },
   {
     "category": "Machine Learning",
@@ -446,13 +419,11 @@
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Lookout for Equipment",
-    "doc_url": "https://docs.aws.amazon.com/lookout-for-equipment/?icmpid=docs_homepage_ml"
+    "name": "Amazon Lookout for Equipment"
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Lookout for Metrics",
-    "doc_url": "https://docs.aws.amazon.com/lookout-for-metrics/?icmpid=docs_homepage_ml"
+    "name": "Amazon Lookout for Metrics"
   },
   {
     "category": "Machine Learning",
@@ -461,23 +432,19 @@
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Monitron",
-    "doc_url": "https://docs.aws.amazon.com/Monitron/?icmpid=docs_homepage_ml"
+    "name": "Amazon Monitron"
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Omics",
-    "doc_url": "https://docs.aws.amazon.com/omics/?icmpid=docs_homepage_ml"
+    "name": "Amazon Omics"
   },
   {
     "category": "Machine Learning",
-    "name": "AWS Panorama",
-    "doc_url": "https://docs.aws.amazon.com/panorama/?icmpid=docs_homepage_ml"
+    "name": "AWS Panorama"
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Personalize",
-    "doc_url": "https://docs.aws.amazon.com/personalize/?icmpid=docs_homepage_ml"
+    "name": "Amazon Personalize"
   },
   {
     "category": "Machine Learning",
@@ -516,8 +483,7 @@
   },
   {
     "category": "Machine Learning",
-    "name": "AWS DeepComposer",
-    "doc_url": "https://docs.aws.amazon.com/deepcomposer/?icmpid=docs_homepage_ml"
+    "name": "AWS DeepComposer"
   },
   {
     "category": "Machine Learning",
@@ -531,8 +497,7 @@
   },
   {
     "category": "Machine Learning",
-    "name": "Apache MXNet on AWS",
-    "doc_url": "https://aws.amazon.com/mxnet/"
+    "name": "Apache MXNet on AWS"
   },
   {
     "category": "Machine Learning",
@@ -556,8 +521,7 @@
   },
   {
     "category": "Management & Governance",
-    "name": "AWS Chatbot",
-    "doc_url": "https://docs.aws.amazon.com/chatbot/?icmpid=docs_homepage_mgmtgov"
+    "name": "AWS Chatbot"
   },
   {
     "category": "Management & Governance",
@@ -566,8 +530,7 @@
   },
   {
     "category": "Management & Governance",
-    "name": "AWS CloudTrail",
-    "doc_url": "https://docs.aws.amazon.com/cloudtrail/"
+    "name": "AWS CloudTrail"
   },
   {
     "category": "Management & Governance",
@@ -581,8 +544,7 @@
   },
   {
     "category": "Management & Governance",
-    "name": "AWS Compute Optimizer",
-    "doc_url": "https://docs.aws.amazon.com/compute-optimizer/?id=docs_gateway"
+    "name": "AWS Compute Optimizer"
   },
   {
     "category": "Management & Governance",
@@ -596,8 +558,7 @@
   },
   {
     "category": "Management & Governance",
-    "name": "AWS Control Tower",
-    "doc_url": "https://docs.aws.amazon.com/controltower/?icmpid=docs_homepage_mgmtgov"
+    "name": "AWS Control Tower"
   },
   {
     "category": "Management & Governance",
@@ -611,13 +572,11 @@
   },
   {
     "category": "Management & Governance",
-    "name": "AWS Launch Wizard",
-    "doc_url": "https://docs.aws.amazon.com/launchwizard/?icmpid=docs_homepage_mgmtgov"
+    "name": "AWS Launch Wizard"
   },
   {
     "category": "Management & Governance",
-    "name": "AWS License Manager",
-    "doc_url": "https://docs.aws.amazon.com/license-manager/?icmpid=docs_homepage_mgmtgov"
+    "name": "AWS License Manager"
   },
   {
     "category": "Management & Governance",
@@ -626,13 +585,11 @@
   },
   {
     "category": "Management & Governance",
-    "name": "Amazon Managed Service for Prometheus",
-    "doc_url": "https://docs.aws.amazon.com/prometheus/?icmpid=docs_homepage_mgmtgov"
+    "name": "Amazon Managed Service for Prometheus"
   },
   {
     "category": "Management & Governance",
-    "name": "AWS Management Console",
-    "doc_url": "https://docs.aws.amazon.com/awsconsolehelpdocs/"
+    "name": "AWS Management Console"
   },
   {
     "category": "Management & Governance",
@@ -646,13 +603,11 @@
   },
   {
     "category": "Management & Governance",
-    "name": "AWS Proton",
-    "doc_url": "https://docs.aws.amazon.com/proton/?icmpid=docs_homepage_mgmtgov"
+    "name": "AWS Proton"
   },
   {
     "category": "Management & Governance",
-    "name": "AWS Resilience Hub",
-    "doc_url": "https://docs.aws.amazon.com/resilience-hub/?icmpid=docs_homepage_mgmtgov"
+    "name": "AWS Resilience Hub"
   },
   {
     "category": "Management & Governance",
@@ -691,8 +646,7 @@
   },
   {
     "category": "Management & Governance",
-    "name": "AWS Telco Network Builder",
-    "doc_url": "https://docs.aws.amazon.com/tnb/?id=docs_gateway"
+    "name": "AWS Telco Network Builder"
   },
   {
     "category": "Management & Governance",
@@ -711,8 +665,7 @@
   },
   {
     "category": "Management & Governance",
-    "name": "AWS Well-Architected Tool",
-    "doc_url": "https://docs.aws.amazon.com/wellarchitected/?icmpid=docs_homepage_mgmtgov"
+    "name": "AWS Well-Architected Tool"
   },
   {
     "category": "Serverless",
@@ -766,8 +719,7 @@
   },
   {
     "category": "Developer Tools",
-    "name": "AWS Application Composer",
-    "doc_url": "https://docs.aws.amazon.com/application-composer/"
+    "name": "AWS Application Composer"
   },
   {
     "category": "Developer Tools",
@@ -776,13 +728,11 @@
   },
   {
     "category": "Developer Tools",
-    "name": "AWS Cloud Control API",
-    "doc_url": "https://docs.aws.amazon.com/cloudcontrolapi/?icmpid=docs_homepage_devtools"
+    "name": "AWS Cloud Control API"
   },
   {
     "category": "Developer Tools",
-    "name": "AWS CloudShell",
-    "doc_url": "https://docs.aws.amazon.com/cloudshell/"
+    "name": "AWS CloudShell"
   },
   {
     "category": "Developer Tools",
@@ -796,8 +746,7 @@
   },
   {
     "category": "Developer Tools",
-    "name": "Amazon CodeCatalyst",
-    "doc_url": "https://docs.aws.amazon.com/codecatalyst/"
+    "name": "Amazon CodeCatalyst"
   },
   {
     "category": "Developer Tools",
@@ -826,13 +775,11 @@
   },
   {
     "category": "Developer Tools",
-    "name": "AWS Fault Injection Simulator",
-    "doc_url": "https://docs.aws.amazon.com/fis/?icmpid=docs_homepage_devtools"
+    "name": "AWS Fault Injection Simulator"
   },
   {
     "category": "Developer Tools",
-    "name": "AWS Microservice Extractor for .NET",
-    "doc_url": "https://aws.amazon.com/microservice-extractor/"
+    "name": "AWS Microservice Extractor for .NET"
   },
   {
     "category": "Developer Tools",
@@ -841,13 +788,11 @@
   },
   {
     "category": "Developer Tools",
-    "name": "Toolkit for .NET Refactoring",
-    "doc_url": "https://docs.aws.amazon.com/tk-dotnet-refactoring/?icmpid=docs_homepage_devtools"
+    "name": "Toolkit for .NET Refactoring"
   },
   {
     "category": "Developer Tools",
-    "name": "AWS Tools & SDKs",
-    "doc_url": "https://aws.amazon.com/developer/tools/"
+    "name": "AWS Tools & SDKs"
   },
   {
     "category": "Developer Tools",
@@ -861,8 +806,7 @@
   },
   {
     "category": "Migration & Transfer",
-    "name": "AWS Application Migration Service",
-    "doc_url": "https://docs.aws.amazon.com/mgn/?icmpid=docs_homepage_migration"
+    "name": "AWS Application Migration Service"
   },
   {
     "category": "Migration & Transfer",
@@ -896,8 +840,7 @@
   },
   {
     "category": "Migration & Transfer",
-    "name": "AWS Transfer Family",
-    "doc_url": "https://docs.aws.amazon.com/transfer/?icmpid=docs_homepage_migration"
+    "name": "AWS Transfer Family"
   },
   {
     "category": "Networking & Content Delivery",
@@ -911,8 +854,7 @@
   },
   {
     "category": "Networking & Content Delivery",
-    "name": "AWS Cloud Map",
-    "doc_url": "https://docs.aws.amazon.com/cloud-map/?icmpid=docs_homepage_networking"
+    "name": "AWS Cloud Map"
   },
   {
     "category": "Networking & Content Delivery",
@@ -926,8 +868,7 @@
   },
   {
     "category": "Networking & Content Delivery",
-    "name": "Elastic Load Balancing",
-    "doc_url": "https://docs.aws.amazon.com/elasticloadbalancing/"
+    "name": "Elastic Load Balancing"
   },
   {
     "category": "Networking & Content Delivery",
@@ -951,8 +892,7 @@
   },
   {
     "category": "Networking & Content Delivery",
-    "name": "AWS Verified Access",
-    "doc_url": "https://docs.aws.amazon.com/verified-access/?icmpid=docs_homepage_networking"
+    "name": "AWS Verified Access"
   },
   {
     "category": "Networking & Content Delivery",
@@ -961,8 +901,7 @@
   },
   {
     "category": "Networking & Content Delivery",
-    "name": "Amazon VPC Lattice",
-    "doc_url": "https://docs.aws.amazon.com/vpc-lattice/?icmpid=docs_homepage_networking"
+    "name": "Amazon VPC Lattice"
   },
   {
     "category": "Networking & Content Delivery",
@@ -981,8 +920,7 @@
   },
   {
     "category": "Media Services",
-    "name": "AWS Elemental MediaConnect",
-    "doc_url": "https://docs.aws.amazon.com/mediaconnect/?icmpid=docs_homepage_mediasvcs"
+    "name": "AWS Elemental MediaConnect"
   },
   {
     "category": "Media Services",
@@ -1011,18 +949,15 @@
   },
   {
     "category": "Media Services",
-    "name": "AWS Elemental On-Premises",
-    "doc_url": "https://docs.aws.amazon.com/elemental-on-premises/"
+    "name": "AWS Elemental On-Premises"
   },
   {
     "category": "Media Services",
-    "name": "Amazon Interactive Video Service",
-    "doc_url": "https://docs.aws.amazon.com/ivs/"
+    "name": "Amazon Interactive Video Service"
   },
   {
     "category": "Media Services",
-    "name": "Amazon Nimble Studio",
-    "doc_url": "https://docs.aws.amazon.com/nimble-studio/?icmpid=docs_homepage_mediasvcs"
+    "name": "Amazon Nimble Studio"
   },
   {
     "category": "Internet of Things (IoT)",
@@ -1051,8 +986,7 @@
   },
   {
     "category": "Internet of Things (IoT)",
-    "name": "AWS IoT Events",
-    "doc_url": "https://docs.aws.amazon.com/iotevents/?icmpid=docs_homepage_iot"
+    "name": "AWS IoT Events"
   },
   {
     "category": "Internet of Things (IoT)",
@@ -1061,8 +995,7 @@
   },
   {
     "category": "Internet of Things (IoT)",
-    "name": "AWS IoT FleetWise",
-    "doc_url": "https://docs.aws.amazon.com/iot-fleetwise/?icmpid=docs_homepage_iot"
+    "name": "AWS IoT FleetWise"
   },
   {
     "category": "Internet of Things (IoT)",
@@ -1071,8 +1004,7 @@
   },
   {
     "category": "Internet of Things (IoT)",
-    "name": "AWS IoT RoboRunner",
-    "doc_url": "https://docs.aws.amazon.com/iotroborunner/?icmpid=docs_homepage_iot"
+    "name": "AWS IoT RoboRunner"
   },
   {
     "category": "Internet of Things (IoT)",
@@ -1096,8 +1028,7 @@
   },
   {
     "category": "Front-End Web & Mobile",
-    "name": "Amplify Android (AWS Mobile SDK for Android)",
-    "doc_url": "https://docs.amplify.aws/sdk/q/platform/android/"
+    "name": "Amplify Android (AWS Mobile SDK for Android)"
   },
   {
     "category": "Front-End Web & Mobile",
@@ -1146,8 +1077,7 @@
   },
   {
     "category": "End User Computing",
-    "name": "Amazon WorkSpaces Web",
-    "doc_url": "https://docs.aws.amazon.com/workspaces-web/?icmpid=docs_homepage_euc"
+    "name": "Amazon WorkSpaces Web"
   },
   {
     "category": "End User Computing",
@@ -1176,8 +1106,7 @@
   },
   {
     "category": "Analytics",
-    "name": "AWS Clean Rooms",
-    "doc_url": "https://docs.aws.amazon.com/clean-rooms/?icmpid=docs_homepage_analytics"
+    "name": "AWS Clean Rooms"
   },
   {
     "category": "Analytics",
@@ -1186,8 +1115,7 @@
   },
   {
     "category": "Analytics",
-    "name": "AWS Data Exchange",
-    "doc_url": "https://docs.aws.amazon.com/data-exchange/"
+    "name": "AWS Data Exchange"
   },
   {
     "category": "Analytics",
@@ -1211,8 +1139,7 @@
   },
   {
     "category": "Analytics",
-    "name": "Amazon FinSpace",
-    "doc_url": "https://docs.aws.amazon.com/finspace/?icmpid=docs_homepage_analytics"
+    "name": "Amazon FinSpace"
   },
   {
     "category": "Analytics",
@@ -1226,8 +1153,7 @@
   },
   {
     "category": "Analytics",
-    "name": "AWS Lake Formation",
-    "doc_url": "https://docs.aws.amazon.com/lake-formation/?icmpid=docs_homepage_analytics"
+    "name": "AWS Lake Formation"
   },
   {
     "category": "Analytics",
@@ -1256,8 +1182,7 @@
   },
   {
     "category": "Application Integration",
-    "name": "Amazon Managed Workflows for Apache Airflow",
-    "doc_url": "https://docs.aws.amazon.com/mwaa/?icmpid=docs_homepage_appintegration"
+    "name": "Amazon Managed Workflows for Apache Airflow"
   },
   {
     "category": "Application Integration",
