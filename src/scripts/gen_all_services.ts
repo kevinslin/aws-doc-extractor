@@ -1,12 +1,5 @@
 import fs from "fs-extra";
-
-type Service = Partial<{
-  name: string;
-  doc_url: string;
-  repo_url: string;
-  toc_url: string;
-  category: string;
-}>;
+import { ServiceMetadata } from "../types/index.js";
 
 type Entry = {
   category: string;
@@ -17,7 +10,7 @@ type Entry = {
 const entries: Entry[] = fs.readJsonSync('data/all_services.json');
 
 // Create an array of all individual service entries
-const allEntries: Service[] = entries.flatMap((entry: Entry) => {
+const allEntries: ServiceMetadata[] = entries.flatMap((entry: Entry) => {
   return entry.services.flatMap((service: string) => {
     return {
       category: entry.category,

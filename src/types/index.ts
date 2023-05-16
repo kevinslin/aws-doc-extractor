@@ -83,3 +83,10 @@ export const SkipStepsOptions = z.enum([
 ]);
 
 
+export type ServiceMetadata = Partial<{
+  name: string;
+  doc_url: string;
+  repo_url: string;
+  toc_url: string;
+  category: string;
+}>;
