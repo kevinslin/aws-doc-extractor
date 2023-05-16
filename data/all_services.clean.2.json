@@ -1,0 +1,522 @@
+[
+    {
+        "category": "Compute",
+        "name": "AWS App Runner",
+        "doc_url": "https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html"
+    },
+    {
+        "category": "Compute",
+        "name": "AWS End-of-Support Migration Program (EMP) for Windows Server",
+        "doc_url": "https://docs.aws.amazon.com/emp/latest/userguide/emp-what-is.html"
+    },
+    {
+        "category": "Compute",
+        "name": "AWS Local Zones",
+        "doc_url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html"
+    },
+    {
+        "category": "Compute",
+        "name": "AWS Serverless Application Model (AWS SAM)",
+        "doc_url": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html"
+    },
+    {
+        "category": "Compute",
+        "name": "AWS Serverless Application Repository",
+        "doc_url": "https://docs.aws.amazon.com/serverlessrepo/latest/devguide/what-is-serverlessrepo.html"
+    },
+    {
+        "category": "Compute",
+        "name": "AWS Wavelength",
+        "doc_url": "https://docs.aws.amazon.com/wavelength/latest/developerguide/get-started-wavelength.html"
+    },
+    {
+        "category": "Containers",
+        "name": "AWS App2Container",
+        "doc_url": "https://docs.aws.amazon.com/app2container/latest/UserGuide/start-intro.html"
+    },
+    {
+        "category": "Containers",
+        "name": "AWS App Runner",
+        "doc_url": "https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html"
+    },
+    {
+        "category": "Storage",
+        "name": "AWS Backup",
+        "doc_url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html"
+    },
+    {
+        "category": "Storage",
+        "name": "Amazon EFS",
+        "doc_url": "https://docs.aws.amazon.com/efs/latest/ug/api-reference.html"
+    },
+    {
+        "category": "Storage",
+        "name": "AWS Elastic Disaster Recovery",
+        "doc_url": "https://docs.aws.amazon.com/drs/latest/userguide/what-is-drs.html"
+    },
+    {
+        "category": "Database",
+        "name": "Amazon MemoryDB for Redis",
+        "doc_url": "https://docs.aws.amazon.com/memorydb/latest/devguide/getting-started.html"
+    },
+    {
+        "category": "Database",
+        "name": "Amazon Timestream",
+        "doc_url": "https://docs.aws.amazon.com/timestream/latest/developerguide/what-is-timestream.html"
+    },
+    {
+        "category": "Security, Identity, & Compliance",
+        "name": "AWS Audit Manager",
+        "doc_url": "https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html"
+    },
+    {
+        "category": "Security, Identity, & Compliance",
+        "name": "AWS Firewall Manager",
+        "doc_url": "https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html"
+    },
+    {
+        "category": "Security, Identity, & Compliance",
+        "name": "Amazon Macie",
+        "doc_url": "https://docs.aws.amazon.com/macie/latest/APIReference/welcome.html"
+    },
+    {
+        "category": "Security, Identity, & Compliance",
+        "name": "AWS Secrets Manager",
+        "doc_url": "https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"
+    },
+    {
+        "category": "Security, Identity, & Compliance",
+        "name": "Amazon Security Lake (Preview)",
+        "doc_url": "https://docs.aws.amazon.com/security-lake/latest/userguide/what-is-security-lake.html"
+    },
+    {
+        "category": "Security, Identity, & Compliance",
+        "name": "AWS Shield",
+        "doc_url": "https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html"
+    },
+    {
+        "category": "Cryptography & PKI",
+        "name": "AWS Key Management Service (AWS KMS)",
+        "doc_url": "https://docs.aws.amazon.com/kms/latest/developerguide/overview.html"
+    },
+    {
+        "category": "Cryptography & PKI",
+        "name": "AWS Crypto Tools",
+        "doc_url": "NO_LINK_FOUND"
+    },
+    {
+        "category": "Machine Learning",
+        "name": "Amazon CodeGuru",
+        "doc_url": "https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/getting-started-with-guru.html"
+    },
+    {
+        "category": "Machine Learning",
+        "name": "Amazon DevOps Guru",
+        "doc_url": "https://docs.aws.amazon.com/devops-guru/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Machine Learning",
+        "name": "Amazon Forecast",
+        "doc_url": "https://docs.aws.amazon.com/forecast/latest/dg/what-is-forecast.html"
+    },
+    {
+        "category": "Machine Learning",
+        "name": "Amazon Fraud Detector",
+        "doc_url": "https://docs.aws.amazon.com/frauddetector/latest/api/Welcome.html"
+    },
+    {
+        "category": "Machine Learning",
+        "name": "Amazon HealthLake",
+        "doc_url": "https://docs.aws.amazon.com/healthlake/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Machine Learning",
+        "name": "Amazon Kendra",
+        "doc_url": "https://docs.aws.amazon.com/kendra/latest/dg/what-is-kendra.html"
+    },
+    {
+        "category": "Machine Learning",
+        "name": "Amazon Lookout for Equipment",
+        "doc_url": "https://amazon-lookout-for-equipment-sdk.readthedocs.io/en/latest/index.html"
+    },
+    {
+        "category": "Machine Learning",
+        "name": "Amazon Lookout for Metrics",
+        "doc_url": "https://docs.aws.amazon.com/lookoutmetrics/latest/api/Welcome.html"
+    },
+    {
+        "category": "Machine Learning",
+        "name": "Amazon Monitron",
+        "doc_url": "https://docs.aws.amazon.com/Monitron/latest/getting-started-guide/gsg-getting-started.html"
+    },
+    {
+        "category": "Machine Learning",
+        "name": "Amazon Omics",
+        "doc_url": "https://docs.aws.amazon.com/omics/latest/api/Welcome.html"
+    },
+    {
+        "category": "Machine Learning",
+        "name": "AWS Panorama",
+        "doc_url": "https://docs.aws.amazon.com/panorama/latest/dev/panorama-welcome.html"
+    },
+    {
+        "category": "Machine Learning",
+        "name": "Amazon Personalize",
+        "doc_url": "https://docs.aws.amazon.com/personalize/latest/dg/what-is-personalize.html"
+    },
+    {
+        "category": "Machine Learning",
+        "name": "AWS DeepComposer",
+        "doc_url": "https://docs.aws.amazon.com/deepcomposer/latest/devguide/what-it-is.html"
+    },
+    {
+        "category": "Machine Learning",
+        "name": "Apache MXNet on AWS",
+        "doc_url": "https://docs.aws.amazon.com/mxnet/latest/dg/whatis.html"
+    },
+    {
+        "category": "Management & Governance",
+        "name": "AWS Chatbot",
+        "doc_url": "https://docs.aws.amazon.com/chatbot/latest/adminguide/getting-started.html"
+    },
+    {
+        "category": "Management & Governance",
+        "name": "AWS CloudTrail",
+        "doc_url": "https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Management & Governance",
+        "name": "AWS Compute Optimizer",
+        "doc_url": "https://docs.aws.amazon.com/compute-optimizer/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Management & Governance",
+        "name": "AWS Control Tower",
+        "doc_url": "https://docs.aws.amazon.com/controltower/latest/userguide/getting-started-with-control-tower.html"
+    },
+    {
+        "category": "Management & Governance",
+        "name": "AWS Launch Wizard",
+        "doc_url": "https://docs.aws.amazon.com/launchwizard/latest/userguide/launch-wizard-sap-deploying.html"
+    },
+    {
+        "category": "Management & Governance",
+        "name": "AWS License Manager",
+        "doc_url": "https://docs.aws.amazon.com/license-manager/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Management & Governance",
+        "name": "Amazon Managed Service for Prometheus",
+        "doc_url": "https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-getting-started.html"
+    },
+    {
+        "category": "Management & Governance",
+        "name": "AWS Management Console",
+        "doc_url": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/learn-whats-new.html"
+    },
+    {
+        "category": "Management & Governance",
+        "name": "AWS Proton",
+        "doc_url": "https://docs.aws.amazon.com/proton/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Management & Governance",
+        "name": "AWS Resilience Hub",
+        "doc_url": "https://docs.aws.amazon.com/resilience-hub/latest/userguide/what-is.html"
+    },
+    {
+        "category": "Management & Governance",
+        "name": "AWS Telco Network Builder",
+        "doc_url": "https://docs.aws.amazon.com/tnb/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Management & Governance",
+        "name": "AWS Well-Architected Tool",
+        "doc_url": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Developer Tools",
+        "name": "AWS Application Composer",
+        "doc_url": "https://docs.aws.amazon.com/application-composer/latest/dg/what-is-composer.html"
+    },
+    {
+        "category": "Developer Tools",
+        "name": "AWS Cloud Control API",
+        "doc_url": "https://docs.aws.amazon.com/cloudcontrolapi/latest/userguide/what-is-cloudcontrolapi.html"
+    },
+    {
+        "category": "Developer Tools",
+        "name": "AWS CloudShell",
+        "doc_url": "https://docs.aws.amazon.com/cloudshell/latest/userguide/welcome.html"
+    },
+    {
+        "category": "Developer Tools",
+        "name": "Amazon CodeCatalyst",
+        "doc_url": "https://docs.aws.amazon.com/codecatalyst/latest/userguide/welcome.html"
+    },
+    {
+        "category": "Developer Tools",
+        "name": "AWS Fault Injection Simulator",
+        "doc_url": "https://docs.aws.amazon.com/fis/latest/userguide/what-is.html"
+    },
+    {
+        "category": "Developer Tools",
+        "name": "AWS Microservice Extractor for .NET",
+        "doc_url": "https://docs.aws.amazon.com/microservice-extractor/latest/userguide/microservice-extractor-prerequisites.html"
+    },
+    {
+        "category": "Developer Tools",
+        "name": "Toolkit for .NET Refactoring",
+        "doc_url": "NO_LINK_FOUND"
+    },
+    {
+        "category": "Developer Tools",
+        "name": "AWS Tools & SDKs",
+        "doc_url": "https://docs.aws.amazon.com/sdkref/latest/guide/overview.html"
+    },
+    {
+        "category": "Migration & Transfer",
+        "name": "AWS Application Migration Service",
+        "doc_url": "https://docs.aws.amazon.com/mgn/latest/ug/what-is-application-migration-service.html"
+    },
+    {
+        "category": "Migration & Transfer",
+        "name": "AWS Transfer Family",
+        "doc_url": "https://docs.aws.amazon.com/transfer/latest/userguide/api_reference.html"
+    },
+    {
+        "category": "Networking & Content Delivery",
+        "name": "AWS Cloud Map",
+        "doc_url": "https://docs.aws.amazon.com/cloud-map/latest/api/Welcome.html"
+    },
+    {
+        "category": "Networking & Content Delivery",
+        "name": "Elastic Load Balancing",
+        "doc_url": "https://hexdocs.pm/ex_aws_elastic_load_balancing/readme.html"
+    },
+    {
+        "category": "Networking & Content Delivery",
+        "name": "AWS Verified Access",
+        "doc_url": "https://docs.aws.amazon.com/verified-access/latest/ug/what-is-verified-access.html"
+    },
+    {
+        "category": "Networking & Content Delivery",
+        "name": "Amazon VPC Lattice",
+        "doc_url": "https://docs.aws.amazon.com/vpc-lattice/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Media Services",
+        "name": "AWS Elemental MediaConnect",
+        "doc_url": "https://docs.aws.amazon.com/mediaconnect/latest/api/what-is-mediaconnect.html"
+    },
+    {
+        "category": "Media Services",
+        "name": "AWS Elemental On-Premises",
+        "doc_url": "https://docs.aws.amazon.com/elemental-onprem/latest/ug/what-is.html"
+    },
+    {
+        "category": "Media Services",
+        "name": "Amazon Interactive Video Service",
+        "doc_url": "https://docs.aws.amazon.com/ivs/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Media Services",
+        "name": "Amazon Nimble Studio",
+        "doc_url": "https://docs.aws.amazon.com/nimble-studio/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Internet of Things (IoT)",
+        "name": "AWS IoT Events",
+        "doc_url": "https://docs.aws.amazon.com/iotevents/latest/developerguide/what-is-iotevents.html"
+    },
+    {
+        "category": "Internet of Things (IoT)",
+        "name": "AWS IoT FleetWise",
+        "doc_url": "https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/what-is-iotfleetwise.html"
+    },
+    {
+        "category": "Internet of Things (IoT)",
+        "name": "AWS IoT RoboRunner",
+        "doc_url": "https://docs.aws.amazon.com/iotroborunner/latest/dev/iotroborunner-welcome.html"
+    },
+    {
+        "category": "Front-End Web & Mobile",
+        "name": "Amplify Android (AWS Mobile SDK for Android)",
+        "doc_url": "https://docs.aws.amazon.com/sdk-for-android/index.html"
+    },
+    {
+        "category": "End User Computing",
+        "name": "Amazon WorkSpaces Web",
+        "doc_url": "https://docs.aws.amazon.com/workspaces-web/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Analytics",
+        "name": "AWS Clean Rooms",
+        "doc_url": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/Welcome.html"
+    },
+    {
+        "category": "Analytics",
+        "name": "AWS Data Exchange",
+        "doc_url": "https://docs.aws.amazon.com/data-exchange/latest/userguide/what-is.html"
+    },
+    {
+        "category": "Analytics",
+        "name": "Amazon FinSpace",
+        "doc_url": "https://docs.aws.amazon.com/finspace/latest/data-api/fs-api-welcome.html"
+    },
+    {
+        "category": "Analytics",
+        "name": "AWS Lake Formation",
+        "doc_url": "https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api.html"
+    },
+    {
+        "category": "Application Integration",
+        "name": "Amazon Managed Workflows for Apache Airflow",
+        "doc_url": "https://docs.aws.amazon.com/mwaa/index.html"
+    },
+    {
+        "category": "Application Integration",
+        "name": "Amazon MQ",
+        "doc_url": "https://docs.aws.amazon.com/amazon-mq/index.html"
+    },
+    {
+        "category": "Application Integration",
+        "name": "Amazon SNS",
+        "doc_url": "https://docs.aws.amazon.com/sns/latest/api/welcome.html"
+    },
+    {
+        "category": "Application Integration",
+        "name": "Amazon SQS",
+        "doc_url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Application Integration",
+        "name": "AWS Step Functions",
+        "doc_url": "https://docs.aws.amazon.com/step-functions/index.html"
+    },
+    {
+        "category": "Application Integration",
+        "name": "Amazon SWF",
+        "doc_url": "https://docs.aws.amazon.com/swf/index.html"
+    },
+    {
+        "category": "Business Applications",
+        "name": "Alexa for Business",
+        "doc_url": "https://docs.aws.amazon.com/a4b/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Business Applications",
+        "name": "Amazon Chime",
+        "doc_url": "https://docs.aws.amazon.com/chime/index.html"
+    },
+    {
+        "category": "Business Applications",
+        "name": "Amazon Chime SDK",
+        "doc_url": "https://docs.aws.amazon.com/chime-sdk/latest/dg/meetings-sdk.html"
+    },
+    {
+        "category": "Business Applications",
+        "name": "Amazon Connect",
+        "doc_url": "https://docs.aws.amazon.com/connect/index.html"
+    },
+    {
+        "category": "Business Applications",
+        "name": "Amazon Honeycode",
+        "doc_url": "https://docs.aws.amazon.com/honeycode/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Business Applications",
+        "name": "Amazon Pinpoint",
+        "doc_url": "https://docs.aws.amazon.com/pinpoint/index.html"
+    },
+    {
+        "category": "Business Applications",
+        "name": "Amazon Simple Email Service (Amazon SES)",
+        "doc_url": "https://docs.aws.amazon.com/ses/index.html"
+    },
+    {
+        "category": "Business Applications",
+        "name": "AWS Supply Chain",
+        "doc_url": "https://docs.aws.amazon.com/aws-supply-chain/index.html"
+    },
+    {
+        "category": "Business Applications",
+        "name": "AWS Wickr",
+        "doc_url": "https://docs.aws.amazon.com/wickr/latest/adminguide/what-is-wickr.html"
+    },
+    {
+        "category": "Business Applications",
+        "name": "Amazon WorkDocs",
+        "doc_url": "https://docs.aws.amazon.com/workdocs/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Business Applications",
+        "name": "Amazon WorkMail",
+        "doc_url": "https://docs.aws.amazon.com/workmail/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Customer Enablement Services",
+        "name": "AWS Incident Detection and Response",
+        "doc_url": "https://docs.aws.amazon.com/IDR/latest/userguide/what-is-idr.html"
+    },
+    {
+        "category": "Customer Enablement Services",
+        "name": "AWS Managed Services",
+        "doc_url": "https://docs.aws.amazon.com/managedservices/latest/userguide/what-is-ams.html"
+    },
+    {
+        "category": "Customer Enablement Services",
+        "name": "AWS Professional Services",
+        "doc_url": "https://docs.aws.amazon.com/marketplace/latest/userguide/proserv-product-guidelines.html"
+    },
+    {
+        "category": "Customer Enablement Services",
+        "name": "AWS Training and Certification",
+        "doc_url": "NO_LINK_FOUND"
+    },
+    {
+        "category": "Customer Enablement Services",
+        "name": "AWS IQ",
+        "doc_url": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiq.html"
+    },
+    {
+        "category": "Satellite",
+        "name": "AWS Ground Station",
+        "doc_url": "https://docs.aws.amazon.com/ground-station/latest/APIReference/Welcome.html"
+    },
+    {
+        "category": "Robotics",
+        "name": "AWS RoboMaker",
+        "doc_url": "https://docs.aws.amazon.com/robomaker/latest/dg/chapter-welcome.html"
+    },
+    {
+        "category": "Quantum Computing",
+        "name": "Amazon Braket",
+        "doc_url": "https://docs.aws.amazon.com/braket/index.html"
+    },
+    {
+        "category": "Blockchain",
+        "name": "Amazon Managed Blockchain",
+        "doc_url": "https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/what-is-managed-blockchain.html"
+    },
+    {
+        "category": "Game Development",
+        "name": "AWS GameKit",
+        "doc_url": "https://docs.aws.amazon.com/gamekit/latest/UnrealDevGuide/getting-started.html"
+    },
+    {
+        "category": "Game Development",
+        "name": "Amazon GameLift",
+        "doc_url": "https://docs.aws.amazon.com/gamelift/index.html"
+    },
+    {
+        "category": "Game Development",
+        "name": "Amazon GameSparks (Preview)",
+        "doc_url": "https://docs.aws.amazon.com/gamesparks/latest/dg/welcome.html"
+    },
+    {
+        "category": "Game Development",
+        "name": "Amazon Lumberyard",
+        "doc_url": "https://docs.aws.amazon.com/lumberyard/latest/apireference/index.html"
+    }
+]
