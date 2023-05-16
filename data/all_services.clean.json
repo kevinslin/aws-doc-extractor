@@ -21,23 +21,28 @@
   },
   {
     "category": "Serverless",
-    "name": "Amazon DynamoDB"
+    "name": "Amazon DynamoDB",
+    "doc_url": "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/Welcome.html"
   },
   {
     "category": "Serverless",
-    "name": "AWS Lambda"
+    "name": "AWS Lambda",
+    "doc_url": "NO_LINK_FOUND"
   },
   {
     "category": "Networking & Content Delivery",
-    "name": "Amazon VPC"
+    "name": "Amazon VPC",
+    "doc_url": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Vpc.html"
   },
   {
     "category": "Compute",
-    "name": "Amazon Lightsail"
+    "name": "Amazon Lightsail",
+    "doc_url": "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/Welcome.html"
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon SageMaker"
+    "name": "Amazon SageMaker",
+    "doc_url": "https://docs.aws.amazon.com/sagemaker/latest/dg/api-and-sdk-reference.html"
   },
   {
     "category": "Containers",
@@ -46,15 +51,18 @@
   },
   {
     "category": "Compute",
-    "name": "AWS Batch"
+    "name": "AWS Batch",
+    "doc_url": "https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html"
   },
   {
     "category": "Compute",
-    "name": "AWS Elastic Beanstalk"
+    "name": "AWS Elastic Beanstalk",
+    "doc_url": "NO_LINK_FOUND"
   },
   {
     "category": "Compute",
-    "name": "Amazon EC2 Image Builder"
+    "name": "Amazon EC2 Image Builder",
+    "doc_url": "https://docs.aws.amazon.com/imagebuilder/latest/userguide/what-is-image-builder.html"
   },
   {
     "category": "Compute",
@@ -68,11 +76,13 @@
   },
   {
     "category": "Compute",
-    "name": "AWS Outposts"
+    "name": "AWS Outposts",
+    "doc_url": "https://docs.aws.amazon.com/outposts/latest/APIReference/Welcome.html"
   },
   {
     "category": "Compute",
-    "name": "AWS ParallelCluster"
+    "name": "AWS ParallelCluster",
+    "doc_url": "https://docs.aws.amazon.com/parallelcluster/latest/ug/api-reference-v3.html"
   },
   {
     "category": "Compute",
@@ -86,7 +96,8 @@
   },
   {
     "category": "Compute",
-    "name": "AWS SimSpace Weaver"
+    "name": "AWS SimSpace Weaver",
+    "doc_url": "https://docs.aws.amazon.com/simspaceweaver/latest/APIReference/Welcome.html"
   },
   {
     "category": "Compute",
@@ -95,11 +106,13 @@
   },
   {
     "category": "Containers",
-    "name": "Amazon ECR"
+    "name": "Amazon ECR",
+    "doc_url": "https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html"
   },
   {
     "category": "Containers",
-    "name": "Amazon ECS"
+    "name": "Amazon ECS",
+    "doc_url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html"
   },
   {
     "category": "Containers",
@@ -113,7 +126,8 @@
   },
   {
     "category": "Containers",
-    "name": "Red Hat OpenShift Service on AWS"
+    "name": "Red Hat OpenShift Service on AWS",
+    "doc_url": "NO_LINK_FOUND"
   },
   {
     "category": "Storage",
@@ -122,7 +136,8 @@
   },
   {
     "category": "Storage",
-    "name": "Amazon EBS"
+    "name": "Amazon EBS",
+    "doc_url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html"
   },
   {
     "category": "Storage",
@@ -146,11 +161,13 @@
   },
   {
     "category": "Migration & Transfer",
-    "name": "AWS Snow Family"
+    "name": "AWS Snow Family",
+    "doc_url": "https://docs.aws.amazon.com/snowball/latest/developer-guide/getting-started.html"
   },
   {
     "category": "Storage",
-    "name": "AWS Storage Gateway"
+    "name": "AWS Storage Gateway",
+    "doc_url": "https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html"
   },
   {
     "category": "Database",
@@ -159,7 +176,8 @@
   },
   {
     "category": "Database",
-    "name": "Amazon ElastiCache"
+    "name": "Amazon ElastiCache",
+    "doc_url": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/Welcome.html"
   },
   {
     "category": "Database",
@@ -173,7 +191,8 @@
   },
   {
     "category": "Database",
-    "name": "Amazon Neptune"
+    "name": "Amazon Neptune",
+    "doc_url": "https://docs.aws.amazon.com/neptune/latest/apiref/Welcome.html"
   },
   {
     "category": "Database",
@@ -182,7 +201,8 @@
   },
   {
     "category": "Analytics",
-    "name": "Amazon Redshift"
+    "name": "Amazon Redshift",
+    "doc_url": "https://docs.aws.amazon.com/redshift/latest/APIReference/Welcome.html"
   },
   {
     "category": "Database",
@@ -191,11 +211,13 @@
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "AWS Identity and Access Management (IAM)"
+    "name": "AWS Identity and Access Management (IAM)",
+    "doc_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "AWS Artifact"
+    "name": "AWS Artifact",
+    "doc_url": "https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-device-farm/interfaces/artifact.html"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -204,7 +226,8 @@
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "Amazon Cognito"
+    "name": "Amazon Cognito",
+    "doc_url": "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-reference.html"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -213,7 +236,8 @@
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "AWS Directory Service"
+    "name": "AWS Directory Service",
+    "doc_url": "https://docs.aws.amazon.com/directoryservice/latest/devguide/welcome.html"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -222,19 +246,23 @@
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "Amazon Cloud Directory"
+    "name": "Amazon Cloud Directory",
+    "doc_url": "https://docs.aws.amazon.com/clouddirectory/latest/APIReference/welcome.html"
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "Amazon GuardDuty"
+    "name": "Amazon GuardDuty",
+    "doc_url": "https://docs.aws.amazon.com/guardduty/latest/APIReference/Welcome.html"
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "AWS IAM Identity Center (successor to AWS Single Sign-On)"
+    "name": "AWS IAM Identity Center (successor to AWS Single Sign-On)",
+    "doc_url": "https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html"
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "Amazon Inspector"
+    "name": "Amazon Inspector",
+    "doc_url": "https://docs.aws.amazon.com/inspector/v2/APIReference/Welcome.html"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -243,11 +271,13 @@
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "AWS Network Firewall"
+    "name": "AWS Network Firewall",
+    "doc_url": "https://docs.aws.amazon.com/network-firewall/latest/developerguide/what-is-aws-network-firewall.html"
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "AWS Resource Access Manager (AWS RAM)"
+    "name": "AWS Resource Access Manager (AWS RAM)",
+    "doc_url": "https://docs.aws.amazon.com/ram/latest/userguide/what-is.html"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -256,7 +286,8 @@
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "AWS Security Hub"
+    "name": "AWS Security Hub",
+    "doc_url": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -270,7 +301,8 @@
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "AWS WAF"
+    "name": "AWS WAF",
+    "doc_url": "https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html"
   },
   {
     "category": "Cryptography & PKI",
@@ -284,7 +316,8 @@
   },
   {
     "category": "Cryptography & PKI",
-    "name": "AWS CloudHSM"
+    "name": "AWS CloudHSM",
+    "doc_url": "https://docs.aws.amazon.com/cloudhsm/latest/userguide/pkcs11-apis.html"
   },
   {
     "category": "Cryptography & PKI",
@@ -298,7 +331,8 @@
   },
   {
     "category": "Cryptography & PKI",
-    "name": "AWS Certificate Manager"
+    "name": "AWS Certificate Manager",
+    "doc_url": "https://docs.aws.amazon.com/acm/latest/APIReference/Welcome.html"
   },
   {
     "category": "Cryptography & PKI",
@@ -307,7 +341,8 @@
   },
   {
     "category": "Cryptography & PKI",
-    "name": "AWS Signer"
+    "name": "AWS Signer",
+    "doc_url": "https://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html"
   },
   {
     "category": "Machine Learning",
@@ -321,7 +356,8 @@
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Comprehend"
+    "name": "Amazon Comprehend",
+    "doc_url": "https://docs.aws.amazon.com/comprehend/latest/APIReference/welcome.html"
   },
   {
     "category": "Machine Learning",
@@ -360,11 +396,13 @@
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Lex"
+    "name": "Amazon Lex",
+    "doc_url": "https://docs.aws.amazon.com/lex/latest/dg/API_Reference.html"
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Lookout for Equipment"
+    "name": "Amazon Lookout for Equipment",
+    "doc_url": "NO_LINK_FOUND"
   },
   {
     "category": "Machine Learning",
@@ -373,7 +411,8 @@
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Lookout for Vision"
+    "name": "Amazon Lookout for Vision",
+    "doc_url": "https://docs.aws.amazon.com/lookout-for-vision/latest/developer-guide/getting-started.html"
   },
   {
     "category": "Machine Learning",
@@ -397,11 +436,13 @@
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Polly"
+    "name": "Amazon Polly",
+    "doc_url": "https://docs.aws.amazon.com/polly/latest/dg/API_Reference.html"
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Rekognition"
+    "name": "Amazon Rekognition",
+    "doc_url": "https://docs.aws.amazon.com/rekognition/latest/dg/API_Reference.html"
   },
   {
     "category": "Machine Learning",
@@ -410,15 +451,18 @@
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Translate"
+    "name": "Amazon Translate",
+    "doc_url": "https://docs.aws.amazon.com/translate/latest/APIReference/welcome.html"
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Transcribe"
+    "name": "Amazon Transcribe",
+    "doc_url": "https://docs.aws.amazon.com/transcribe/latest/APIReference/Welcome.html"
   },
   {
     "category": "Machine Learning",
-    "name": "AWS Deep Learning AMIs"
+    "name": "AWS Deep Learning AMIs",
+    "doc_url": "https://docs.aws.amazon.com/dlami/latest/devguide/gs.html"
   },
   {
     "category": "Machine Learning",
@@ -432,11 +476,13 @@
   },
   {
     "category": "Machine Learning",
-    "name": "AWS DeepLens"
+    "name": "AWS DeepLens",
+    "doc_url": "https://docs.aws.amazon.com/deeplens/latest/dg/deeplens-getting-started.html"
   },
   {
     "category": "Machine Learning",
-    "name": "AWS DeepRacer"
+    "name": "AWS DeepRacer",
+    "doc_url": "https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-get-started.html"
   },
   {
     "category": "Machine Learning",
@@ -445,7 +491,8 @@
   },
   {
     "category": "Machine Learning",
-    "name": "Amazon Machine Learning"
+    "name": "Amazon Machine Learning",
+    "doc_url": "https://docs.aws.amazon.com/machine-learning/latest/dg/what-is-amazon-machine-learning.html"
   },
   {
     "category": "Management & Governance",
@@ -454,11 +501,13 @@
   },
   {
     "category": "Management & Governance",
-    "name": "AWS AppConfig"
+    "name": "AWS AppConfig",
+    "doc_url": "https://docs.aws.amazon.com/appconfig/2019-10-09/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
-    "name": "Auto Scaling"
+    "name": "Auto Scaling",
+    "doc_url": "NO_LINK_FOUND"
   },
   {
     "category": "Management & Governance",
@@ -467,7 +516,8 @@
   },
   {
     "category": "Management & Governance",
-    "name": "AWS CloudFormation"
+    "name": "AWS CloudFormation",
+    "doc_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
@@ -476,11 +526,13 @@
   },
   {
     "category": "Management & Governance",
-    "name": "Amazon CloudWatch"
+    "name": "Amazon CloudWatch",
+    "doc_url": "NO_LINK_FOUND"
   },
   {
     "category": "Management & Governance",
-    "name": "AWS Command Line Interface (AWS CLI)"
+    "name": "AWS Command Line Interface (AWS CLI)",
+    "doc_url": "https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html"
   },
   {
     "category": "Management & Governance",
@@ -489,7 +541,8 @@
   },
   {
     "category": "Management & Governance",
-    "name": "AWS Config"
+    "name": "AWS Config",
+    "doc_url": "https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html"
   },
   {
     "category": "Management & Governance",
@@ -523,7 +576,8 @@
   },
   {
     "category": "Management & Governance",
-    "name": "Amazon Managed Grafana"
+    "name": "Amazon Managed Grafana",
+    "doc_url": "https://docs.aws.amazon.com/grafana/latest/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
@@ -537,7 +591,8 @@
   },
   {
     "category": "Management & Governance",
-    "name": "AWS OpsWorks"
+    "name": "AWS OpsWorks",
+    "doc_url": "https://docs.aws.amazon.com/opsworks/latest/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
@@ -566,7 +621,8 @@
   },
   {
     "category": "Management & Governance",
-    "name": "AWS Service Catalog"
+    "name": "AWS Service Catalog",
+    "doc_url": "https://docs.aws.amazon.com/servicecatalog/latest/dg/what-is-service-catalog.html"
   },
   {
     "category": "Management & Governance",
@@ -580,7 +636,8 @@
   },
   {
     "category": "Management & Governance",
-    "name": "AWS Systems Manager"
+    "name": "AWS Systems Manager",
+    "doc_url": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
@@ -619,7 +676,8 @@
   },
   {
     "category": "Application Integration",
-    "name": "Amazon EventBridge"
+    "name": "Amazon EventBridge",
+    "doc_url": "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-get-started.html"
   },
   {
     "category": "Application Integration",
@@ -633,7 +691,8 @@
   },
   {
     "category": "Front-End Web & Mobile",
-    "name": "AWS AppSync"
+    "name": "AWS AppSync",
+    "doc_url": "https://docs.aws.amazon.com/appsync/latest/devguide/what-is-appsync.html"
   },
   {
     "category": "Serverless",
@@ -642,7 +701,8 @@
   },
   {
     "category": "Application Integration",
-    "name": "AWS Step Functions"
+    "name": "AWS Step Functions",
+    "doc_url": "https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html"
   },
   {
     "category": "Developer Tools",
@@ -651,7 +711,8 @@
   },
   {
     "category": "Developer Tools",
-    "name": "AWS Cloud9"
+    "name": "AWS Cloud9",
+    "doc_url": "https://docs.aws.amazon.com/cloud9/latest/user-guide/welcome.html"
   },
   {
     "category": "Developer Tools",
@@ -665,11 +726,13 @@
   },
   {
     "category": "Developer Tools",
-    "name": "AWS CodeArtifact"
+    "name": "AWS CodeArtifact",
+    "doc_url": "https://docs.aws.amazon.com/codeartifact/latest/ug/getting-started.html"
   },
   {
     "category": "Developer Tools",
-    "name": "AWS CodeBuild"
+    "name": "AWS CodeBuild",
+    "doc_url": "https://docs.aws.amazon.com/codebuild/latest/APIReference/Welcome.html"
   },
   {
     "category": "Developer Tools",
@@ -678,15 +741,18 @@
   },
   {
     "category": "Developer Tools",
-    "name": "AWS CodeCommit"
+    "name": "AWS CodeCommit",
+    "doc_url": "https://docs.aws.amazon.com/codecommit/latest/APIReference/Welcome.html"
   },
   {
     "category": "Developer Tools",
-    "name": "AWS CodeDeploy"
+    "name": "AWS CodeDeploy",
+    "doc_url": "https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html"
   },
   {
     "category": "Developer Tools",
-    "name": "AWS CodePipeline"
+    "name": "AWS CodePipeline",
+    "doc_url": "https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html"
   },
   {
     "category": "Developer Tools",
@@ -695,7 +761,8 @@
   },
   {
     "category": "Developer Tools",
-    "name": "Amazon CodeWhisperer"
+    "name": "Amazon CodeWhisperer",
+    "doc_url": "https://docs.aws.amazon.com/toolkit-for-vscode/latest/userguide/codewhisperer.html"
   },
   {
     "category": "Developer Tools",
@@ -724,11 +791,13 @@
   },
   {
     "category": "Developer Tools",
-    "name": "AWS X-Ray"
+    "name": "AWS X-Ray",
+    "doc_url": "https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html"
   },
   {
     "category": "Migration & Transfer",
-    "name": "AWS Application Discovery Service"
+    "name": "AWS Application Discovery Service",
+    "doc_url": "https://docs.aws.amazon.com/application-discovery/latest/userguide/what-is-appdiscovery.html"
   },
   {
     "category": "Migration & Transfer",
@@ -737,11 +806,13 @@
   },
   {
     "category": "Migration & Transfer",
-    "name": "AWS Database Migration Service"
+    "name": "AWS Database Migration Service",
+    "doc_url": "https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"
   },
   {
     "category": "Migration & Transfer",
-    "name": "AWS DataSync"
+    "name": "AWS DataSync",
+    "doc_url": "https://docs.aws.amazon.com/datasync/latest/userguide/what-is-datasync.html"
   },
   {
     "category": "Migration & Transfer",
@@ -750,11 +821,13 @@
   },
   {
     "category": "Migration & Transfer",
-    "name": "AWS Migration Hub"
+    "name": "AWS Migration Hub",
+    "doc_url": "https://docs.aws.amazon.com/migrationhub/latest/ug/api-reference.html"
   },
   {
     "category": "Migration & Transfer",
-    "name": "AWS Schema Conversion Tool"
+    "name": "AWS Schema Conversion Tool",
+    "doc_url": "https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Welcome.html"
   },
   {
     "category": "Migration & Transfer",
@@ -763,7 +836,8 @@
   },
   {
     "category": "Networking & Content Delivery",
-    "name": "AWS App Mesh"
+    "name": "AWS App Mesh",
+    "doc_url": "https://docs.aws.amazon.com/app-mesh/latest/userguide/what-is-app-mesh.html"
   },
   {
     "category": "Networking & Content Delivery",
@@ -772,11 +846,13 @@
   },
   {
     "category": "Networking & Content Delivery",
-    "name": "Amazon CloudFront"
+    "name": "Amazon CloudFront",
+    "doc_url": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/Welcome.html"
   },
   {
     "category": "Networking & Content Delivery",
-    "name": "AWS Direct Connect"
+    "name": "AWS Direct Connect",
+    "doc_url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html"
   },
   {
     "category": "Networking & Content Delivery",
@@ -785,11 +861,13 @@
   },
   {
     "category": "Networking & Content Delivery",
-    "name": "AWS Global Accelerator"
+    "name": "AWS Global Accelerator",
+    "doc_url": "https://docs.aws.amazon.com/global-accelerator/latest/api/Welcome.html"
   },
   {
     "category": "Networking & Content Delivery",
-    "name": "AWS Private 5G"
+    "name": "AWS Private 5G",
+    "doc_url": "https://docs.aws.amazon.com/private-networks/latest/userguide/identity-access-management.html"
   },
   {
     "category": "Networking & Content Delivery",
@@ -813,7 +891,8 @@
   },
   {
     "category": "Networking & Content Delivery",
-    "name": "AWS VPN"
+    "name": "AWS VPN",
+    "doc_url": "https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html"
   },
   {
     "category": "Media Services",
@@ -832,19 +911,23 @@
   },
   {
     "category": "Media Services",
-    "name": "AWS Elemental MediaConvert"
+    "name": "AWS Elemental MediaConvert",
+    "doc_url": "https://docs.aws.amazon.com/mediaconvert/latest/apireference/getting-started.html"
   },
   {
     "category": "Media Services",
-    "name": "AWS Elemental MediaLive"
+    "name": "AWS Elemental MediaLive",
+    "doc_url": "https://docs.aws.amazon.com/medialive/latest/apireference/what-is.html"
   },
   {
     "category": "Media Services",
-    "name": "AWS Elemental MediaPackage"
+    "name": "AWS Elemental MediaPackage",
+    "doc_url": "https://docs.aws.amazon.com/mediapackage/latest/apireference/what-is.html"
   },
   {
     "category": "Media Services",
-    "name": "AWS Elemental MediaStore"
+    "name": "AWS Elemental MediaStore",
+    "doc_url": "https://docs.aws.amazon.com/mediastore/latest/apireference/Welcome.html"
   },
   {
     "category": "Media Services",
@@ -868,7 +951,8 @@
   },
   {
     "category": "Internet of Things (IoT)",
-    "name": "AWS IoT Core"
+    "name": "AWS IoT Core",
+    "doc_url": "https://docs.aws.amazon.com/iot/latest/developerguide/iot-gs.html"
   },
   {
     "category": "Internet of Things (IoT)",
@@ -877,7 +961,8 @@
   },
   {
     "category": "Internet of Things (IoT)",
-    "name": "AWS IoT Analytics"
+    "name": "AWS IoT Analytics",
+    "doc_url": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html"
   },
   {
     "category": "Internet of Things (IoT)",
@@ -886,7 +971,8 @@
   },
   {
     "category": "Internet of Things (IoT)",
-    "name": "AWS IoT Device Management"
+    "name": "AWS IoT Device Management",
+    "doc_url": "https://docs.aws.amazon.com/iot/latest/developerguide/iot-thing-management.html"
   },
   {
     "category": "Internet of Things (IoT)",
@@ -905,7 +991,8 @@
   },
   {
     "category": "Internet of Things (IoT)",
-    "name": "AWS IoT Greengrass"
+    "name": "AWS IoT Greengrass",
+    "doc_url": "https://docs.aws.amazon.com/greengrass/v2/developerguide/what-is-iot-greengrass.html"
   },
   {
     "category": "Internet of Things (IoT)",
@@ -914,35 +1001,43 @@
   },
   {
     "category": "Internet of Things (IoT)",
-    "name": "AWS IoT SiteWise"
+    "name": "AWS IoT SiteWise",
+    "doc_url": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/what-is-sitewise.html"
   },
   {
     "category": "Internet of Things (IoT)",
-    "name": "AWS IoT TwinMaker"
+    "name": "AWS IoT TwinMaker",
+    "doc_url": "https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/Welcome.html"
   },
   {
     "category": "Internet of Things (IoT)",
-    "name": "AWS IoT 1-Click"
+    "name": "AWS IoT 1-Click",
+    "doc_url": "https://docs.aws.amazon.com/iot-1-click/latest/developerguide/what-is-1click.html"
   },
   {
     "category": "Front-End Web & Mobile",
-    "name": "AWS Amplify"
+    "name": "AWS Amplify",
+    "doc_url": "NO_LINK_FOUND"
   },
   {
     "category": "Front-End Web & Mobile",
-    "name": "Amplify Android (AWS Mobile SDK for Android)"
+    "name": "Amplify Android (AWS Mobile SDK for Android)",
+    "doc_url": "NO_LINK_FOUND"
   },
   {
     "category": "Front-End Web & Mobile",
-    "name": "Amplify iOS (AWS Mobile SDK for iOS)"
+    "name": "Amplify iOS (AWS Mobile SDK for iOS)",
+    "doc_url": "NO_LINK_FOUND"
   },
   {
     "category": "Front-End Web & Mobile",
-    "name": "AWS Device Farm"
+    "name": "AWS Device Farm",
+    "doc_url": "https://docs.aws.amazon.com/devicefarm/latest/APIReference/Welcome.html"
   },
   {
     "category": "Front-End Web & Mobile",
-    "name": "Amazon Location Service"
+    "name": "Amazon Location Service",
+    "doc_url": "https://docs.aws.amazon.com/location/latest/developerguide/welcome.html"
   },
   {
     "category": "Front-End Web & Mobile",
@@ -956,11 +1051,13 @@
   },
   {
     "category": "Business Applications",
-    "name": "Amazon Pinpoint"
+    "name": "Amazon Pinpoint",
+    "doc_url": "https://docs.aws.amazon.com/pinpoint/latest/developerguide/welcome.html"
   },
   {
     "category": "End User Computing",
-    "name": "Amazon WorkSpaces"
+    "name": "Amazon WorkSpaces",
+    "doc_url": "https://docs.aws.amazon.com/workspaces/latest/api/welcome.html"
   },
   {
     "category": "End User Computing",
@@ -969,19 +1066,23 @@
   },
   {
     "category": "End User Computing",
-    "name": "Amazon AppStream 2.0"
+    "name": "Amazon AppStream 2.0",
+    "doc_url": "https://docs.aws.amazon.com/appstream2/latest/APIReference/Welcome.html"
   },
   {
     "category": "End User Computing",
-    "name": "Amazon WAM"
+    "name": "Amazon WAM",
+    "doc_url": "https://docs.aws.amazon.com/workspaces/latest/api/welcome.html"
   },
   {
     "category": "End User Computing",
-    "name": "NICE DCV"
+    "name": "NICE DCV",
+    "doc_url": "https://docs.aws.amazon.com/dcv/latest/websdkguide/what-is.html"
   },
   {
     "category": "Application Integration",
-    "name": "Amazon AppFlow"
+    "name": "Amazon AppFlow",
+    "doc_url": "https://docs.aws.amazon.com/appflow/1.0/APIReference/Welcome.html"
   },
   {
     "category": "Analytics",
@@ -995,7 +1096,8 @@
   },
   {
     "category": "Analytics",
-    "name": "Amazon CloudSearch"
+    "name": "Amazon CloudSearch",
+    "doc_url": "https://docs.aws.amazon.com/cloudsearch/latest/developerguide/api-ref.html"
   },
   {
     "category": "Analytics",
@@ -1004,7 +1106,8 @@
   },
   {
     "category": "Analytics",
-    "name": "AWS Data Pipeline"
+    "name": "AWS Data Pipeline",
+    "doc_url": "https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html"
   },
   {
     "category": "Analytics",
@@ -1013,7 +1116,8 @@
   },
   {
     "category": "Analytics",
-    "name": "Amazon OpenSearch Service"
+    "name": "Amazon OpenSearch Service",
+    "doc_url": "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/what-is.html"
   },
   {
     "category": "Analytics",
@@ -1027,11 +1131,13 @@
   },
   {
     "category": "Analytics",
-    "name": "AWS Glue"
+    "name": "AWS Glue",
+    "doc_url": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api.html"
   },
   {
     "category": "Analytics",
-    "name": "Amazon Kinesis"
+    "name": "Amazon Kinesis",
+    "doc_url": "NO_LINK_FOUND"
   },
   {
     "category": "Analytics",
@@ -1050,15 +1156,18 @@
   },
   {
     "category": "Application Integration",
-    "name": "Amazon Managed Workflows for Apache Airflow"
+    "name": "Amazon Managed Workflows for Apache Airflow",
+    "doc_url": "https://docs.aws.amazon.com/mwaa/latest/userguide/what-is-mwaa.html"
   },
   {
     "category": "Application Integration",
-    "name": "Amazon MQ"
+    "name": "Amazon MQ",
+    "doc_url": "https://docs.aws.amazon.com/amazon-mq/latest/api-reference/welcome.html"
   },
   {
     "category": "Application Integration",
-    "name": "Amazon SWF"
+    "name": "Amazon SWF",
+    "doc_url": "https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-welcome.html"
   },
   {
     "category": "Business Applications",
@@ -1067,7 +1176,8 @@
   },
   {
     "category": "Business Applications",
-    "name": "Amazon Chime"
+    "name": "Amazon Chime",
+    "doc_url": "https://docs.aws.amazon.com/chime/latest/APIReference/welcome.html"
   },
   {
     "category": "Business Applications",
@@ -1076,7 +1186,8 @@
   },
   {
     "category": "Business Applications",
-    "name": "Amazon Connect"
+    "name": "Amazon Connect",
+    "doc_url": "https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html"
   },
   {
     "category": "Business Applications",
@@ -1085,11 +1196,13 @@
   },
   {
     "category": "Business Applications",
-    "name": "Amazon Simple Email Service (Amazon SES)"
+    "name": "Amazon Simple Email Service (Amazon SES)",
+    "doc_url": "https://docs.aws.amazon.com/ses/latest/APIReference/Welcome.html"
   },
   {
     "category": "Business Applications",
-    "name": "AWS Supply Chain"
+    "name": "AWS Supply Chain",
+    "doc_url": "https://docs.aws.amazon.com/aws-supply-chain/latest/adminguide/getting-started.html"
   },
   {
     "category": "Business Applications",
@@ -1143,7 +1256,8 @@
   },
   {
     "category": "Quantum Computing",
-    "name": "Amazon Braket"
+    "name": "Amazon Braket",
+    "doc_url": "NO_LINK_FOUND"
   },
   {
     "category": "Blockchain",
@@ -1157,7 +1271,8 @@
   },
   {
     "category": "Game Development",
-    "name": "Amazon GameLift"
+    "name": "Amazon GameLift",
+    "doc_url": "https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html"
   },
   {
     "category": "Game Development",
@@ -1166,6 +1281,7 @@
   },
   {
     "category": "Game Development",
-    "name": "Amazon Lumberyard"
+    "name": "Amazon Lumberyard",
+    "doc_url": "https://docs.aws.amazon.com/lumberyard/latest/apireference/Component.html"
   }
 ]
