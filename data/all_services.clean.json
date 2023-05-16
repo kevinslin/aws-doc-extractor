@@ -227,8 +227,7 @@
   {
     "category": "Database",
     "name": "Amazon Neptune",
-    "doc_url": "https://docs.aws.amazon.com/neptune/latest/apiref/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/neptune/latest/apiref/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/neptune/latest/apiref/Welcome.html"
   },
   {
     "category": "Database",
@@ -454,8 +453,7 @@
   {
     "category": "Machine Learning",
     "name": "Amazon Fraud Detector",
-    "doc_url": "https://docs.aws.amazon.com/frauddetector/latest/api/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/frauddetector/latest/api/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/frauddetector/latest/api/Welcome.html"
   },
   {
     "category": "Machine Learning",
@@ -483,8 +481,7 @@
   {
     "category": "Machine Learning",
     "name": "Amazon Lookout for Metrics",
-    "doc_url": "https://docs.aws.amazon.com/lookoutmetrics/latest/api/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/lookoutmetrics/latest/api/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/lookoutmetrics/latest/api/Welcome.html"
   },
   {
     "category": "Machine Learning",
@@ -501,8 +498,7 @@
   {
     "category": "Machine Learning",
     "name": "Amazon Omics",
-    "doc_url": "https://docs.aws.amazon.com/omics/latest/api/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/omics/latest/api/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/omics/latest/api/Welcome.html"
   },
   {
     "category": "Machine Learning",
@@ -727,8 +723,7 @@
   {
     "category": "Management & Governance",
     "name": "AWS Resource Explorer",
-    "doc_url": "https://docs.aws.amazon.com/resource-explorer/latest/apireference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/resource-explorer/latest/apireference/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/resource-explorer/latest/apireference/Welcome.html"
   },
   {
     "category": "Management & Governance",
@@ -787,8 +782,7 @@
   {
     "category": "Management & Governance",
     "name": "AWS User Notifications",
-    "doc_url": "https://docs.aws.amazon.com/sns/latest/api/welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/sns/latest/api/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/sns/latest/api/welcome.html"
   },
   {
     "category": "Management & Governance",
@@ -811,8 +805,7 @@
   {
     "category": "Application Integration",
     "name": "Amazon SNS",
-    "doc_url": "https://docs.aws.amazon.com/sns/latest/api/welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/sns/latest/api/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/sns/latest/api/welcome.html"
   },
   {
     "category": "Application Integration",
@@ -1002,8 +995,7 @@
   {
     "category": "Networking & Content Delivery",
     "name": "AWS Cloud Map",
-    "doc_url": "https://docs.aws.amazon.com/cloud-map/latest/api/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/cloud-map/latest/api/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/cloud-map/latest/api/Welcome.html"
   },
   {
     "category": "Networking & Content Delivery",
@@ -1026,8 +1018,7 @@
   {
     "category": "Networking & Content Delivery",
     "name": "AWS Global Accelerator",
-    "doc_url": "https://docs.aws.amazon.com/global-accelerator/latest/api/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/global-accelerator/latest/api/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/global-accelerator/latest/api/Welcome.html"
   },
   {
     "category": "Networking & Content Delivery",
@@ -1080,38 +1071,32 @@
   {
     "category": "Media Services",
     "name": "AWS Elemental MediaConnect",
-    "doc_url": "https://docs.aws.amazon.com/mediaconnect/latest/api/what-is-mediaconnect.html",
-    "toc_url": "https://docs.aws.amazon.com/mediaconnect/latest/api/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/mediaconnect/latest/api/what-is-mediaconnect.html"
   },
   {
     "category": "Media Services",
     "name": "AWS Elemental MediaConvert",
-    "doc_url": "https://docs.aws.amazon.com/mediaconvert/latest/apireference/getting-started.html",
-    "toc_url": "https://docs.aws.amazon.com/mediaconvert/latest/apireference/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/mediaconvert/latest/apireference/getting-started.html"
   },
   {
     "category": "Media Services",
     "name": "AWS Elemental MediaLive",
-    "doc_url": "https://docs.aws.amazon.com/medialive/latest/apireference/what-is.html",
-    "toc_url": "https://docs.aws.amazon.com/medialive/latest/apireference/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/medialive/latest/apireference/what-is.html"
   },
   {
     "category": "Media Services",
     "name": "AWS Elemental MediaPackage",
-    "doc_url": "https://docs.aws.amazon.com/mediapackage/latest/apireference/what-is.html",
-    "toc_url": "https://docs.aws.amazon.com/mediapackage/latest/apireference/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/mediapackage/latest/apireference/what-is.html"
   },
   {
     "category": "Media Services",
     "name": "AWS Elemental MediaStore",
-    "doc_url": "https://docs.aws.amazon.com/mediastore/latest/apireference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/mediastore/latest/apireference/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/mediastore/latest/apireference/Welcome.html"
   },
   {
     "category": "Media Services",
     "name": "AWS Elemental MediaTailor",
-    "doc_url": "https://docs.aws.amazon.com/mediatailor/latest/apireference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/mediatailor/latest/apireference/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/mediatailor/latest/apireference/Welcome.html"
   },
   {
     "category": "Media Services",
@@ -1200,8 +1185,7 @@
   {
     "category": "Internet of Things (IoT)",
     "name": "AWS IoT TwinMaker",
-    "doc_url": "https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/Welcome.html"
   },
   {
     "category": "Internet of Things (IoT)",
@@ -1257,8 +1241,7 @@
   {
     "category": "End User Computing",
     "name": "Amazon WorkSpaces",
-    "doc_url": "https://docs.aws.amazon.com/workspaces/latest/api/welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/workspaces/latest/api/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/workspaces/latest/api/welcome.html"
   },
   {
     "category": "End User Computing",
@@ -1275,8 +1258,7 @@
   {
     "category": "End User Computing",
     "name": "Amazon WAM",
-    "doc_url": "https://docs.aws.amazon.com/workspaces/latest/api/welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/workspaces/latest/api/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/workspaces/latest/api/welcome.html"
   },
   {
     "category": "End User Computing",
@@ -1299,8 +1281,7 @@
   {
     "category": "Analytics",
     "name": "AWS Clean Rooms",
-    "doc_url": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/Welcome.html"
   },
   {
     "category": "Analytics",
@@ -1382,8 +1363,7 @@
   {
     "category": "Application Integration",
     "name": "Amazon MQ",
-    "doc_url": "https://docs.aws.amazon.com/amazon-mq/latest/api-reference/welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/amazon-mq/latest/api-reference/toc-contents.json"
+    "apiref_url": "https://docs.aws.amazon.com/amazon-mq/latest/api-reference/welcome.html"
   },
   {
     "category": "Application Integration",
@@ -1524,7 +1504,6 @@
   {
     "category": "Game Development",
     "name": "Amazon Lumberyard",
-    "doc_url": "https://docs.aws.amazon.com/lumberyard/latest/apireference/Component.html",
-    "toc_url": "NOT_FOUND"
+    "apiref_url": "https://docs.aws.amazon.com/lumberyard/latest/apireference/Component.html"
   }
 ]
