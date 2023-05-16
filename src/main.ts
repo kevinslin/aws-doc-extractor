@@ -38,7 +38,6 @@ function generateSiteToc(opts: { prefix: string; services: string[]; basedir: st
     const contents = fs.readFileSync(summaryPath, "utf-8");
     const serviceName = _.get(ServiceNames, service, service)
     out.push(`- ${serviceName}\n${contents}`);
-    fs.removeSync(summaryPath);
   });
   return out.join("\n");
 }
