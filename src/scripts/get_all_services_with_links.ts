@@ -12,8 +12,7 @@ async function main() {
   console.log(`services: ${services.length}, servicesClean: ${servicesClean.length}`)
   servicesClean.forEach((service) => {
     const name = AWSConstants.normalizeServiceName(service.name);
-    const tmp = _.get(ServiceNames , name)
-    console.log(tmp)
+    service.norm_name = name;
   });
   fs.writeJSONSync('data/all_services.clean.1-with_links.json', servicesClean, { spaces: 2 });
   // console.log(out)
