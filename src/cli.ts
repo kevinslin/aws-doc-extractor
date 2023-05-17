@@ -3,6 +3,7 @@ import { z } from 'zod';
 import { main } from './main.js';
 
 const ALL_SERVICES = ["AMAZON_ECS", "AMAZON_EC2", "AWS_LAMBDA", "AMAZON_SIMPLE_STORAGE_SERVICE"];
+
 const ParsedArgsSchema = z.object({
   skipSteps: z.string().transform(x => x ? x.split(","): [])
     .optional(),
