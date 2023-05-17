@@ -40,12 +40,12 @@ export class AWSUtils {
     return path.join("build", "artifacts")
   }
 
-  static getArtifactPathForService(service: string, renderTargetFormat: string) {
-    return path.join(this.getArtifactPath(), service, renderTargetFormat)
+  static getArtifactPathForService(service: ServiceMetadata, renderTargetFormat: string) {
+    return path.join(this.getArtifactPath(), service.norm_name, renderTargetFormat)
   }
 
-  static getStagingPathForService(service: string) {
-    return path.join('build', "staging", service);
+  static getStagingPathForService(service: ServiceMetadata) {
+    return path.join('build', "staging", service.norm_name);
   }
 
   static getData(vfile: VFile): {

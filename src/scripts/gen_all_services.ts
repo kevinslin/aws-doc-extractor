@@ -10,7 +10,7 @@ type Entry = {
 const entries: Entry[] = fs.readJsonSync('data/all_services.json');
 
 // Create an array of all individual service entries
-const allEntries: ServiceMetadata[] = entries.flatMap((entry: Entry) => {
+const allEntries: Partial<ServiceMetadata>[] = entries.flatMap((entry: Entry) => {
   return entry.services.flatMap((service: string) => {
     return {
       category: entry.category,

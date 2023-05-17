@@ -26,7 +26,7 @@ async function isGitRepo(path: string): Promise<boolean> {
 }
 
 // --- Main
-function generateSiteToc(opts: { prefix: string; services: string[]; basedir: string, renderTargetFormat: TargetFormat }) {
+function generateSiteToc(opts: { prefix: string; services: ServiceMetadata[]; basedir: string, renderTargetFormat: TargetFormat }) {
   const { prefix, services } = opts;
   const out: string[] = [];
   out.push(prefix);
@@ -34,9 +34,9 @@ function generateSiteToc(opts: { prefix: string; services: string[]; basedir: st
   services.forEach((service) => {
     const artifactDirForServiceAndTargetFormat = path.join(opts.basedir,
       AWSUtils.getArtifactPathForService(service, opts.renderTargetFormat));
-    const summaryPath = path.join(artifactDirForServiceAndTargetFormat, `SUMMARY.${service}.md`);
+    const summaryPath = path.join(artifactDirForServiceAndTargetFormat, `SUMMARY.${service.norm_name}.md`);
     const contents = fs.readFileSync(summaryPath, "utf-8");
-    const serviceName = _.get(ServiceNames, service, service)
+    const serviceName = service.name;
     out.push(`- ${serviceName}\n${contents}`);
   });
   return out.join("\n");
@@ -62,7 +62,6 @@ export async function main(opts: { services: ServiceMetadata[], skipSteps: z.inf
       })
     );
   }
-  process.exit();
 
   // TODO: extractNotesFromService
   if (opts.skipSteps.includes(SkipStepsOptions.Enum.extractNotes)) {

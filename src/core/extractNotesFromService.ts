@@ -4,13 +4,13 @@ import { glob } from 'glob';
 import path from 'path';
 import { extractFromAWSDocs } from "../index.js";
 import _ from "lodash";
-import { ContentInner, Entities, ContentTopLevel, Content, TargetFormat, Section, ContentSource } from "../types/index.js";
+import { ContentInner, Entities, ContentTopLevel, Content, TargetFormat, Section, ContentSource, ServiceMetadata } from "../types/index.js";
 import { HTMLTarget } from "../targets/index.js";
 import { MarkdownDendronFileTarget, MarkdownSingleFileTarget } from "../targets/markdown.js";
 import { VFile } from "vfile";
 import _debug from "debug";
 import { AWSUtils } from "../utils/aws.js";
-const debug = _debug("main")
+const debug = _debug("extractNotesFromService")
 
 // === Init
 
@@ -46,7 +46,7 @@ async function processMarkdownFiles(inputDir: string, outputDir: string) {
       }
 
       fs.ensureFileSync(outputFile);
-      console.log(`Entities extracted from ${inputFile}: ${entities.length}`)
+      debug({ ctx: "processMarkdownFiles", inputFile, entities: entities.length})
       // Write the entities to a new file in the output directory
       fs.writeFile(outputFile, JSON.stringify(entities, null, 2), (err) => {
         if (err) {
@@ -120,6 +120,7 @@ function renderFromJSON(opts: { data: ContentTopLevel[], serviceName: string, re
     serviceName: opts.serviceName,
     sources: opts.sources
   };
+  debug({ctx: "renderFromJSON", metadata});
   switch (opts.renderTargetFormat) {
     case TargetFormat["md.single-page"]:
       return new MarkdownSingleFileTarget().write({ vfiles, metadata });
@@ -127,8 +128,6 @@ function renderFromJSON(opts: { data: ContentTopLevel[], serviceName: string, re
       return new MarkdownDendronFileTarget().write({ vfiles, metadata });
     case TargetFormat["html.single-page"]:
       return new HTMLTarget().write({ vfiles, metadata });
-    // case TargetFormat["md.multi-page"]:
-    //   return new MarkdownMultiPageTarget().write({sections, metadata: {title: opts.serviceName}, destDir: opts.destDir});
     default:
       throw new Error(`Unsupported render target format: ${opts.renderTargetFormat}`)
   }
@@ -139,7 +138,7 @@ function renderFromJSON(opts: { data: ContentTopLevel[], serviceName: string, re
 // ===
 
 
-export async function extractNotesFromService(opts: { basedir: string, service: string, sources: ContentSource[] }) {
+export async function extractNotesFromService(opts: { basedir: string, service: ServiceMetadata, sources: ContentSource[] }) {
   const inputDir = path.join(opts.basedir, AWSUtils.getDocPathForService(opts.service));
   const stagingDir = path.join(opts.basedir, AWSUtils.getStagingPathForService(opts.service));
   const artifactDir = AWSUtils.getArtifactPath()
@@ -165,7 +164,7 @@ export async function extractNotesFromService(opts: { basedir: string, service: 
     {
       data: toc.contents,
       renderTargetFormat,
-      serviceName: opts.service,
+      serviceName: opts.service.norm_name,
       destDir: artifactDirForServiceAndTargetFormat,
       sources: opts.sources
     });
