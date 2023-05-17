@@ -1,8 +1,6 @@
-import _ from "lodash";
-import { ServiceNames } from "../constants/aws.js";
+import fs from "fs-extra";
 import { ServiceMetadata } from "../types/index.js";
 import { AWSConstants } from "../utils/aws.js";
-import fs from "fs-extra";
 
 
 async function main() {

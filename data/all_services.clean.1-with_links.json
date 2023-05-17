@@ -12,8 +12,8 @@
     "category": "Serverless",
     "name": "Amazon S3",
     "git_repo": "amazon-s3-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/AmazonS3/latest/API/toc-contents.json",
+    "doc_url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
+    "toc_url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/toc-contents.json",
     "apiref_url": false,
     "norm_name": "AMAZON_S3"
   },
@@ -43,6 +43,15 @@
     "toc_url": "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/toc-contents.json",
     "apiref_url": false,
     "norm_name": "AMAZON_DYNAMO_DB"
+  },
+  {
+    "category": "Serverless",
+    "name": "AWS Lambda",
+    "git_repo": "aws-lambda-developer-guide.git",
+    "doc_url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
+    "toc_url": "https://docs.aws.amazon.com/lambda/latest/dg/toc-contents.json",
+    "apiref_url": false,
+    "norm_name": "AWS_LAMBDA"
   },
   {
     "category": "Networking & Content Delivery",
