@@ -15,7 +15,6 @@ async function main() {
     service.norm_name = name;
   });
   fs.writeJSONSync('data/all_services.clean.1-with_links.json', servicesClean, { spaces: 2 });
-  // console.log(out)
 }
 
 main();

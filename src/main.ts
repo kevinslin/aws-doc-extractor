@@ -7,7 +7,7 @@ import _debug from "debug";
 import path from 'path';
 import * as url from 'url';
 import { AWSUtils } from './utils/aws.js';
-import { TargetFormat, SkipStepsOptions } from './types/index.js';
+import { TargetFormat, SkipStepsOptions, ServiceMetadata } from './types/index.js';
 import { extractNotesFromService } from './core/extractNotesFromService.js';
 import { ServiceNames } from './constants/aws.js';
 import _ from 'lodash';
@@ -43,7 +43,7 @@ function generateSiteToc(opts: { prefix: string; services: string[]; basedir: st
 }
 
 
-export async function main(opts: { services: string[], skipSteps: z.infer<typeof SkipStepsOptions>[] }) {
+export async function main(opts: { services: ServiceMetadata[], skipSteps: z.infer<typeof SkipStepsOptions>[] }) {
   const ctx = "main"
   debug({ ctx, opts, msg: "enter" })
   const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
@@ -62,6 +62,7 @@ export async function main(opts: { services: string[], skipSteps: z.infer<typeof
       })
     );
   }
+  process.exit();
 
   // TODO: extractNotesFromService
   if (opts.skipSteps.includes(SkipStepsOptions.Enum.extractNotes)) {
@@ -94,7 +95,7 @@ export async function main(opts: { services: string[], skipSteps: z.infer<typeof
   }
 }
 
-async function upsertDevGuide(opts: { service: string, basedir: string }) {
+async function upsertDevGuide(opts: { service: ServiceMetadata, basedir: string }) {
   const ctx = "upsertDevGuide";
   const guidePath = path.join(opts.basedir, AWSUtils.getDocPathForService(opts.service));
   debug({ ctx, service: opts.service, guidePath })
@@ -122,7 +123,7 @@ async function upsertDevGuide(opts: { service: string, basedir: string }) {
   }
 }
 
-async function upsertToc(opts: { service: string, basedir: string }) {
+async function upsertToc(opts: { service: ServiceMetadata, basedir: string }) {
   const ctx = "upsertToc";
   const tocPath = path.join(opts.basedir, AWSUtils.getDocTocPathForService(opts.service));
   debug({ ctx, service: opts.service, tocPath, msg: "enter" })

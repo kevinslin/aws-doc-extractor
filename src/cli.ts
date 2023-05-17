@@ -1,8 +1,10 @@
 import minimist from 'minimist';
 import { z } from 'zod';
 import { main } from './main.js';
+import { fs } from 'zx';
+import { ALL_SERVICES_CLEAN_1_WITH_LINKS } from './constants/index.js';
 
-const ALL_SERVICES = ["AMAZON_ECS", "AMAZON_EC2", "AWS_LAMBDA", "AMAZON_SIMPLE_STORAGE_SERVICE"];
+const ALL_SERVICES = fs.readJsonSync(`data/${ALL_SERVICES_CLEAN_1_WITH_LINKS}`);
 
 const ParsedArgsSchema = z.object({
   skipSteps: z.string().transform(x => x ? x.split(","): [])
@@ -22,9 +24,9 @@ function generateCommand(args: ParsedArgs) {
   console.log('Generate command executed!');
   console.log('skipSteps:', skipSteps);
   console.log('services:', services);
-  // TODO: validate
+  const tmp = services.slice(3, 4)
   // @ts-ignore
-  return main({services, skipSteps})
+  return main({services: tmp, skipSteps})
 }
 
 function printHelp() {
