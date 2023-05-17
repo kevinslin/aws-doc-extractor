@@ -3,17 +3,37 @@ import { z } from 'zod';
 import { main } from './main.js';
 import { fs } from 'zx';
 import { ALL_SERVICES_CLEAN_1_WITH_LINKS } from './constants/index.js';
+import { ServiceMetadata } from './types/index.js';
+import _debug from "debug";
+const debug = _debug("cli")
 
-const ALL_SERVICES = fs.readJsonSync(`data/${ALL_SERVICES_CLEAN_1_WITH_LINKS}`);
+const ALL_SERVICES: ServiceMetadata[] = fs.readJsonSync(`data/${ALL_SERVICES_CLEAN_1_WITH_LINKS}`);
 
 const ParsedArgsSchema = z.object({
   skipSteps: z.string().transform(x => x ? x.split(","): [])
     .optional(),
   services: z.string(z.string())
     .transform(x => x ? x.split(","): ["all"])
-    .transform(x => x[0] === 'all' ? ALL_SERVICES : x)
+    .transform(x => {
+      switch (x[0]) {
+        case 'all':
+          return ALL_SERVICES
+        case 'fetched': {
+          const fetched = fs.readdirSync('docs');
+          return ALL_SERVICES.filter(s => fetched.includes(s.norm_name))
+        } case 'not-fetched':
+          const fetched = fs.readdirSync('docs');
+          return ALL_SERVICES.filter(s => !fetched.includes(s.norm_name))
+        default:
+          return ALL_SERVICES.filter(s => s.norm_name === x[0])
+      }
+      // TODO: validate service is valid
+    })
     .optional(),
 });
+
+// a switch statement with following cases: 'all', 'fetched', 'not-fetched
+
 
 type ParsedArgs = z.infer<typeof ParsedArgsSchema>;
 
@@ -24,9 +44,8 @@ function generateCommand(args: ParsedArgs) {
   console.log('Generate command executed!');
   console.log('skipSteps:', skipSteps);
   console.log('services:', services);
-  const tmp = services.slice(3, 4)
   // @ts-ignore
-  return main({services: tmp, skipSteps})
+  return main({services, skipSteps})
 }
 
 function printHelp() {
@@ -55,12 +74,14 @@ function parseArgs(args: string[]) {
 
 function runCLI(args: string[]) {
   const parsedArgs = parseArgs(args);
+  debug({ctx: "runCLI", parsedArgs});
   const command = parsedArgs._[0];
 
   switch (command) {
     case 'generate':
       // Validate parsed arguments using zod
       const validationResult = ParsedArgsSchema.safeParse(parsedArgs);
+      debug({ctx: "runCLI:generate", validationResult});
       if (!validationResult.success) {
         console.error('Invalid arguments:', validationResult.error);
         process.exit(1);
