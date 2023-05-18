@@ -11,7 +11,7 @@
   {
     "category": "Serverless",
     "name": "Amazon S3",
-    "git_repo": "amazon-s3-user-guide.git",
+    "git_repo": "amazon-s3-userguide.git",
     "doc_url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
     "toc_url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/toc-contents.json",
     "apiref_url": false,
