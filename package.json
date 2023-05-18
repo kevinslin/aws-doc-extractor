@@ -31,6 +31,7 @@
     "build": "tsc",
     "cli": "env DEBUG=* node src/cli.js",
     "build:service_db": "ts-node-esm src/scripts/get_all_services_with_links.ts",
+    "run:oneoff": "ts-node-esm src/scripts/oneoff-fixapireference.ts | tee /tmp/out.2.txt",
     "gen:fetched": "yarn cli generate --services fetched --skipSteps fetchDocs",
     "gen:one": "yarn cli generate --services ",
     "gen:one:s3": "yarn cli generate --services AMAZON_SIMPLE_STORAGE_SERVICE --skipSteps generateToc",

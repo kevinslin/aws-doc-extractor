@@ -35,9 +35,9 @@
     "category": "Serverless",
     "name": "Amazon DynamoDB",
     "git_repo": "amazon-dynamodb-developer-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/Welcome.html"
   },
   {
     "category": "Serverless",
@@ -51,9 +51,9 @@
     "category": "Networking & Content Delivery",
     "name": "Amazon VPC",
     "git_repo": "amazon-vpc-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Vpc.html",
-    "toc_url": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Vpc.html"
   },
   {
     "category": "Compute",
@@ -83,9 +83,9 @@
     "category": "Compute",
     "name": "AWS Batch",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/batch/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html"
   },
   {
     "category": "Compute",
@@ -123,9 +123,9 @@
     "category": "Compute",
     "name": "AWS Outposts",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/outposts/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/outposts/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/outposts/latest/APIReference/Welcome.html"
   },
   {
     "category": "Compute",
@@ -155,9 +155,9 @@
     "category": "Compute",
     "name": "AWS SimSpace Weaver",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/simspaceweaver/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/simspaceweaver/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/simspaceweaver/latest/APIReference/Welcome.html"
   },
   {
     "category": "Compute",
@@ -171,9 +171,9 @@
     "category": "Containers",
     "name": "Amazon ECR",
     "git_repo": "amazon-ecr-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/AmazonECR/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html"
   },
   {
     "category": "Containers",
@@ -187,9 +187,9 @@
     "category": "Containers",
     "name": "Amazon EKS",
     "git_repo": "amazon-eks-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/eks/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/eks/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/eks/latest/APIReference/Welcome.html"
   },
   {
     "category": "Containers",
@@ -243,9 +243,9 @@
     "category": "Storage",
     "name": "Amazon FSx",
     "git_repo": "amazon-fsx-lustre-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/fsx/latest/APIReference/welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/fsx/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/fsx/latest/APIReference/welcome.html"
   },
   {
     "category": "Storage",
@@ -267,9 +267,9 @@
     "category": "Storage",
     "name": "AWS Storage Gateway",
     "git_repo": "aws-storagegateway-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/storagegateway/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html"
   },
   {
     "category": "Database",
@@ -283,9 +283,9 @@
     "category": "Database",
     "name": "Amazon ElastiCache",
     "git_repo": "amazon-elasticache-docs.git",
-    "doc_url": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/Welcome.html"
   },
   {
     "category": "Database",
@@ -323,9 +323,9 @@
     "category": "Analytics",
     "name": "Amazon Redshift",
     "git_repo": "amazon-redshift-developer-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/redshift/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/redshift/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/redshift/latest/APIReference/Welcome.html"
   },
   {
     "category": "Database",
@@ -371,9 +371,9 @@
     "category": "Security, Identity, & Compliance",
     "name": "Amazon Detective",
     "git_repo": "amazon-detective-admin-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/detective/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/detective/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/detective/latest/APIReference/Welcome.html"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -395,17 +395,17 @@
     "category": "Security, Identity, & Compliance",
     "name": "Amazon Cloud Directory",
     "git_repo": "amazon-cloud-directory-developer-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/clouddirectory/latest/APIReference/welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/clouddirectory/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/clouddirectory/latest/APIReference/welcome.html"
   },
   {
     "category": "Security, Identity, & Compliance",
     "name": "Amazon GuardDuty",
     "git_repo": "amazon-guardduty-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/guardduty/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/guardduty/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/guardduty/latest/APIReference/Welcome.html"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -419,17 +419,17 @@
     "category": "Security, Identity, & Compliance",
     "name": "Amazon Inspector",
     "git_repo": "amazon-inspector-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/inspector/v2/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/inspector/v2/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/inspector/v2/APIReference/Welcome.html"
   },
   {
     "category": "Security, Identity, & Compliance",
     "name": "Amazon Macie",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/macie/latest/APIReference/welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/macie/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/macie/latest/APIReference/welcome.html"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -459,9 +459,9 @@
     "category": "Security, Identity, & Compliance",
     "name": "AWS Security Hub",
     "git_repo": "aws-security-hub-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html"
   },
   {
     "category": "Security, Identity, & Compliance",
@@ -531,9 +531,9 @@
     "category": "Cryptography & PKI",
     "name": "AWS Certificate Manager",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/acm/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/acm/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/acm/latest/APIReference/Welcome.html"
   },
   {
     "category": "Cryptography & PKI",
@@ -571,9 +571,9 @@
     "category": "Machine Learning",
     "name": "Amazon Comprehend",
     "git_repo": "amazon-comprehend-developer-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/comprehend/latest/APIReference/welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/comprehend/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/comprehend/latest/APIReference/welcome.html"
   },
   {
     "category": "Machine Learning",
@@ -587,9 +587,9 @@
     "category": "Machine Learning",
     "name": "Amazon DevOps Guru",
     "git_repo": "amazon-devops-guru-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/devops-guru/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/devops-guru/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/devops-guru/latest/APIReference/Welcome.html"
   },
   {
     "category": "Machine Learning",
@@ -619,9 +619,9 @@
     "category": "Machine Learning",
     "name": "Amazon HealthLake",
     "git_repo": "amazon-healthlake-dev-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/healthlake/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/healthlake/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/healthlake/latest/APIReference/Welcome.html"
   },
   {
     "category": "Machine Learning",
@@ -723,17 +723,17 @@
     "category": "Machine Learning",
     "name": "Amazon Translate",
     "git_repo": "amazon-translate-developer-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/translate/latest/APIReference/welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/translate/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/translate/latest/APIReference/welcome.html"
   },
   {
     "category": "Machine Learning",
     "name": "Amazon Transcribe",
     "git_repo": "amazon-transcribe-developer-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/transcribe/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/transcribe/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/transcribe/latest/APIReference/Welcome.html"
   },
   {
     "category": "Machine Learning",
@@ -803,9 +803,9 @@
     "category": "Management & Governance",
     "name": "AWS AppConfig",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/appconfig/2019-10-09/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/appconfig/2019-10-09/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/appconfig/2019-10-09/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
@@ -827,17 +827,17 @@
     "category": "Management & Governance",
     "name": "AWS CloudFormation",
     "git_repo": "aws-cloudformation-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
     "name": "AWS CloudTrail",
     "git_repo": "aws-cloudtrail-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
@@ -859,9 +859,9 @@
     "category": "Management & Governance",
     "name": "AWS Compute Optimizer",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/compute-optimizer/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/compute-optimizer/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/compute-optimizer/latest/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
@@ -891,9 +891,9 @@
     "category": "Management & Governance",
     "name": "Amazon Data Lifecycle Manager",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/dlm/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/dlm/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/dlm/latest/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
@@ -915,17 +915,17 @@
     "category": "Management & Governance",
     "name": "AWS License Manager",
     "git_repo": "aws-license-manager-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/license-manager/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/license-manager/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/license-manager/latest/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
     "name": "Amazon Managed Grafana",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/grafana/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/grafana/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/grafana/latest/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
@@ -947,25 +947,25 @@
     "category": "Management & Governance",
     "name": "AWS OpsWorks",
     "git_repo": "aws-opsworks-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/opsworks/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/opsworks/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/opsworks/latest/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
     "name": "AWS Organizations",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/organizations/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/organizations/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/organizations/latest/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
     "name": "AWS Proton",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/proton/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/proton/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/proton/latest/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
@@ -1019,25 +1019,25 @@
     "category": "Management & Governance",
     "name": "AWS Systems Manager",
     "git_repo": "aws-systems-manager-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
     "name": "Tag Editor",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/overview.html",
-    "toc_url": "https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/overview.html"
   },
   {
     "category": "Management & Governance",
     "name": "AWS Telco Network Builder",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/tnb/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/tnb/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/tnb/latest/APIReference/Welcome.html"
   },
   {
     "category": "Management & Governance",
@@ -1067,9 +1067,9 @@
     "category": "Management & Governance",
     "name": "AWS Well-Architected Tool",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/Welcome.html"
   },
   {
     "category": "Networking & Content Delivery",
@@ -1099,9 +1099,9 @@
     "category": "Application Integration",
     "name": "Amazon SQS",
     "git_repo": "amazon-sqs-developer-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/Welcome.html"
   },
   {
     "category": "Front-End Web & Mobile",
@@ -1171,9 +1171,9 @@
     "category": "Developer Tools",
     "name": "AWS CodeBuild",
     "git_repo": "aws-codebuild-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/codebuild/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/codebuild/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/codebuild/latest/APIReference/Welcome.html"
   },
   {
     "category": "Developer Tools",
@@ -1187,9 +1187,9 @@
     "category": "Developer Tools",
     "name": "AWS CodeCommit",
     "git_repo": "aws-codecommit-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/codecommit/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/codecommit/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/codecommit/latest/APIReference/Welcome.html"
   },
   {
     "category": "Developer Tools",
@@ -1203,9 +1203,9 @@
     "category": "Developer Tools",
     "name": "AWS CodePipeline",
     "git_repo": "aws-codepipeline-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/codepipeline/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/codepipeline/latest/APIReference/Welcome.html"
   },
   {
     "category": "Developer Tools",
@@ -1355,9 +1355,9 @@
     "category": "Networking & Content Delivery",
     "name": "Amazon CloudFront",
     "git_repo": "amazon-cloudfront-developer-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/Welcome.html"
   },
   {
     "category": "Networking & Content Delivery",
@@ -1419,9 +1419,9 @@
     "category": "Networking & Content Delivery",
     "name": "Amazon VPC Lattice",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/vpc-lattice/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/vpc-lattice/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/vpc-lattice/latest/APIReference/Welcome.html"
   },
   {
     "category": "Networking & Content Delivery",
@@ -1507,17 +1507,17 @@
     "category": "Media Services",
     "name": "Amazon Interactive Video Service",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/ivs/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/ivs/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/ivs/latest/APIReference/Welcome.html"
   },
   {
     "category": "Media Services",
     "name": "Amazon Nimble Studio",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/nimble-studio/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/nimble-studio/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/nimble-studio/latest/APIReference/Welcome.html"
   },
   {
     "category": "Internet of Things (IoT)",
@@ -1651,9 +1651,9 @@
     "category": "Front-End Web & Mobile",
     "name": "AWS Device Farm",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/devicefarm/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/devicefarm/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/devicefarm/latest/APIReference/Welcome.html"
   },
   {
     "category": "Front-End Web & Mobile",
@@ -1699,17 +1699,17 @@
     "category": "End User Computing",
     "name": "Amazon WorkSpaces Web",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/workspaces-web/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/workspaces-web/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/workspaces-web/latest/APIReference/Welcome.html"
   },
   {
     "category": "End User Computing",
     "name": "Amazon AppStream 2.0",
     "git_repo": "amazon-appstream2-developer-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/appstream2/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/appstream2/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/appstream2/latest/APIReference/Welcome.html"
   },
   {
     "category": "End User Computing",
@@ -1731,17 +1731,17 @@
     "category": "Application Integration",
     "name": "Amazon AppFlow",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/appflow/1.0/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/appflow/1.0/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/appflow/1.0/APIReference/Welcome.html"
   },
   {
     "category": "Analytics",
     "name": "Amazon Athena",
     "git_repo": "amazon-athena-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/athena/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/athena/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/athena/latest/APIReference/Welcome.html"
   },
   {
     "category": "Analytics",
@@ -1795,9 +1795,9 @@
     "category": "Analytics",
     "name": "Amazon EMR",
     "git_repo": "amazon-emr-management-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/emr/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/emr/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/emr/latest/APIReference/Welcome.html"
   },
   {
     "category": "Analytics",
@@ -1843,9 +1843,9 @@
     "category": "Analytics",
     "name": "Amazon QuickSight",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/quicksight/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/quicksight/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/quicksight/latest/APIReference/Welcome.html"
   },
   {
     "category": "Application Integration",
@@ -1875,17 +1875,17 @@
     "category": "Business Applications",
     "name": "Alexa for Business",
     "git_repo": "alexa-for-business-administration-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/a4b/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/a4b/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/a4b/latest/APIReference/Welcome.html"
   },
   {
     "category": "Business Applications",
     "name": "Amazon Chime",
     "git_repo": "amazon-chime-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/chime/latest/APIReference/welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/chime/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/chime/latest/APIReference/welcome.html"
   },
   {
     "category": "Business Applications",
@@ -1899,25 +1899,25 @@
     "category": "Business Applications",
     "name": "Amazon Connect",
     "git_repo": "amazon-connect-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/connect/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html"
   },
   {
     "category": "Business Applications",
     "name": "Amazon Honeycode",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/honeycode/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/honeycode/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/honeycode/latest/APIReference/Welcome.html"
   },
   {
     "category": "Business Applications",
     "name": "Amazon Simple Email Service (Amazon SES)",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/ses/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/ses/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/ses/latest/APIReference/Welcome.html"
   },
   {
     "category": "Business Applications",
@@ -1939,17 +1939,17 @@
     "category": "Business Applications",
     "name": "Amazon WorkDocs",
     "git_repo": "amazon-workdocs-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/workdocs/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/workdocs/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/workdocs/latest/APIReference/Welcome.html"
   },
   {
     "category": "Business Applications",
     "name": "Amazon WorkMail",
     "git_repo": "amazon-workmail-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/workmail/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/workmail/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/workmail/latest/APIReference/Welcome.html"
   },
   {
     "category": "Customer Enablement Services",
@@ -1995,9 +1995,9 @@
     "category": "Satellite",
     "name": "AWS Ground Station",
     "git_repo": false,
-    "doc_url": "https://docs.aws.amazon.com/ground-station/latest/APIReference/Welcome.html",
-    "toc_url": "https://docs.aws.amazon.com/ground-station/latest/APIReference/toc-contents.json",
-    "apiref_url": false
+    "doc_url": false,
+    "toc_url": false,
+    "apiref_url": "https://docs.aws.amazon.com/ground-station/latest/APIReference/Welcome.html"
   },
   {
     "category": "Robotics",
