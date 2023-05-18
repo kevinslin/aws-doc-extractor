@@ -10,6 +10,7 @@ const debug = _debug("cli")
 const ALL_SERVICES: ServiceMetadata[] = fs.readJsonSync(`data/${ALL_SERVICES_CLEAN_1_WITH_LINKS}`);
 
 export const ParsedArgsSchema = z.object({
+  startFrom: z.string().optional(),
   skipSteps: z.string().transform(x => x ? x.split(","): [])
     .optional(),
   services: z.string(z.string())
@@ -38,11 +39,19 @@ export const ParsedArgsSchema = z.object({
 type ParsedArgs = z.infer<typeof ParsedArgsSchema>;
 
 function generateCommand(args: ParsedArgs) {
-  const { skipSteps = [], services = [] } = args;
+  let { skipSteps = [], services = [] } = args;
 
   // Your logic for the "generate" command
   console.log('Generate command executed!');
   console.log('skipSteps:', skipSteps);
+  if (args.startFrom) {
+    const idx = services.findIndex(s => s.norm_name === args.startFrom)
+    if (idx === -1) {
+      console.error(`invalid startFrom: ${args.startFrom}`)
+      process.exit(1)
+    }
+    services = services.splice(0, idx)
+  }
   console.log('services:', services);
   // @ts-ignore
   return main({services, skipSteps})
@@ -81,7 +90,7 @@ export function runCLI(args: string[]) {
     case 'generate':
       // Validate parsed arguments using zod
       const validationResult = ParsedArgsSchema.safeParse(parsedArgs);
-      debug({ctx: "runCLI:generate", validationResult});
+      debug({ctx: "runCLI:generate", data: JSON.stringify(validationResult)});
       if (!validationResult.success) {
         console.error('Invalid arguments:', validationResult.error);
         process.exit(1);

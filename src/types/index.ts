@@ -77,6 +77,8 @@ export type ContentSource = {
 
 export const SkipStepsOptions = z.enum([
   'fetchDocs',
+  // don't pull docs if they exist
+  'pullDocs',
   'fetchToc',
   'extractNotes',
   'generateToc',

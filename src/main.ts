@@ -55,12 +55,10 @@ export async function main(opts: { services: ServiceMetadata[], skipSteps: z.inf
   if (opts.skipSteps.includes(SkipStepsOptions.Enum.fetchDocs)) {
     debug({ ctx, msg: "skipping fetchDocs" })
   } else {
-    await Promise.all(
-      opts.services.map(async (service) => {
-        await upsertDevGuide({ service, basedir: BASEDIR });
-        await upsertToc({ service, basedir: BASEDIR });
-      })
-    );
+    for (const service of opts.services) {
+      await upsertDevGuide({ service, basedir: BASEDIR, skipPull: opts.skipSteps.includes(SkipStepsOptions.Enum.pullDocs) });
+      await upsertToc({ service, basedir: BASEDIR });
+    }
   }
 
   // TODO: extractNotesFromService
@@ -94,7 +92,7 @@ export async function main(opts: { services: ServiceMetadata[], skipSteps: z.inf
   }
 }
 
-async function upsertDevGuide(opts: { service: ServiceMetadata, basedir: string }) {
+async function upsertDevGuide(opts: { service: ServiceMetadata, basedir: string, skipPull?: boolean }) {
   const ctx = "upsertDevGuide";
   const guidePath = path.join(opts.basedir, AWSUtils.getDocPathForService(opts.service));
   debug({ ctx, service: opts.service, guidePath })
@@ -109,7 +107,11 @@ async function upsertDevGuide(opts: { service: ServiceMetadata, basedir: string 
       http,
     });
   } else {
-    debug({ ctx, service: opts.service, msg: "repo found, pulling" })
+    debug({ ctx, service: opts.service, msg: "repo found" })
+    if (opts.skipPull) {
+      return
+    }
+    debug({ ctx, service: opts.service, msg: "pulling" })
     await git.pull({
       fs: fsNode,
       dir: guidePath,
@@ -128,8 +130,13 @@ async function upsertToc(opts: { service: ServiceMetadata, basedir: string }) {
   debug({ ctx, service: opts.service, tocPath, msg: "enter" })
   if (!fs.existsSync(tocPath)) {
     debug({ ctx, service: opts.service, tocPath, msg: "fetching toc" })
-    const content = await AWSUtils.getDocTocForService(opts.service);
-    fs.writeFileSync(tocPath, JSON.stringify(content, null, 2));
+    try {
+      const content = await AWSUtils.getDocTocForService(opts.service);
+      fs.writeFileSync(tocPath, JSON.stringify(content, null, 2));
+    } catch (err) {
+      console.log({ service: opts.service.name, err })
+      throw err
+    }
   }
 }
 
