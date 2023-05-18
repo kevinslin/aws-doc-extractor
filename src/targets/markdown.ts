@@ -81,6 +81,7 @@ export class MarkdownDendronFileTarget extends BaseTarget {
       const section = AWSUtils.getSections(vfile)[0];
       return section.parent.title;
     });
+    debug({ctx: "runBeforeAllWriteHook", groups: groups.length, vfiles: opts.vfiles.length});
     const simpleKebab = (astring: string) => {
       return astring.replace(/ /g, '-').toLowerCase();
     }

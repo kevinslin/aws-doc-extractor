@@ -11,7 +11,14 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/src/main2.js",
+      "program": "${workspaceFolder}/src/cli.js",
+      "args": ["generate", "--services", "AMAZON_S3"],
+      "runtimeArgs": ["--inspect"],
+      "console": "internalConsole", 
+      "outputCapture": "std",
+      "env": {
+        "DEBUG": "*"
+      },
       "outFiles": [
         "${workspaceFolder}/**/*.js"
       ]

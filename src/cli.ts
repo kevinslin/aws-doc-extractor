@@ -9,7 +9,7 @@ const debug = _debug("cli")
 
 const ALL_SERVICES: ServiceMetadata[] = fs.readJsonSync(`data/${ALL_SERVICES_CLEAN_1_WITH_LINKS}`);
 
-const ParsedArgsSchema = z.object({
+export const ParsedArgsSchema = z.object({
   skipSteps: z.string().transform(x => x ? x.split(","): [])
     .optional(),
   services: z.string(z.string())
@@ -72,7 +72,7 @@ function parseArgs(args: string[]) {
 
 }
 
-function runCLI(args: string[]) {
+export function runCLI(args: string[]) {
   const parsedArgs = parseArgs(args);
   debug({ctx: "runCLI", parsedArgs});
   const command = parsedArgs._[0];

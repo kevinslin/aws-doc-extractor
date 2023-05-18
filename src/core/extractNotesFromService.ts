@@ -10,7 +10,8 @@ import { MarkdownDendronFileTarget, MarkdownSingleFileTarget } from "../targets/
 import { VFile } from "vfile";
 import _debug from "debug";
 import { AWSUtils } from "../utils/aws.js";
-const debug = _debug("extractNotesFromService")
+const log = _debug("extractNotesFromService")
+const debug = _debug("extractNotesFromService:debug")
 
 // === Init
 
@@ -46,14 +47,14 @@ async function processMarkdownFiles(inputDir: string, outputDir: string) {
       }
 
       fs.ensureFileSync(outputFile);
-      debug({ ctx: "processMarkdownFiles", inputFile, entities: entities.length})
+      log({ ctx: "processMarkdownFiles", inputFile, entities: entities.length})
       // Write the entities to a new file in the output directory
       fs.writeFile(outputFile, JSON.stringify(entities, null, 2), (err) => {
         if (err) {
           console.error(`Error writing file ${outputFile}: ${err}`);
           return;
         }
-        debug({ ctx: "processMarkdownFiles", outputFile });
+        log({ ctx: "processMarkdownFiles", outputFile });
       });
     }
   });
@@ -68,7 +69,9 @@ async function combineTocAndNotes(contents: ContentInner[], dataDir: string) {
   for (const c of contents) {
     const fname = c.href.replace(".html", ".md");
     const fpath = path.join(dataDir, fname);
+    debug({ctx: "combineTocAndNotes", fname, fpath})
     if (await fs.pathExists(fpath)) {
+      debug({ctx: "combineTocAndNotes", msg: `found ${fpath}`})
       const out: Entities[] = await fs.readJson(fpath);
       c.notes = out.map(e => e.content);
     }
@@ -114,13 +117,14 @@ function section2VFiles(sections: Section[]): VFile[] {
 function renderFromJSON(opts: { data: ContentTopLevel[], serviceName: string, renderTargetFormat: TargetFormat, destDir: string, sources: ContentSource[] }) {
   const sections = filterSectionWithContent(opts.data);
   const vfiles: VFile[] = section2VFiles(sections);
+  log({ctx: "renderFromJSON", sections: sections.length, vfiles: vfiles.length})
   const metadata = {
     title: opts.serviceName,
     destDir: opts.destDir, 
     serviceName: opts.serviceName,
     sources: opts.sources
   };
-  debug({ctx: "renderFromJSON", metadata});
+  log({ctx: "renderFromJSON", metadata});
   switch (opts.renderTargetFormat) {
     case TargetFormat["md.single-page"]:
       return new MarkdownSingleFileTarget().write({ vfiles, metadata });
@@ -145,19 +149,19 @@ export async function extractNotesFromService(opts: { basedir: string, service: 
   const tocPath = path.join(opts.basedir, AWSUtils.getDocTocPathForService(opts.service));
 
   const ctx = "downloadDocs";
-  debug({ ctx, inputDir, buildDir: stagingDir, artifactDir, msg: "enter" })
+  log({ ctx, inputDir, buildDir: stagingDir, artifactDir, msg: "enter" })
 
-  debug({ ctx, msg: "pre:parsing aws docs" })
+  log({ ctx, msg: "pre:parsing aws docs" })
   processMarkdownFiles(inputDir, stagingDir);
 
 
-  debug("pre:combining toc and notes")
+  log("pre:combining toc and notes")
   const toc: Content = await fs.readJson(tocPath);
   await combineTocAndNotes(toc.contents, stagingDir);
   // TODO: remove this
   await fs.writeJson(replaceEnd(tocPath, ".json", "out.json"), toc);
 
-  debug("pre:render")
+  log("pre:render")
   const renderTargetFormat = TargetFormat["md.multi-page.dendron"]
   const artifactDirForServiceAndTargetFormat = path.join(opts.basedir, AWSUtils.getArtifactPathForService(opts.service, renderTargetFormat));
   await renderFromJSON(
