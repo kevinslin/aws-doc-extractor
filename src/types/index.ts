@@ -92,4 +92,5 @@ export type ServiceMetadata = {
   git_repo: string;
   doc_url: string;
   toc_url: string;
+  apiref_url: string;
 };
