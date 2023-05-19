@@ -8,7 +8,7 @@ const jsonData: Required<ServiceMetadata>[] = JSON.parse(data);
 // Extract entities with "/APIReference/" in "doc_url"
 const entities = jsonData.filter((service: ServiceMetadata) => {
   try {
-    if (service.apiref_url) {
+    if (service.doc_url) {
       const name = AWSConstants.normalizeServiceName(service.name)
       console.log(name)
       return true

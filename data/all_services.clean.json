@@ -347,8 +347,8 @@
     "category": "Security, Identity, & Compliance",
     "name": "AWS Artifact",
     "git_repo": "aws-codeartifact-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-device-farm/interfaces/artifact.html",
-    "toc_url": "NOT_FOUND",
+    "doc_url": false,
+    "toc_url": false,
     "apiref_url": false
   },
   {
@@ -1044,7 +1044,7 @@
     "name": "AWS Tools for PowerShell",
     "git_repo": "aws-powershell-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/powershell/latest/reference/Index.html",
-    "toc_url": "NOT_FOUND",
+    "toc_url": false,
     "apiref_url": false
   },
   {
@@ -1372,7 +1372,7 @@
     "name": "Elastic Load Balancing",
     "git_repo": "elb-classic-load-balancers-user-guide.git",
     "doc_url": "https://hexdocs.pm/ex_aws_elastic_load_balancing/readme.html",
-    "toc_url": "NOT_FOUND",
+    "toc_url": false,
     "apiref_url": false
   },
   {
@@ -1532,7 +1532,7 @@
     "name": "FreeRTOS",
     "git_repo": "aws-freertos-docs.git",
     "doc_url": "https://www.freertos.org/a00106.html",
-    "toc_url": "NOT_FOUND",
+    "toc_url": false,
     "apiref_url": false
   },
   {

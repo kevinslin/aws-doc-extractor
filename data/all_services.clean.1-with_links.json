@@ -136,15 +136,6 @@
   },
   {
     "category": "Security, Identity, & Compliance",
-    "name": "AWS Artifact",
-    "git_repo": "aws-codeartifact-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-device-farm/interfaces/artifact.html",
-    "toc_url": "NOT_FOUND",
-    "apiref_url": false,
-    "norm_name": "AWS_ARTIFACT"
-  },
-  {
-    "category": "Security, Identity, & Compliance",
     "name": "AWS Directory Service",
     "git_repo": "aws-directory-service-admin-guide.git",
     "doc_url": "https://docs.aws.amazon.com/directoryservice/latest/devguide/welcome.html",
@@ -396,15 +387,6 @@
     "norm_name": "SERVICE_QUOTAS"
   },
   {
-    "category": "Management & Governance",
-    "name": "AWS Tools for PowerShell",
-    "git_repo": "aws-powershell-user-guide.git",
-    "doc_url": "https://docs.aws.amazon.com/powershell/latest/reference/Index.html",
-    "toc_url": "NOT_FOUND",
-    "apiref_url": false,
-    "norm_name": "AWS_TOOLS_FOR_POWER_SHELL"
-  },
-  {
     "category": "Networking & Content Delivery",
     "name": "Amazon API Gateway",
     "git_repo": "amazon-api-gateway-developer-guide.git",
@@ -523,15 +505,6 @@
   },
   {
     "category": "Networking & Content Delivery",
-    "name": "Elastic Load Balancing",
-    "git_repo": "elb-classic-load-balancers-user-guide.git",
-    "doc_url": "https://hexdocs.pm/ex_aws_elastic_load_balancing/readme.html",
-    "toc_url": "NOT_FOUND",
-    "apiref_url": false,
-    "norm_name": "ELASTIC_LOAD_BALANCING"
-  },
-  {
-    "category": "Networking & Content Delivery",
     "name": "Amazon Route 53",
     "git_repo": "amazon-route53-docs.git",
     "doc_url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html",
@@ -565,15 +538,6 @@
     "toc_url": "https://docs.aws.amazon.com/iot/latest/developerguide/toc-contents.json",
     "apiref_url": false,
     "norm_name": "AWS_IOT_CORE"
-  },
-  {
-    "category": "Internet of Things (IoT)",
-    "name": "FreeRTOS",
-    "git_repo": "aws-freertos-docs.git",
-    "doc_url": "https://www.freertos.org/a00106.html",
-    "toc_url": "NOT_FOUND",
-    "apiref_url": false,
-    "norm_name": "FREE_RTOS"
   },
   {
     "category": "Internet of Things (IoT)",

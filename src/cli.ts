@@ -50,7 +50,7 @@ function generateCommand(args: ParsedArgs) {
       console.error(`invalid startFrom: ${args.startFrom}`)
       process.exit(1)
     }
-    services = services.splice(0, idx)
+    services = services.slice(idx, -1)
   }
   console.log('services:', services);
   // @ts-ignore
