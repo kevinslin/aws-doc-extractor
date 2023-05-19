@@ -4,14 +4,13 @@ import git from 'isomorphic-git';
 import http from 'isomorphic-git/http/node/index.js';
 
 import _debug from "debug";
+import _ from 'lodash';
 import path from 'path';
 import * as url from 'url';
-import { AWSUtils } from './utils/aws.js';
-import { TargetFormat, SkipStepsOptions, ServiceMetadata } from './types/index.js';
-import { extractNotesFromService } from './core/extractNotesFromService.js';
-import { ServiceNames } from './constants/aws.js';
-import _ from 'lodash';
 import { z } from 'zod';
+import { extractNotesFromService } from './core/extractNotesFromService.js';
+import { ServiceMetadata, SkipStepsOptions, TargetFormat } from './types/index.js';
+import { AWSUtils } from './utils/aws.js';
 const debug = _debug("main")
 
 // --- utils
@@ -31,14 +30,23 @@ function generateSiteToc(opts: { prefix: string; services: ServiceMetadata[]; ba
   const out: string[] = [];
   out.push(prefix);
 
-  services.forEach((service) => {
-    const artifactDirForServiceAndTargetFormat = path.join(opts.basedir,
-      AWSUtils.getArtifactPathForService(service, opts.renderTargetFormat));
-    const summaryPath = path.join(artifactDirForServiceAndTargetFormat, `SUMMARY.${service.norm_name}.md`);
-    const contents = fs.readFileSync(summaryPath, "utf-8");
-    const serviceName = service.name;
-    out.push(`- ${serviceName}\n${contents}`);
+  const generateTocForGroup = (services: ServiceMetadata[], category: string) => {
+    out.push(`## ${category}`);
+    services.forEach((service) => {
+      const artifactDirForServiceAndTargetFormat = path.join(opts.basedir,
+        AWSUtils.getArtifactPathForService(service, opts.renderTargetFormat));
+      const summaryPath = path.join(artifactDirForServiceAndTargetFormat, `SUMMARY.${service.norm_name}.md`);
+      const contents = fs.readFileSync(summaryPath, "utf-8");
+      const serviceName = service.name;
+      out.push(`- ${serviceName}\n${contents}`);
+    });
+  };
+
+  const groups = _.groupBy(services, (service) => service.category)
+  _.forEach(groups, (services, category) => {
+    generateTocForGroup(services, category);
   });
+
   return out.join("\n");
 }
 
@@ -81,7 +89,6 @@ export async function main(opts: { services: ServiceMetadata[], skipSteps: z.inf
     const prefix = `## About
 - [README](./../README.md)
 
-## Services
 `;
     // generate site toc
     const tocContents = generateSiteToc({ prefix, services: opts.services, basedir: BASEDIR, renderTargetFormat });

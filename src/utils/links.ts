@@ -32,6 +32,8 @@ const pairs: [string[], string][] = [
   [["security", "access permissions"], "Security"],
   [["configure"], "Configure"],
   [["Integrating other services"], "Integration"],
+  [["Overview"], "Overview"],
+  [["API Reference"], "API"],
   // [[], ""],
 ];
 
@@ -50,6 +52,9 @@ function normalizeTitle(title: string): string {
   }
   if (/^Developing.*/.test(title) ) {
     return "Develop"
+  }
+  if (/^What is.*/.test(title) ) {
+    return "Overview"
   }
   return title
 }
@@ -72,6 +77,7 @@ export function getCategoryAndNormalizedTitleForLink(opts: { link: string; servi
   const Dev = ["getting started", "tutorials"];
   const commonCategories: CategoryMap = {
     Common: [
+      "overview",
       "configure",
       "develop",
       "monitor",
@@ -80,7 +86,9 @@ export function getCategoryAndNormalizedTitleForLink(opts: { link: string; servi
       "resources and tags",
       "working with other services",
       "security",
-      "networking"].concat(Dev),
+      "networking",
+      "api"
+    ].concat(Dev),
   };
   const serviceCategories: Record<string, CategoryMap> = {
     ecs: {
