@@ -1,9 +1,18 @@
-# AWS Reference Notes
+# aws-doc-extractor
 
-This extracts all **Note** sections from AWS Developer Docs. 
+This project pulls in AWS documentation and extracts, consolidates, and organizes all admonitions. 
 
 It is used to generate the content for [AWS Reference Notes](https://awsnotes.dendron.so/about/readme)
 
+<figure><img src="https://ik.imagekit.io/fpjzhqpv1/spaces_f3gLJIDBWU1gy8axhkzg_uploads_git-blob-b831b3fe7db725905e1d8a7ac9aee460a0194025_cloud-ref-notes_yulnDmgj_.webp?updatedAt=1684507323528" alt="Cloud Reference Notes", height="400px" </figure>
+
+AWS Reference Notes is a compilation of the **Note-able** sections of AWS services[^1].
+
+It is compiled by parsing all sections of [AWS Documentation](https://docs.aws.amazon.com/) and extracting specific admonitions (eg. **Note**, **Important**, **Considerations**) which are then organized and compiled here. 
+
+AWS Reference Notes exists because I observed that any section of the AWS docs that start with a **Note** was something that was worth paying attention to. These sections documented gotchas, limits, and other caveats of a particular service. When not observed, they can take anywhere on the order of hours to weeks to work around. 
+
+[^1]: NOTE: AWS Reference Notes currently has 66 services respresented
 
 ## Getting Started
 

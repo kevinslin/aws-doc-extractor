@@ -104,6 +104,11 @@ export class MarkdownDendronFileTarget extends BaseTarget {
     return vfiles;
   }
 
+  /**
+   * Writes the SUMMARY file
+   * @param opts 
+   * @returns 
+   */
   async runAfterAllWriteHook(opts: { vfiles: VFile[]; metadata: TargetMetadata }) {
     const { vfiles, metadata } = opts;
     const { destDir, serviceName } = metadata;

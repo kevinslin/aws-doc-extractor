@@ -29,6 +29,7 @@ function generateSiteToc(opts: { prefix: string; services: ServiceMetadata[]; ba
   const { prefix, services } = opts;
   const out: string[] = [];
   out.push(prefix);
+  const ctx = "generateSiteToc";
 
   const generateTocForGroup = (services: ServiceMetadata[], category: string) => {
     out.push(`## ${category}`);
@@ -37,6 +38,11 @@ function generateSiteToc(opts: { prefix: string; services: ServiceMetadata[]; ba
         AWSUtils.getArtifactPathForService(service, opts.renderTargetFormat));
       const summaryPath = path.join(artifactDirForServiceAndTargetFormat, `SUMMARY.${service.norm_name}.md`);
       const contents = fs.readFileSync(summaryPath, "utf-8");
+      // check if empty
+      if (contents.split("\n").length === 2 ) {
+        debug({ ctx, msg: "skipping", service: service.name, summaryPath });
+        return
+      }
       const serviceName = service.name;
       out.push(`- ${serviceName}\n${contents}`);
     });
