@@ -11,6 +11,7 @@ const ALL_SERVICES: ServiceMetadata[] = fs.readJsonSync(`data/${ALL_SERVICES_CLE
 
 export const ParsedArgsSchema = z.object({
   startFrom: z.string().optional(),
+  skipServices: z.string().transform(x => (x && x !== "") ? x.split(","): []),
   skipSteps: z.string().transform(x => x ? x.split(","): [])
     .optional(),
   services: z.string(z.string())
@@ -52,6 +53,9 @@ function generateCommand(args: ParsedArgs) {
     }
     services = services.slice(idx, -1)
   }
+  if (args.skipServices.length > 0) {
+    services = services.filter(s => !args.skipServices.includes(s.norm_name))
+  }
   console.log('services:', services);
   // @ts-ignore
   return main({services, skipSteps})
@@ -71,10 +75,11 @@ function printHelp() {
 
 function parseArgs(args: string[]) {
   return minimist(args, {
-    string: ['skipSteps', 'services'],
+    string: ['skipSteps', 'services', 'skipServices'],
     alias: { skipSteps: 's', services: 'sv' },
     default: {
       services: 'all',
+      skipServices: "",
     },
   });
 

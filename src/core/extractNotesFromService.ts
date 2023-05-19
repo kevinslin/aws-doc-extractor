@@ -49,13 +49,13 @@ async function processMarkdownFiles(inputDir: string, outputDir: string) {
       fs.ensureFileSync(outputFile);
       log({ ctx: "processMarkdownFiles", inputFile, entities: entities.length})
       // Write the entities to a new file in the output directory
-      fs.writeFile(outputFile, JSON.stringify(entities, null, 2), (err) => {
-        if (err) {
-          console.error(`Error writing file ${outputFile}: ${err}`);
-          return;
-        }
-        log({ ctx: "processMarkdownFiles", outputFile });
-      });
+      try {
+        const data = JSON.stringify(entities, null, 2);
+        fs.writeFileSync(outputFile, data); 
+        log({ctx: "processMarkdownFiles", msg: `wrote ${outputFile}`})
+      } catch (err) {
+        log(`Error with file: ${inputFile}: ${err}`);
+      }
     }
   });
 }
