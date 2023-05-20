@@ -58,7 +58,7 @@
   {
     "category": "Compute",
     "name": "Amazon Lightsail",
-    "git_repo": false,
+    "git_repo": "amazon-lightsail-developer-guide.git",
     "doc_url": "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/Welcome.html",
     "toc_url": "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/toc-contents.json",
     "apiref_url": false
@@ -82,7 +82,7 @@
   {
     "category": "Compute",
     "name": "AWS Batch",
-    "git_repo": false,
+    "git_repo": "aws-batch-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/batch/latest/userguide/what-is-batch.html",
     "toc_url": false,
     "apiref_url": "https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html"
@@ -106,7 +106,7 @@
   {
     "category": "Compute",
     "name": "AWS End-of-Support Migration Program (EMP) for Windows Server",
-    "git_repo": false,
+    "git_repo": "emp-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/emp/latest/userguide/emp-what-is.html",
     "toc_url": "https://docs.aws.amazon.com/emp/latest/userguide/toc-contents.json",
     "apiref_url": false
@@ -218,7 +218,7 @@
   {
     "category": "Storage",
     "name": "Amazon EBS",
-    "git_repo": false,
+    "git_repo": "amazon-ec2-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html",
     "toc_url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/toc-contents.json",
     "apiref_url": false
@@ -338,7 +338,7 @@
   {
     "category": "Security, Identity, & Compliance",
     "name": "AWS Identity and Access Management (IAM)",
-    "git_repo": false,
+    "git_repo": "iam-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
     "toc_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/toc-contents.json",
     "apiref_url": false
@@ -362,7 +362,7 @@
   {
     "category": "Security, Identity, & Compliance",
     "name": "Amazon Cognito",
-    "git_repo": false,
+    "git_repo": "amazon-cognito-developer-guide.git",
     "doc_url": "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-reference.html",
     "toc_url": "https://docs.aws.amazon.com/cognito/latest/developerguide/toc-contents.json",
     "apiref_url": false
@@ -474,7 +474,7 @@
   {
     "category": "Security, Identity, & Compliance",
     "name": "AWS Shield",
-    "git_repo": false,
+    "git_repo": "amazon-guardduty-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html",
     "toc_url": "https://docs.aws.amazon.com/waf/latest/developerguide/toc-contents.json",
     "apiref_url": false
@@ -482,7 +482,7 @@
   {
     "category": "Security, Identity, & Compliance",
     "name": "AWS WAF",
-    "git_repo": false,
+    "git_repo": "aws-waf-and-shield-advanced-developer-guide.git",
     "doc_url": "https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html",
     "toc_url": "https://docs.aws.amazon.com/waf/latest/developerguide/toc-contents.json",
     "apiref_url": false
@@ -522,7 +522,7 @@
   {
     "category": "Cryptography & PKI",
     "name": "AWS Crypto Tools",
-    "git_repo": false,
+    "git_repo": "aws-encryption-sdk-docs.git",
     "doc_url": "NO_LINK_FOUND",
     "toc_url": false,
     "apiref_url": false
@@ -530,7 +530,7 @@
   {
     "category": "Cryptography & PKI",
     "name": "AWS Certificate Manager",
-    "git_repo": false,
+    "git_repo": "aws-certificate-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html",
     "toc_url": false,
     "apiref_url": "https://docs.aws.amazon.com/acm/latest/APIReference/Welcome.html"
@@ -538,7 +538,7 @@
   {
     "category": "Cryptography & PKI",
     "name": "AWS Private Certificate Authority",
-    "git_repo": false,
+    "git_repo": "aws-private-ca-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/privateca/latest/userguide/PcaWelcome.html",
     "toc_url": "https://docs.aws.amazon.com/privateca/latest/userguide/toc-contents.json",
     "apiref_url": false
@@ -762,7 +762,7 @@
   {
     "category": "Machine Learning",
     "name": "AWS DeepLens",
-    "git_repo": false,
+    "git_repo": "aws-deeplens-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/deeplens/latest/dg/deeplens-getting-started.html",
     "toc_url": "https://docs.aws.amazon.com/deeplens/latest/dg/toc-contents.json",
     "apiref_url": false
@@ -802,7 +802,7 @@
   {
     "category": "Management & Governance",
     "name": "AWS AppConfig",
-    "git_repo": false,
+    "git_repo": "aws-appconfig-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html",
     "toc_url": false,
     "apiref_url": "https://docs.aws.amazon.com/appconfig/2019-10-09/APIReference/Welcome.html"
@@ -818,7 +818,7 @@
   {
     "category": "Management & Governance",
     "name": "AWS Chatbot",
-    "git_repo": false,
+    "git_repo": "aws-chatbot-admin-guide.git",
     "doc_url": "https://docs.aws.amazon.com/chatbot/latest/adminguide/getting-started.html",
     "toc_url": "https://docs.aws.amazon.com/chatbot/latest/adminguide/toc-contents.json",
     "apiref_url": false
@@ -866,7 +866,7 @@
   {
     "category": "Management & Governance",
     "name": "AWS Config",
-    "git_repo": false,
+    "git_repo": "aws-config-developer-guide.git",
     "doc_url": "https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html",
     "toc_url": "https://docs.aws.amazon.com/config/latest/developerguide/toc-contents.json",
     "apiref_url": false
@@ -882,7 +882,7 @@
   {
     "category": "Management & Governance",
     "name": "AWS Control Tower",
-    "git_repo": false,
+    "git_repo": "aws-control-tower-guide.git",
     "doc_url": "https://docs.aws.amazon.com/controltower/latest/userguide/getting-started-with-control-tower.html",
     "toc_url": "https://docs.aws.amazon.com/controltower/latest/userguide/toc-contents.json",
     "apiref_url": false
@@ -898,7 +898,7 @@
   {
     "category": "Management & Governance",
     "name": "AWS Health",
-    "git_repo": false,
+    "git_repo": "aws-personal-health-dashboard.git",
     "doc_url": "https://docs.aws.amazon.com/health/latest/ug/health-api.html",
     "toc_url": "https://docs.aws.amazon.com/health/latest/ug/toc-contents.json",
     "apiref_url": false
@@ -954,7 +954,7 @@
   {
     "category": "Management & Governance",
     "name": "AWS Organizations",
-    "git_repo": false,
+    "git_repo": "aws-organizations-docs.git",
     "doc_url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html",
     "toc_url": false,
     "apiref_url": "https://docs.aws.amazon.com/organizations/latest/APIReference/Welcome.html"
@@ -962,7 +962,7 @@
   {
     "category": "Management & Governance",
     "name": "AWS Proton",
-    "git_repo": false,
+    "git_repo": "aws-proton-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html",
     "toc_url": false,
     "apiref_url": "https://docs.aws.amazon.com/proton/latest/APIReference/Welcome.html"
@@ -1114,7 +1114,7 @@
   {
     "category": "Serverless",
     "name": "AWS Fargate",
-    "git_repo": false,
+    "git_repo": "aws-elastic-beanstalk-developer-guide.git",
     "doc_url": "https://docs.aws.amazon.com/AmazonECS/latest/userguide/what-is-fargate.html",
     "toc_url": "https://docs.aws.amazon.com/AmazonECS/latest/userguide/toc-contents.json",
     "apiref_url": false
@@ -1146,7 +1146,7 @@
   {
     "category": "Developer Tools",
     "name": "AWS Cloud Control API",
-    "git_repo": false,
+    "git_repo": "aws-cloudformation-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/cloudcontrolapi/latest/userguide/what-is-cloudcontrolapi.html",
     "toc_url": "https://docs.aws.amazon.com/cloudcontrolapi/latest/userguide/toc-contents.json",
     "apiref_url": false
@@ -1210,7 +1210,7 @@
   {
     "category": "Developer Tools",
     "name": "AWS CodeStar",
-    "git_repo": false,
+    "git_repo": "aws-codestar-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/codestar/latest/userguide/welcome.html",
     "toc_url": "https://docs.aws.amazon.com/codestar/latest/userguide/toc-contents.json",
     "apiref_url": false
@@ -1234,7 +1234,7 @@
   {
     "category": "Developer Tools",
     "name": "AWS Microservice Extractor for .NET",
-    "git_repo": false,
+    "git_repo": "aws-microservice-extractor-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/microservice-extractor/latest/userguide/microservice-extractor-prerequisites.html",
     "toc_url": "https://docs.aws.amazon.com/microservice-extractor/latest/userguide/toc-contents.json",
     "apiref_url": false
@@ -1242,7 +1242,7 @@
   {
     "category": "Developer Tools",
     "name": "Porting Assistant for .NET",
-    "git_repo": false,
+    "git_repo": "porting-assistant-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/portingassistant/latest/userguide/what-is-porting-assistant.html",
     "toc_url": "https://docs.aws.amazon.com/portingassistant/latest/userguide/toc-contents.json",
     "apiref_url": false
@@ -1250,7 +1250,7 @@
   {
     "category": "Developer Tools",
     "name": "Toolkit for .NET Refactoring",
-    "git_repo": false,
+    "git_repo": "aws-toolkit-visual-studio-user-guide.git",
     "doc_url": "NO_LINK_FOUND",
     "toc_url": false,
     "apiref_url": false
@@ -1258,7 +1258,7 @@
   {
     "category": "Developer Tools",
     "name": "AWS Tools & SDKs",
-    "git_repo": false,
+    "git_repo": "aws-doc-sdk-examples.git",
     "doc_url": "https://docs.aws.amazon.com/sdkref/latest/guide/overview.html",
     "toc_url": "https://docs.aws.amazon.com/sdkref/latest/guide/toc-contents.json",
     "apiref_url": false
@@ -1290,7 +1290,7 @@
   {
     "category": "Migration & Transfer",
     "name": "AWS Database Migration Service",
-    "git_repo": false,
+    "git_repo": "aws-dms-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html",
     "toc_url": "https://docs.aws.amazon.com/dms/latest/userguide/toc-contents.json",
     "apiref_url": false
@@ -1298,7 +1298,7 @@
   {
     "category": "Migration & Transfer",
     "name": "AWS DataSync",
-    "git_repo": false,
+    "git_repo": "aws-datasync-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/datasync/latest/userguide/what-is-datasync.html",
     "toc_url": "https://docs.aws.amazon.com/datasync/latest/userguide/toc-contents.json",
     "apiref_url": false
@@ -1378,7 +1378,7 @@
   {
     "category": "Networking & Content Delivery",
     "name": "AWS Global Accelerator",
-    "git_repo": false,
+    "git_repo": "aws-global-accelerator-dev-guide.git",
     "doc_url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html",
     "toc_url": false,
     "apiref_url": "https://docs.aws.amazon.com/global-accelerator/latest/api/Welcome.html"
@@ -1402,7 +1402,7 @@
   {
     "category": "Networking & Content Delivery",
     "name": "Amazon Route 53 Application Recovery Controller",
-    "git_repo": false,
+    "git_repo": "amazon-route53-docs.git",
     "doc_url": "https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route53-recovery.html",
     "toc_url": "https://docs.aws.amazon.com/r53recovery/latest/dg/toc-contents.json",
     "apiref_url": false
@@ -1418,7 +1418,7 @@
   {
     "category": "Networking & Content Delivery",
     "name": "Amazon VPC Lattice",
-    "git_repo": false,
+    "git_repo": "amazon-vpc-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/vpc-lattice/latest/ug/what-is-vpc-lattice.html",
     "toc_url": false,
     "apiref_url": "https://docs.aws.amazon.com/vpc-lattice/latest/APIReference/Welcome.html"
@@ -1546,7 +1546,7 @@
   {
     "category": "Internet of Things (IoT)",
     "name": "AWS IoT Device Defender",
-    "git_repo": false,
+    "git_repo": "aws-iot-docs.git",
     "doc_url": "https://docs.aws.amazon.com/iot/latest/developerguide/device-defender.html",
     "toc_url": "https://docs.aws.amazon.com/iot/latest/developerguide/toc-contents.json",
     "apiref_url": false
@@ -1554,7 +1554,7 @@
   {
     "category": "Internet of Things (IoT)",
     "name": "AWS IoT Device Management",
-    "git_repo": false,
+    "git_repo": "aws-iot-docs.git",
     "doc_url": "https://docs.aws.amazon.com/iot/latest/developerguide/iot-thing-management.html",
     "toc_url": "https://docs.aws.amazon.com/iot/latest/developerguide/toc-contents.json",
     "apiref_url": false
@@ -1570,7 +1570,7 @@
   {
     "category": "Internet of Things (IoT)",
     "name": "AWS IoT ExpressLink",
-    "git_repo": false,
+    "git_repo": "aws-iot-docs.git",
     "doc_url": "https://docs.aws.amazon.com/iot-expresslink/v1.1/programmersguide/elpg.html",
     "toc_url": "https://docs.aws.amazon.com/iot-expresslink/v1.1/programmersguide/toc-contents.json",
     "apiref_url": false
@@ -1666,7 +1666,7 @@
   {
     "category": "Front-End Web & Mobile",
     "name": "AWS Mobile SDK for Unity",
-    "git_repo": false,
+    "git_repo": "aws-unity-developer-guide.git",
     "doc_url": "https://docs.aws.amazon.com/mobile/sdkforunity/developerguide/what-is-unity-plugin.html",
     "toc_url": "https://docs.aws.amazon.com/mobile/sdkforunity/developerguide/toc-contents.json",
     "apiref_url": false
@@ -1674,7 +1674,7 @@
   {
     "category": "Front-End Web & Mobile",
     "name": "AWS Mobile SDK for Xamarin",
-    "git_repo": false,
+    "git_repo": "aws-xamarin-developer-guide.git",
     "doc_url": "https://docs.aws.amazon.com/mobile/sdkforxamarin/developerguide/Welcome.html",
     "toc_url": "https://docs.aws.amazon.com/mobile/sdkforxamarin/developerguide/toc-contents.json",
     "apiref_url": false
@@ -1698,7 +1698,7 @@
   {
     "category": "End User Computing",
     "name": "Amazon WorkSpaces Web",
-    "git_repo": false,
+    "git_repo": "amazon-workspaces-user-guide.git",
     "doc_url": false,
     "toc_url": false,
     "apiref_url": "https://docs.aws.amazon.com/workspaces-web/latest/APIReference/Welcome.html"
@@ -1762,7 +1762,7 @@
   {
     "category": "Analytics",
     "name": "AWS Data Exchange",
-    "git_repo": false,
+    "git_repo": "aws-data-exchange-user-guide.git",
     "doc_url": "https://docs.aws.amazon.com/data-exchange/latest/userguide/what-is.html",
     "toc_url": "https://docs.aws.amazon.com/data-exchange/latest/userguide/toc-contents.json",
     "apiref_url": false
@@ -1810,7 +1810,7 @@
   {
     "category": "Analytics",
     "name": "AWS Glue",
-    "git_repo": false,
+    "git_repo": "aws-glue-developer-guide.git",
     "doc_url": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api.html",
     "toc_url": "https://docs.aws.amazon.com/glue/latest/dg/toc-contents.json",
     "apiref_url": false
@@ -1914,7 +1914,7 @@
   {
     "category": "Business Applications",
     "name": "Amazon Simple Email Service (Amazon SES)",
-    "git_repo": false,
+    "git_repo": "amazon-ses-developer-guide.git",
     "doc_url": false,
     "toc_url": false,
     "apiref_url": "https://docs.aws.amazon.com/ses/latest/APIReference/Welcome.html"
